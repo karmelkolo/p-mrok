@@ -3,23 +3,25 @@
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_c0xso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udlso"]
-size = Vector2(720, 20)
+size = Vector2(56, 10)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_naa06"]
 
 [node name="Node2D" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_c0xso")]
-position = Vector2(506, 294)
+position = Vector2(73, 76)
+SPEED = 25.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(507, 242)
+position = Vector2(90, 39)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2, 0)
+position = Vector2(-17, 5)
 shape = SubResource("RectangleShape2D_udlso")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(2, -1.90735e-06)
-scale = Vector2(720, 20)
+position = Vector2(-17, -1.90735e-06)
+scale = Vector2(56, 20)
 texture = SubResource("CanvasTexture_naa06")

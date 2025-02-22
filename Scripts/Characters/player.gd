@@ -6,7 +6,7 @@ extends CharacterBody2D
 var facing = "Down"
 
 func _process(_delta: float) -> void:
-	if velocity.x != 0 || velocity.y != 0:
+	if velocity != Vector2(0,0):
 		$Player_Sprite.animation = "Walking_" + facing
 	else:
 		$Player_Sprite.animation = "Standing_" + facing
@@ -26,12 +26,15 @@ func _physics_process(_delta: float) -> void:
 		
 	move_and_slide()
 	
-func _input(event):
-	if event.is_action_pressed("ui_down"):
-		facing = "Down"
-	if event.is_action_pressed("ui_left"):
-		facing = "Left"
-	if event.is_action_pressed("ui_right"):
-		facing = "Right"
-	if event.is_action_pressed("ui_up"):
-		facing = "Up"
+	var velocity_abs = velocity.abs()
+	if velocity != Vector2(0,0):
+		if velocity_abs.x > velocity_abs.y:
+			if velocity.x > 0:
+				facing = "Right"
+			else:
+				facing = "Left"
+		else:
+			if velocity.y > 0:
+				facing = "Down"
+			else:
+				facing = "Up"
