@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://chijchdoul62w"]
+
+[ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_c0xso"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udlso"]
+size = Vector2(720, 20)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_naa06"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_c0xso")]
+position = Vector2(506, 294)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(507, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_udlso")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2, -1.90735e-06)
+scale = Vector2(720, 20)
+texture = SubResource("CanvasTexture_naa06")

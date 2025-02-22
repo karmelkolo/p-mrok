@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxfvp3i0nxpm2"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_tc74r"]
+[ext_resource type="SpriteFrames" uid="uid://c1hberdwe7ehs" path="res://Prefabs/Characters/Player/Player_Animation.tres" id="1_tugc6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_posjc"]
+size = Vector2(14, 32)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_tc74r")
+
+[node name="Player_Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_posjc")
+
+[node name="Player_Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_tugc6")
+animation = &"Standing_Down"
+autoplay = "Standing_Down"

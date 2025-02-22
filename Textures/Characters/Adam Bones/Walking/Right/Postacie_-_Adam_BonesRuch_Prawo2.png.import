@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3ylij5gxthji"
-path="res://.godot/imported/sol_flight3.png-4d51bae3e633d25d5d93498c49c859d8.ctex"
+uid="uid://bt156vdcgp4yw"
+path="res://.godot/imported/Postacie_-_Adam_BonesRuch_Prawo2.png-913a304400656638ca7a9174784f7522.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sol_flight3.png"
-dest_files=["res://.godot/imported/sol_flight3.png-4d51bae3e633d25d5d93498c49c859d8.ctex"]
+source_file="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo2.png"
+dest_files=["res://.godot/imported/Postacie_-_Adam_BonesRuch_Prawo2.png-913a304400656638ca7a9174784f7522.ctex"]
 
 [params]
 

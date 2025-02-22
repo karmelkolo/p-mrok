@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://chijchdoul62w"]
-
-[ext_resource type="Texture2D" uid="uid://c3ylij5gxthji" path="res://sol_flight3.png" id="1_326eu"]
-
-[node name="SolFlight3" type="Sprite2D"]
-texture = ExtResource("1_326eu")
