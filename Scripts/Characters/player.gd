@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var SPEED = 300.0
+@export var SPEED = 25
 
 var facing = "Down"
 
@@ -10,6 +10,14 @@ func _process(_delta: float) -> void:
 		$Player_Sprite.animation = "Walking_" + facing
 	else:
 		$Player_Sprite.animation = "Standing_" + facing
+
+func _input(event) -> void:
+	if event.is_action_pressed("run"):
+		SPEED = SPEED * 2
+		$Player_Sprite.speed_scale = 2
+	if event.is_action_released("run"):
+		SPEED = SPEED / 2.0
+		$Player_Sprite.speed_scale = 1
 
 func _physics_process(_delta: float) -> void:
 	var direction_x := Input.get_axis("ui_left", "ui_right")
@@ -38,3 +46,4 @@ func _physics_process(_delta: float) -> void:
 				facing = "Down"
 			else:
 				facing = "Up"
+				

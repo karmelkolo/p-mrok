@@ -5,13 +5,13 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_20cqy"]
 radius = 5.5
-height = 14.0
+height = 15.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_tc74r")
 
 [node name="Player_Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10.5)
+position = Vector2(0.5, 10.5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_20cqy")
 
@@ -19,3 +19,4 @@ shape = SubResource("CapsuleShape2D_20cqy")
 sprite_frames = ExtResource("1_tugc6")
 animation = &"Standing_Down"
 autoplay = "Standing_Down"
+offset = Vector2(0.5, 0)
