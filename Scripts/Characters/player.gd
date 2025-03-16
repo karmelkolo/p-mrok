@@ -1,9 +1,11 @@
 extends CharacterBody2D
-
+class_name Player
 
 @export var SPEED = 25
 
 var facing = "Down"
+
+var carrying: bool = false
 
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
@@ -30,3 +32,11 @@ func _physics_process(_delta: float) -> void:
 		
 		
 	move_and_slide()
+
+
+func _on_static_body_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.
+
+
+func _on_detector_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
