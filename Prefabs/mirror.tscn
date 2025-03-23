@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://7xj8apxfaewf"]
+
+[ext_resource type="Texture2D" uid="uid://dtwiful8stggi" path="res://Textures/Objects/Mirror/Obiekt_-_Lustro1.png" id="1_ni6sx"]
+[ext_resource type="Texture2D" uid="uid://b06ndit7arni5" path="res://Textures/Objects/Mirror/Obiekt_-_Lustro1-Mask.png" id="3_8vvij"]
+[ext_resource type="SpriteFrames" uid="uid://c1hberdwe7ehs" path="res://Prefabs/Characters/Player/Player_Animation.tres" id="3_uvam2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8mqq5"]
+light_mode = 2
+
+[node name="Mirror" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ni6sx")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+blend_mode = 2
+texture = ExtResource("3_8vvij")
+
+[node name="Player_Sprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_8mqq5")
+sprite_frames = ExtResource("3_uvam2")
+animation = &"Walking_Left"
+offset = Vector2(0.5, 0)

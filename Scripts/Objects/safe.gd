@@ -7,7 +7,7 @@ func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
