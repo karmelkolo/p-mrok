@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_c0xso"]
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_o10i0"]
-[ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Scenes/HUD.tscn" id="3_3qonj"]
+[ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Prefabs/HUD.tscn" id="3_3qonj"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="3_lyx4m"]
 [ext_resource type="Texture2D" uid="uid://bhp5ykx0he3an" path="res://Textures/Objects/Safe/Obiekt_-_Sejf1.png" id="3_r807r"]
 [ext_resource type="Script" path="res://Scripts/Objects/camera.gd" id="5_3umwe"]
@@ -61,7 +61,6 @@ unique_name_in_owner = true
 position = Vector2(75, 75)
 
 [node name="Camera" type="Camera2D" parent="."]
-unique_name_in_owner = true
 position = Vector2(-34, -2)
 limit_left = -16
 limit_top = -16

@@ -7,6 +7,8 @@
 resource_name = "hud"
 script/source = "extends Node
 
+func _ready() -> void:
+	%Ciemnosc.visible = true
 
 func _on_detector_show_detector() -> void:
 	%Detector.visible = true
@@ -36,6 +38,8 @@ texture = ExtResource("1_40tvi")
 stretch_mode = 2
 
 [node name="Ciemnosc" type="TextureRect" parent="HUD_Layer"]
+unique_name_in_owner = true
+visible = false
 offset_right = 150.0
 offset_bottom = 150.0
 texture = ExtResource("2_yaf0f")

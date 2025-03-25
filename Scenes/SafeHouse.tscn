@@ -1,0 +1,300 @@
+[gd_scene load_steps=36 format=4 uid="uid://51qr3tu6ex3n"]
+
+[ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_3y2t8"]
+[ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_e0avo"]
+[ext_resource type="Texture2D" uid="uid://dtqat2wbbkph5" path="res://Textures/World/Walls/Teren_-_Drewno.png" id="3_p2dsw"]
+[ext_resource type="Texture2D" uid="uid://brm433qicel6q" path="res://Textures/World/Walls/Teren_-_Sciana.png" id="4_6o3qr"]
+[ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="4_tggms"]
+[ext_resource type="Texture2D" uid="uid://cvfuu36jvrfj6" path="res://Textures/Objects/Table/Obiekty_-_Sto.png" id="5_ltxfe"]
+[ext_resource type="Texture2D" uid="uid://cm1v5dalwkjtl" path="res://Textures/Objects/Locker/Obiekt_-_Szafka.png" id="6_28nlo"]
+[ext_resource type="Texture2D" uid="uid://bhwxobc5i7yv8" path="res://Textures/Objects/Ladder/Obiekty_-_Wyjscie.png" id="7_yimjt"]
+[ext_resource type="Texture2D" uid="uid://bhp5ykx0he3an" path="res://Textures/Objects/Safe/Obiekt_-_Sejf1.png" id="8_5asbw"]
+[ext_resource type="Texture2D" uid="uid://dtwiful8stggi" path="res://Textures/Objects/Mirror/Obiekt_-_Lustro1.png" id="9_8a8un"]
+[ext_resource type="Texture2D" uid="uid://cd1soxq3ghjjc" path="res://Textures/Objects/Radio/Obiekty_-_Radio1.png" id="10_rve5h"]
+[ext_resource type="Texture2D" uid="uid://cvmhe357rgvtr" path="res://Textures/Objects/Bed/Obiekt_-_ozko1.png" id="11_6l7yn"]
+[ext_resource type="Texture2D" uid="uid://bh64yubdk5215" path="res://Textures/Objects/Chair/Obiekty_-_Krzeseko1.png" id="12_bfeyo"]
+[ext_resource type="Texture2D" uid="uid://pm26k2hq6ekk" path="res://Textures/Objects/Detector/Obiekty_-_Wykrywacz.png" id="13_0ommp"]
+[ext_resource type="Texture2D" uid="uid://b5kfdjajkqvm4" path="res://Textures/Objects/Box/Obiekt_-_Mae_pudo.png" id="14_6lkjq"]
+[ext_resource type="Texture2D" uid="uid://dwnpnggy3q1ol" path="res://Textures/Objects/Box/Obiekt_-_Duze_pudo.png" id="15_7sa5d"]
+[ext_resource type="Texture2D" uid="uid://suj6cw2qqda0" path="res://Textures/Objects/Box/Obiekt_-_Wysokie_pudo.png" id="16_nfp4o"]
+[ext_resource type="Texture2D" uid="uid://cvp47jm2sd5rj" path="res://Systemy_-_Ikona.png" id="17_gv0xu"]
+[ext_resource type="Script" path="res://Scripts/Objects/camera.gd" id="18_7pt2q"]
+[ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Prefabs/HUD.tscn" id="19_pk5n5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eir3j"]
+texture = ExtResource("2_e0avo")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_276nm"]
+texture = ExtResource("3_p2dsw")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqm7f"]
+texture = ExtResource("4_6o3qr")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ffdje"]
+texture = ExtResource("4_tggms")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_vmnd2"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_eir3j")
+sources/1 = SubResource("TileSetAtlasSource_276nm")
+sources/2 = SubResource("TileSetAtlasSource_hqm7f")
+sources/3 = SubResource("TileSetAtlasSource_ffdje")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gowas"]
+size = Vector2(64, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1i2o"]
+size = Vector2(13.75, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5r83"]
+size = Vector2(36, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvxm6"]
+size = Vector2(38, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hw5v"]
+size = Vector2(22, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0rpk"]
+size = Vector2(27, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2wnp"]
+size = Vector2(26, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ata8"]
+size = Vector2(15, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgcap"]
+size = Vector2(16, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33y4b"]
+size = Vector2(33, 37)
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+show_behind_parent = true
+tile_map_data = PackedByteArray("AAAAAAAAAgAAAAAAAAAAAAEAAgAAAAEAAAAAAAIAAgAAAAIAAAAAAAMAAgAAAAMAAAABAAAAAgABAAAAAAABAAEAAgABAAEAAAABAAIAAgABAAIAAAABAAMAAgABAAMAAAACAAAAAgAAAAAAAAACAAEAAgAAAAEAAAACAAIAAgAAAAIAAAACAAMAAgAAAAMAAAADAAAAAgABAAAAAAADAAEAAgABAAEAAAADAAIAAgABAAIAAAAEAAAAAgAAAAAAAAAEAAEAAgAAAAEAAAAEAAIAAgAAAAIAAAAEAAMAAgAAAAMAAAAFAAAAAgABAAAAAAAFAAEAAgABAAEAAAAFAAIAAgABAAIAAAAFAAMAAgABAAMAAAAGAAAAAgAAAAAAAAAGAAEAAgAAAAEAAAAGAAIAAgAAAAIAAAAGAAMAAgAAAAMAAAAHAAAAAgABAAAAAAAHAAEAAgABAAEAAAAHAAIAAgABAAIAAAAHAAMAAgABAAMAAAAIAAAAAgAAAAAAAAAIAAEAAgAAAAEAAAAIAAIAAgAAAAIAAAAIAAMAAgAAAAMAAAAJAAAAAgABAAAAAAAJAAEAAgABAAEAAAAJAAIAAgABAAIAAAAJAAMAAgABAAMAAAAKAAAAAgAAAAAAAAAKAAEAAgAAAAEAAAAKAAIAAgAAAAIAAAAKAAMAAgAAAAMAAAALAAAAAgABAAAAAAALAAEAAgABAAEAAAALAAIAAgABAAIAAAALAAMAAgABAAMAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAEAAAABAAQAAQABAAAAAAABAAUAAQABAAEAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAEAAAABAAYAAQABAAAAAAABAAcAAQABAAEAAAAAAAgAAQAAAAAAAAAAAAkAAQAAAAEAAAABAAgAAQABAAAAAAABAAkAAQABAAEAAAAAAAoAAQAAAAAAAAABAAoAAQABAAAAAAACAAQAAQAAAAAAAAACAAUAAQAAAAEAAAADAAQAAQABAAAAAAADAAUAAQABAAEAAAACAAYAAQAAAAAAAAACAAcAAQAAAAEAAAADAAYAAQABAAAAAAADAAcAAQABAAEAAAACAAgAAQAAAAAAAAACAAkAAQAAAAEAAAADAAgAAQABAAAAAAADAAkAAQABAAEAAAACAAoAAQAAAAAAAAADAAoAAQABAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAEAAAAFAAQAAQABAAAAAAAFAAUAAQABAAEAAAAEAAYAAQAAAAAAAAAEAAcAAQAAAAEAAAAFAAYAAQABAAAAAAAFAAcAAQABAAEAAAAEAAgAAQAAAAAAAAAEAAkAAQAAAAEAAAAFAAgAAQABAAAAAAAFAAkAAQABAAEAAAAEAAoAAQAAAAAAAAAFAAoAAQABAAAAAAAGAAQAAQAAAAAAAAAGAAUAAQAAAAEAAAAHAAQAAQABAAAAAAAHAAUAAQABAAEAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAEAAAAHAAYAAQABAAAAAAAHAAcAAQABAAEAAAAGAAgAAQAAAAAAAAAGAAkAAQAAAAEAAAAHAAgAAQABAAAAAAAHAAkAAQABAAEAAAAGAAoAAQAAAAAAAAAHAAoAAQABAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAEAAAAJAAQAAQABAAAAAAAJAAUAAQABAAEAAAAIAAYAAQAAAAAAAAAIAAcAAQAAAAEAAAAJAAYAAQABAAAAAAAJAAcAAQABAAEAAAAIAAgAAQAAAAAAAAAIAAkAAQAAAAEAAAAJAAgAAQABAAAAAAAJAAkAAQABAAEAAAAIAAoAAQAAAAAAAAAJAAoAAQABAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAEAAAALAAQAAQABAAAAAAALAAUAAQABAAEAAAAKAAYAAQAAAAAAAAAKAAcAAQAAAAEAAAALAAYAAQABAAAAAAALAAcAAQABAAEAAAAKAAgAAQAAAAAAAAAKAAkAAQAAAAEAAAALAAgAAQABAAAAAAALAAkAAQABAAEAAAAKAAoAAQAAAAAAAAALAAoAAQABAAAAAAADAAMAAgABAAMAAAD//wAAAwAAAAAAAAD//wEAAwAAAAAAAAD//wIAAwAAAAAAAAD//wMAAwAAAAAAAAD//wQAAwAAAAAAAAD//wUAAwAAAAAAAAD//wYAAwAAAAAAAAD//wcAAwAAAAAAAAD//wgAAwAAAAAAAAD//wkAAwAAAAAAAAD//woAAwAAAAAAAAD//wsAAwAAAAAAAAAAAAsAAwAAAAAAAAABAAsAAwAAAAAAAAACAAsAAwAAAAAAAAADAAsAAwAAAAAAAAAEAAsAAwAAAAAAAAAFAAsAAwAAAAAAAAAGAAsAAwAAAAAAAAAHAAsAAwAAAAAAAAAIAAsAAwAAAAAAAAAJAAsAAwAAAAAAAAAKAAsAAwAAAAAAAAALAAsAAwAAAAAAAAAMAAsAAwAAAAAAAAAMAAoAAwAAAAAAAAAMAAkAAwAAAAAAAAAMAAgAAwAAAAAAAAAMAAcAAwAAAAAAAAAMAAYAAwAAAAAAAAAMAAUAAwAAAAAAAAAMAAQAAwAAAAAAAAAMAAMAAwAAAAAAAAAMAAIAAwAAAAAAAAAMAAEAAwAAAAAAAAAMAAAAAwAAAAAAAAAMAP//AwAAAAAAAAALAP//AwAAAAAAAAAKAP//AwAAAAAAAAAJAP//AwAAAAAAAAAIAP//AwAAAAAAAAAHAP//AwAAAAAAAAAGAP//AwAAAAAAAAAFAP//AwAAAAAAAAAEAP//AwAAAAAAAAADAP//AwAAAAAAAAACAP//AwAAAAAAAAABAP//AwAAAAAAAAAAAP//AwAAAAAAAAD/////AwAAAAAAAAA=")
+tile_set = SubResource("TileSet_vmnd2")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("1_3y2t8")]
+unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(147, 56)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-13, -20)
+limit_left = 0
+limit_top = 0
+limit_right = 192
+limit_bottom = 176
+editor_draw_limits = true
+script = ExtResource("18_7pt2q")
+
+[node name="HUD" parent="." instance=ExtResource("19_pk5n5")]
+
+[node name="Collisions" type="Node2D" parent="."]
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="Table" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Table"]
+position = Vector2(94, 107)
+shape = SubResource("RectangleShape2D_gowas")
+
+[node name="Chair1" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Chair1"]
+position = Vector2(77.125, 120)
+shape = SubResource("RectangleShape2D_i1i2o")
+
+[node name="Chair2" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Chair2"]
+position = Vector2(110, 120)
+shape = SubResource("RectangleShape2D_i1i2o")
+
+[node name="Safe and Locker" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Safe and Locker"]
+position = Vector2(51, 67.5)
+shape = SubResource("RectangleShape2D_y5r83")
+
+[node name="Radio and Locker" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Radio and Locker"]
+position = Vector2(115, 67.5)
+shape = SubResource("RectangleShape2D_uvxm6")
+
+[node name="Bed" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Bed"]
+position = Vector2(176, 80.5)
+shape = SubResource("RectangleShape2D_4hw5v")
+
+[node name="Boxes Left" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Boxes Left"]
+position = Vector2(13.5, 152)
+shape = SubResource("RectangleShape2D_h0rpk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions/Boxes Left"]
+position = Vector2(40, 156)
+shape = SubResource("RectangleShape2D_b2wnp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collisions/Boxes Left"]
+position = Vector2(60.5, 163)
+shape = SubResource("RectangleShape2D_8ata8")
+
+[node name="Boxes Right" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Boxes Right"]
+position = Vector2(151, 166.5)
+shape = SubResource("RectangleShape2D_pgcap")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions/Boxes Right"]
+position = Vector2(175.5, 157.5)
+shape = SubResource("RectangleShape2D_33y4b")
+
+[node name="Props" type="Node2D" parent="."]
+y_sort_enabled = true
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Obiekty-Sto" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(94, 102)
+texture = ExtResource("5_ltxfe")
+
+[node name="Obiekt-Szafka" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(41, 55)
+texture = ExtResource("6_28nlo")
+
+[node name="Obiekty-Wyjscie" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(16, 50)
+texture = ExtResource("7_yimjt")
+
+[node name="Obiekt-Sejf1" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(61, 63)
+texture = ExtResource("8_5asbw")
+
+[node name="Obiekt-Lustro1" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(80, 41)
+texture = ExtResource("9_8a8un")
+
+[node name="Obiekt-Szafka2" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(104, 55)
+texture = ExtResource("6_28nlo")
+
+[node name="Obiekty-Radio1" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(126, 59)
+texture = ExtResource("10_rve5h")
+
+[node name="Obiekt-Ozko1" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(176, 77)
+texture = ExtResource("11_6l7yn")
+
+[node name="Obiekty-Krzeseko1" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(77, 120)
+texture = ExtResource("12_bfeyo")
+
+[node name="Obiekty-Krzeseko2" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(110, 120)
+texture = ExtResource("12_bfeyo")
+
+[node name="Obiekty-Wykrywacz" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(75, 97)
+texture = ExtResource("13_0ommp")
+
+[node name="Obiekt-MaePudo" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(13, 131)
+texture = ExtResource("14_6lkjq")
+
+[node name="Obiekt-MaePudo2" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(41, 141)
+texture = ExtResource("14_6lkjq")
+
+[node name="Obiekt-DuzePudo" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(22, 154)
+texture = ExtResource("15_7sa5d")
+
+[node name="Obiekt-WysokiePudo" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(56, 156)
+texture = ExtResource("16_nfp4o")
+
+[node name="Systemy-Ikona" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+z_index = 1
+y_sort_enabled = true
+position = Vector2(154, 150)
+texture = ExtResource("17_gv0xu")
+
+[node name="Obiekt-MaePudo4" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(171, 145)
+texture = ExtResource("14_6lkjq")
+
+[node name="Obiekt-MaePudo3" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(155, 163)
+texture = ExtResource("14_6lkjq")
+
+[node name="Obiekt-WysokiePudo2" type="Sprite2D" parent="Props"]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(179, 156)
+texture = ExtResource("16_nfp4o")
