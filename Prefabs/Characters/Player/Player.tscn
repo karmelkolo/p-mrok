@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://dxfvp3i0nxpm2"]
+[gd_scene load_steps=29 format=3 uid="uid://dxfvp3i0nxpm2"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_tc74r"]
 [ext_resource type="SpriteFrames" uid="uid://c1hberdwe7ehs" path="res://Prefabs/Characters/Player/Player_Animation.tres" id="1_tugc6"]
+[ext_resource type="Texture2D" uid="uid://dikpr8h656nyg" path="res://Textures/World/ciemnosc.png" id="3_kydbe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_20cqy"]
 radius = 5.5
@@ -312,3 +313,20 @@ advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Standing/blend_position = Vector2(-0.0047695, -0.955752)
 parameters/Walking/blend_position = Vector2(-0.0556439, -0.39823)
+
+[node name="Ciemnosc" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_kydbe")

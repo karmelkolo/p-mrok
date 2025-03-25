@@ -7,11 +7,16 @@ var facing = "Down"
 
 var carrying: bool = false
 
+func _ready() -> void:
+	%Ciemnosc.visible = true
+
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
 		SPEED = SPEED * 2
 	if event.is_action_released("run"):
 		SPEED = SPEED / 2.0
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit(0)
 
 func _physics_process(_delta: float) -> void:
 	var direction_x := Input.get_axis("ui_left", "ui_right")
