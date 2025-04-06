@@ -311,8 +311,8 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_1dsno")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Standing/blend_position = Vector2(-0.0047695, -0.955752)
-parameters/Walking/blend_position = Vector2(-0.0556439, -0.39823)
+parameters/Standing/blend_position = Vector2(0.0829694, -0.0619469)
+parameters/Walking/blend_position = Vector2(-0.930131, -0.345133)
 
 [node name="Ciemnosc" type="TextureRect" parent="."]
 unique_name_in_owner = true

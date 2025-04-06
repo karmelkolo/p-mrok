@@ -1,0 +1,328 @@
+[gd_scene load_steps=44 format=3 uid="uid://bv2fpuk7708ki"]
+
+[ext_resource type="Script" path="res://Prefabs/Characters/Monster/monster.gd" id="1_2f8lw"]
+[ext_resource type="Texture2D" uid="uid://cdjrs21q6pua7" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo1.png" id="1_60kds"]
+[ext_resource type="Texture2D" uid="uid://c2ct34aqfn7um" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo2.png" id="2_idl8r"]
+[ext_resource type="Texture2D" uid="uid://bks275ag5384r" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo3.png" id="3_uucns"]
+[ext_resource type="Texture2D" uid="uid://dble50qp5omu1" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo4.png" id="4_kipch"]
+[ext_resource type="Texture2D" uid="uid://f0bh0llbcw2l" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo5.png" id="5_gtgjb"]
+[ext_resource type="Texture2D" uid="uid://bp34dnvrtc62p" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo6.png" id="6_jj8sq"]
+[ext_resource type="Texture2D" uid="uid://pnbaptnaif80" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo7.png" id="7_atefu"]
+[ext_resource type="Texture2D" uid="uid://b4dbbctsginly" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo8.png" id="8_2hidt"]
+[ext_resource type="Texture2D" uid="uid://j6sgv07yiroj" path="res://Textures/Characters/Monster/Running/Right/Postacie_DezerterSprint_Prawo1.png" id="9_se76f"]
+[ext_resource type="Texture2D" uid="uid://bul3iq3vj8qar" path="res://Textures/Characters/Monster/Running/Right/Postacie_DezerterSprint_Prawo2.png" id="10_y2qva"]
+[ext_resource type="Texture2D" uid="uid://ohd4dfog88o4" path="res://Textures/Characters/Monster/Running/Right/Postacie_DezerterSprint_Prawo3.png" id="11_n7h7g"]
+[ext_resource type="Texture2D" uid="uid://c01c518iynbww" path="res://Textures/Characters/Monster/Running/Right/Postacie_DezerterSprint_Prawo4.png" id="12_see3n"]
+[ext_resource type="Texture2D" uid="uid://6fulhr12xf3f" path="res://Textures/Characters/Monster/Running/Right/Postacie_DezerterSprint_Prawo5.png" id="13_yhfuw"]
+[ext_resource type="Texture2D" uid="uid://d4ajawli5gpm1" path="res://Textures/Characters/Monster/Running/Right/Postacie_DezerterSprint_Prawo6.png" id="14_cmskl"]
+[ext_resource type="Texture2D" uid="uid://44h6pe54wo1h" path="res://Textures/Characters/Monster/Running/Right/Postacie_DezerterSprint_Prawo7.png" id="15_42eme"]
+[ext_resource type="Texture2D" uid="uid://dhv2foo5p4ukx" path="res://Textures/Characters/Monster/Running/Right/Postacie_DezerterSprint_Prawo8.png" id="16_s2eek"]
+[ext_resource type="Texture2D" uid="uid://dy22c6f8hfxcb" path="res://Textures/Characters/Monster/Standing/Postacie_-_DezerterLewo.png" id="17_0qddc"]
+[ext_resource type="Texture2D" uid="uid://c2f54iejpbn18" path="res://Textures/Characters/Monster/Standing/Postacie_-_DezerterPrawo.png" id="18_sh8hp"]
+[ext_resource type="Script" path="res://Scripts/Objects/Pole_Smierc.gd" id="20_prdxt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k3gep"]
+radius = 8.0
+height = 46.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nhapx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_60kds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_idl8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uucns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kipch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gtgjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jj8sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_atefu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2hidt")
+}],
+"loop": true,
+"name": &"Running_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_se76f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_y2qva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_n7h7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_see3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yhfuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cmskl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_42eme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s2eek")
+}],
+"loop": true,
+"name": &"Running_Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_0qddc")
+}],
+"loop": true,
+"name": &"Standing_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_sh8hp")
+}],
+"loop": true,
+"name": &"Standing_Right",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_83lmj"]
+resource_name = "Standing_Left"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Standing_Left"]
+}
+
+[sub_resource type="Animation" id="Animation_0i62t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Standing_Right"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_fj7d0"]
+resource_name = "Standing_Right"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Standing_Right"]
+}
+
+[sub_resource type="Animation" id="Animation_57x2p"]
+resource_name = "Running_Right"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Running_Right"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_yiheq"]
+resource_name = "Running_Left"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Running_Left"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_esycp"]
+_data = {
+"RESET": SubResource("Animation_0i62t"),
+"Running_Left": SubResource("Animation_yiheq"),
+"Running_Right": SubResource("Animation_57x2p"),
+"Standing_Left": SubResource("Animation_83lmj"),
+"Standing_Right": SubResource("Animation_fj7d0")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_05w43"]
+animation = &"Running_Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0j2h5"]
+animation = &"Running_Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sxpk0"]
+animation = &"Running_Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t10qg"]
+animation = &"Running_Left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_v7rtf"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_05w43")
+blend_point_0/pos = Vector2(1, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_0j2h5")
+blend_point_1/pos = Vector2(1, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_sxpk0")
+blend_point_2/pos = Vector2(-1, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_t10qg")
+blend_point_3/pos = Vector2(-1, -1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pgcew"]
+animation = &"Standing_Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ta3hy"]
+animation = &"Standing_Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x0xrs"]
+animation = &"Standing_Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2b2vf"]
+animation = &"Standing_Right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_173ot"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_pgcew")
+blend_point_0/pos = Vector2(-1, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_ta3hy")
+blend_point_1/pos = Vector2(-1, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_x0xrs")
+blend_point_2/pos = Vector2(1, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_2b2vf")
+blend_point_3/pos = Vector2(1, -1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fj0y6"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oe3a5"]
+advance_mode = 2
+advance_expression = "velocity.length() != 0"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6q1hv"]
+advance_mode = 2
+advance_expression = "velocity.length() == 0"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_k8j0a"]
+states/Running/node = SubResource("AnimationNodeBlendSpace2D_v7rtf")
+states/Running/position = Vector2(608, 100)
+states/Standing/node = SubResource("AnimationNodeBlendSpace2D_173ot")
+states/Standing/position = Vector2(393, 100)
+states/Start/position = Vector2(184, 100)
+transitions = ["Start", "Standing", SubResource("AnimationNodeStateMachineTransition_fj0y6"), "Standing", "Running", SubResource("AnimationNodeStateMachineTransition_oe3a5"), "Running", "Standing", SubResource("AnimationNodeStateMachineTransition_6q1hv")]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ptb87"]
+radius = 21.0
+
+[node name="Monster" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_2f8lw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_k3gep")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -21)
+sprite_frames = SubResource("SpriteFrames_nhapx")
+animation = &"Standing_Right"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_esycp")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_k8j0a")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Running/blend_position = Vector2(-0.294323, 0.221239)
+parameters/Standing/blend_position = Vector2(0.186026, 0.0707965)
+
+[node name="DeathCollison" type="Area2D" parent="."]
+script = ExtResource("20_prdxt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathCollison"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_ptb87")
+
+[connection signal="body_entered" from="DeathCollison" to="." method="_on_death_collison_body_entered"]

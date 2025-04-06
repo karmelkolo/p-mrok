@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dtsox0iwji0pb"]
+[gd_scene load_steps=20 format=4 uid="uid://dtsox0iwji0pb"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_c0xso"]
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_o10i0"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/Objects/detector.gd" id="7_a6n1a"]
 [ext_resource type="Texture2D" uid="uid://pm26k2hq6ekk" path="res://Textures/Objects/Detector/Obiekty_-_Wykrywacz.png" id="7_lh0sa"]
 [ext_resource type="Script" path="res://Scripts/Objects/Pole_Smierc.gd" id="10_h2120"]
+[ext_resource type="PackedScene" uid="uid://bv2fpuk7708ki" path="res://Prefabs/Characters/Monster/Monster.tscn" id="11_nnmni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajedm"]
 size = Vector2(25, 24)
@@ -47,7 +48,8 @@ texture = ExtResource("3_lyx4m")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_r40np"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_hw7ri")
 sources/1 = SubResource("TileSetAtlasSource_vniu7")
 
@@ -131,6 +133,10 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Smierc"]
 position = Vector2(-15, -3)
 shape = SubResource("RectangleShape2D_lpma6")
+
+[node name="Monster" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_nnmni")]
+position = Vector2(202, 116)
+target = NodePath("../Player")
 
 [connection signal="body_entered" from="Detector" to="Detector" method="_on_body_entered"]
 [connection signal="body_exited" from="Detector" to="Detector" method="_on_body_exited"]

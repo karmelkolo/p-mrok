@@ -8,7 +8,7 @@ var facing = "Down"
 var carrying: bool = false
 
 func _ready() -> void:
-	%Ciemnosc.visible = true
+	%Ciemnosc.visible = false
 
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
