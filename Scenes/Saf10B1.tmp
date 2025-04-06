@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://51qr3tu6ex3n"]
+[gd_scene load_steps=40 format=4 uid="uid://51qr3tu6ex3n"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_3y2t8"]
 [ext_resource type="Script" path="res://Scripts/audio/bunkier_audio.gd" id="1_xk2jr"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="4_tggms"]
 [ext_resource type="Texture2D" uid="uid://cvfuu36jvrfj6" path="res://Textures/Objects/Table/Obiekty_-_Sto.png" id="5_ltxfe"]
 [ext_resource type="Texture2D" uid="uid://cm1v5dalwkjtl" path="res://Textures/Objects/Locker/Obiekt_-_Szafka.png" id="6_28nlo"]
-[ext_resource type="AudioStream" uid="uid://cuwnng7tkthsk" path="res://Audio/chodzenie_bunkier.mp3" id="6_57ycc"]
 [ext_resource type="Texture2D" uid="uid://bhwxobc5i7yv8" path="res://Textures/Objects/Ladder/Obiekty_-_Wyjscie.png" id="7_yimjt"]
 [ext_resource type="Texture2D" uid="uid://bhp5ykx0he3an" path="res://Textures/Objects/Safe/Obiekt_-_Sejf1.png" id="8_5asbw"]
 [ext_resource type="Texture2D" uid="uid://dtwiful8stggi" path="res://Textures/Objects/Mirror/Obiekt_-_Lustro1.png" id="9_8a8un"]
@@ -110,12 +109,6 @@ metadata/_edit_lock_ = true
 unique_name_in_owner = true
 y_sort_enabled = true
 position = Vector2(147, 56)
-
-[node name="walking" type="AudioStreamPlayer2D" parent="Player"]
-stream = ExtResource("6_57ycc")
-
-[node name="Timer" type="Timer" parent="Player"]
-one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-13, -20)

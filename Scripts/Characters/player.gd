@@ -2,19 +2,22 @@ extends CharacterBody2D
 class_name Player
 
 @export var SPEED = 25
+@export var czas = 0.6
 
 var facing = "Down"
 
 var carrying: bool = false
 
 func _ready() -> void:
-	%Ciemnosc.visible = false
+	%Ciemnosc.visible = true
 
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
 		SPEED = SPEED * 2
+		czas = czas / 1.33
 	if event.is_action_released("run"):
 		SPEED = SPEED / 2.0
+		czas = czas * 1.33
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
 
@@ -22,14 +25,23 @@ func _physics_process(_delta: float) -> void:
 	var direction_x := Input.get_axis("ui_left", "ui_right")
 	if direction_x:
 		velocity.x = direction_x * SPEED
+		if $Timer.time_left <=0:
+			$walking.pitch_scale = randf_range(0.75, 1.1)
+			$walking.play()
+			$Timer.start(czas)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+
 	var direction_y := Input.get_axis("ui_up", "ui_down")
 	if direction_y:
 		velocity.y = direction_y * SPEED
+		if $Timer.time_left <=0:
+			$walking.pitch_scale = randf_range(0.8, 1.2)
+			$walking.play()
+			$Timer.start(czas)
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+		
 	
 	if velocity != Vector2.ZERO:
 		$AnimationTree.set("parameters/Standing/blend_position", velocity)
@@ -37,3 +49,7 @@ func _physics_process(_delta: float) -> void:
 		
 		
 	move_and_slide()
+
+
+func _on_wyjscie_interaction_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
