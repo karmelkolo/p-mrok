@@ -1,8 +1,9 @@
 extends CharacterBody2D
 class_name Player
 
-@export var SPEED = 25
+@export var SPEED = 30
 @export var czas = 0.6
+var running = false;
 
 var facing = "Down"
 
@@ -13,11 +14,13 @@ func _ready() -> void:
 
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
+		running = true
 		SPEED = SPEED * 2
 		czas = czas / 1.33
 	if event.is_action_released("run"):
 		SPEED = SPEED / 2.0
 		czas = czas * 1.33
+		running = false
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
 
@@ -46,6 +49,7 @@ func _physics_process(_delta: float) -> void:
 	if velocity != Vector2.ZERO:
 		$AnimationTree.set("parameters/Standing/blend_position", velocity)
 		$AnimationTree.set("parameters/Walking/blend_position", velocity)
+		$AnimationTree.set("parameters/Running/blend_position", velocity)
 		
 		
 	move_and_slide()

@@ -19,6 +19,8 @@ config/icon="res://Systemy_-_Ikona.png"
 
 window/size/viewport_width=150
 window/size/viewport_height=150
+window/size/window_width_override=720
+window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/snap/snap_2d_transforms_to_pixel=false
 

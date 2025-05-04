@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dxfvp3i0nxpm2"]
+[gd_scene load_steps=40 format=3 uid="uid://dxfvp3i0nxpm2"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_tc74r"]
 [ext_resource type="SpriteFrames" uid="uid://c1hberdwe7ehs" path="res://Prefabs/Characters/Player/Player_Animation.tres" id="1_tugc6"]
@@ -210,9 +210,125 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.25)
 }
 
+[sub_resource type="Animation" id="Animation_86ltp"]
+resource_name = "Running_Down"
+length = 1.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Running_Down"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.25)
+}
+
+[sub_resource type="Animation" id="Animation_ydun8"]
+resource_name = "Running_Left"
+length = 1.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Running_Left"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.25)
+}
+
+[sub_resource type="Animation" id="Animation_eyylu"]
+resource_name = "Running_Right"
+length = 1.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Running_Right"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.25)
+}
+
+[sub_resource type="Animation" id="Animation_07ri6"]
+resource_name = "Running_Up"
+length = 1.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Running_Up"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.25)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xctvd"]
 _data = {
 "RESET": SubResource("Animation_3lkjw"),
+"Running_Down": SubResource("Animation_86ltp"),
+"Running_Left": SubResource("Animation_ydun8"),
+"Running_Right": SubResource("Animation_eyylu"),
+"Running_Up": SubResource("Animation_07ri6"),
 "Standing_Down": SubResource("Animation_gv36p"),
 "Standing_Left": SubResource("Animation_8bqmg"),
 "Standing_Right": SubResource("Animation_lpr43"),
@@ -222,6 +338,29 @@ _data = {
 "Walking_Right": SubResource("Animation_rk1f8"),
 "Walking_Up": SubResource("Animation_3kv12")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y3htl"]
+animation = &"Running_Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3acyr"]
+animation = &"Running_Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_20gg7"]
+animation = &"Running_Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xjgob"]
+animation = &"Running_Right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_yry8j"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_y3htl")
+blend_point_0/pos = Vector2(0, -1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_3acyr")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_20gg7")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_xjgob")
+blend_point_3/pos = Vector2(1, 0)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oy6ii"]
 animation = &"Standing_Up"
@@ -280,13 +419,24 @@ advance_expression = "velocity.length() != 0"
 advance_mode = 2
 advance_expression = "velocity.length() == 0"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xoat6"]
+advance_mode = 2
+advance_expression = "running == true"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oqdmi"]
+advance_mode = 2
+advance_expression = "running == false"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_1dsno"]
+states/End/position = Vector2(1035, 100)
+states/Running/node = SubResource("AnimationNodeBlendSpace2D_yry8j")
+states/Running/position = Vector2(823, 100)
 states/Standing/node = SubResource("AnimationNodeBlendSpace2D_efukh")
 states/Standing/position = Vector2(384, 100)
 states/Start/position = Vector2(166, 100)
 states/Walking/node = SubResource("AnimationNodeBlendSpace2D_ggv7w")
 states/Walking/position = Vector2(621, 100)
-transitions = ["Start", "Standing", SubResource("AnimationNodeStateMachineTransition_kx1a8"), "Standing", "Walking", SubResource("AnimationNodeStateMachineTransition_cu7pv"), "Walking", "Standing", SubResource("AnimationNodeStateMachineTransition_rayq8")]
+transitions = ["Start", "Standing", SubResource("AnimationNodeStateMachineTransition_kx1a8"), "Standing", "Walking", SubResource("AnimationNodeStateMachineTransition_cu7pv"), "Walking", "Standing", SubResource("AnimationNodeStateMachineTransition_rayq8"), "Walking", "Running", SubResource("AnimationNodeStateMachineTransition_xoat6"), "Running", "Walking", SubResource("AnimationNodeStateMachineTransition_oqdmi")]
 graph_offset = Vector2(-83, -17)
 
 [node name="Player" type="CharacterBody2D"]
@@ -311,6 +461,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_1dsno")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
+parameters/Running/blend_position = Vector2(0.0026201, 0)
 parameters/Standing/blend_position = Vector2(0.0829694, -0.0619469)
 parameters/Walking/blend_position = Vector2(-0.930131, -0.345133)
 
