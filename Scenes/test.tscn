@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dtsox0iwji0pb"]
+[gd_scene load_steps=24 format=4 uid="uid://dtsox0iwji0pb"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_c0xso"]
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_o10i0"]
@@ -8,11 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bhp5ykx0he3an" path="res://Textures/Objects/Safe/Obiekt_-_Sejf1.png" id="3_r807r"]
 [ext_resource type="Script" path="res://Scripts/Objects/camera.gd" id="5_3umwe"]
 [ext_resource type="Script" path="res://Scripts/Objects/safe.gd" id="5_55jlr"]
+[ext_resource type="AudioStream" uid="uid://degxshgqf56i" path="res://Audio/sfx/detektor_far.mp3" id="6_kacp1"]
 [ext_resource type="Script" path="res://Scripts/Objects/detector.gd" id="7_a6n1a"]
 [ext_resource type="Texture2D" uid="uid://pm26k2hq6ekk" path="res://Textures/Objects/Detector/Obiekty_-_Wykrywacz.png" id="7_lh0sa"]
+[ext_resource type="Script" path="res://Scripts/Audio/beep.gd" id="7_ow1fm"]
 [ext_resource type="Script" path="res://Scripts/Objects/Pole_Smierc.gd" id="10_h2120"]
 [ext_resource type="PackedScene" uid="uid://bv2fpuk7708ki" path="res://Prefabs/Characters/Monster/Monster.tscn" id="11_nnmni"]
-[ext_resource type="AudioStream" uid="uid://gmcxdps6lgdi" path="res://Audio/main_ambient.mp3" id="13_ow7lc"]
 [ext_resource type="Script" path="res://Scripts/Audio/main_audio.gd" id="14_xi2i4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajedm"]
@@ -100,6 +101,10 @@ offset_bottom = 72.0
 theme_override_font_sizes/font_size = 6
 text = "Press [E] to pick up *detector*"
 
+[node name="Beep" type="AudioStreamPlayer2D" parent="Detector"]
+stream = ExtResource("6_kacp1")
+script = ExtResource("7_ow1fm")
+
 [node name="Safe_physical" type="StaticBody2D" parent="."]
 position = Vector2(73, 44)
 script = SubResource("GDScript_ummv0")
@@ -148,7 +153,6 @@ position = Vector2(202, 116)
 target = NodePath("../Player")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("13_ow7lc")
 script = ExtResource("14_xi2i4")
 
 [connection signal="body_entered" from="Detector" to="Detector" method="_on_body_entered"]

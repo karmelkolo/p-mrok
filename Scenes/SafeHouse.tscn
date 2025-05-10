@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://51qr3tu6ex3n"]
+[gd_scene load_steps=43 format=4 uid="uid://51qr3tu6ex3n"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_3y2t8"]
 [ext_resource type="Script" path="res://Scripts/audio/bunkier_audio.gd" id="1_xk2jr"]
@@ -57,15 +57,26 @@ texture = ExtResource("4_tggms")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_laqrc"]
+load_path = "res://.godot/imported/Teren_-_Gora.png-9c66defad0aeec811b6b02758679da1b.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0mow"]
+texture = SubResource("CompressedTexture2D_laqrc")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_vmnd2"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_eir3j")
 sources/1 = SubResource("TileSetAtlasSource_276nm")
 sources/2 = SubResource("TileSetAtlasSource_hqm7f")
 sources/3 = SubResource("TileSetAtlasSource_ffdje")
+sources/4 = SubResource("TileSetAtlasSource_x0mow")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ax4a"]
-size = Vector2(18, 19)
+size = Vector2(18, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gowas"]
 size = Vector2(64, 22)
@@ -132,13 +143,13 @@ script = ExtResource("18_7pt2q")
 script = ExtResource("11_eyjap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wyjscie_interaction"]
-position = Vector2(15, 65.5)
+position = Vector2(16, 67.5)
 shape = SubResource("RectangleShape2D_7ax4a")
 
 [node name="Obiekty-Wyjscie" type="Sprite2D" parent="Wyjscie_interaction"]
 show_behind_parent = true
 y_sort_enabled = true
-position = Vector2(16, 50)
+position = Vector2(16, 44)
 texture = ExtResource("7_yimjt")
 
 [node name="Label" type="Label" parent="Wyjscie_interaction"]

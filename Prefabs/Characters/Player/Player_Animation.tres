@@ -1,69 +1,37 @@
-[gd_resource type="SpriteFrames" load_steps=69 format=3 uid="uid://c1hberdwe7ehs"]
+[gd_resource type="SpriteFrames" load_steps=37 format=3 uid="uid://c1hberdwe7ehs"]
 
-[ext_resource type="Texture2D" uid="uid://chwl5hdepilfc" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod1.png" id="1_gog00"]
 [ext_resource type="Texture2D" uid="uid://bip4d5y8wrmxc" path="res://Textures/Characters/Adam Bones/Standing/Postacie_-_Adam_BonesPrzod.png" id="1_vaate"]
-[ext_resource type="Texture2D" uid="uid://bxtsngnaan0hh" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod2.png" id="2_hhxav"]
 [ext_resource type="Texture2D" uid="uid://pdapkt854rmj" path="res://Textures/Characters/Adam Bones/Standing/Postacie_-_Adam_BonesLewo.png" id="2_oyldo"]
-[ext_resource type="Texture2D" uid="uid://bwp5o5pqq1smc" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod3.png" id="3_i2jn3"]
 [ext_resource type="Texture2D" uid="uid://c1p2etgj4walt" path="res://Textures/Characters/Adam Bones/Standing/Postacie_-_Adam_BonesPrawo.png" id="3_k72bj"]
-[ext_resource type="Texture2D" uid="uid://y2rjteuesfoe" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod4.png" id="4_amqm4"]
 [ext_resource type="Texture2D" uid="uid://dpgsf2c5omte6" path="res://Textures/Characters/Adam Bones/Standing/Postacie_-_Adam_BonesTy.png" id="4_ojgh1"]
-[ext_resource type="Texture2D" uid="uid://cce0ywilydmy2" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod5.png" id="5_6oxnd"]
 [ext_resource type="Texture2D" uid="uid://dbq1g6rbb2kfi" path="res://Textures/Characters/Adam Bones/Walking/Down/Postacie_-_Adam_BonesRuch_Przod1.png" id="5_r7vem"]
-[ext_resource type="Texture2D" uid="uid://xr28d5lt0rcl" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod6.png" id="6_ss4ap"]
 [ext_resource type="Texture2D" uid="uid://bt5wy3ka0t6le" path="res://Textures/Characters/Adam Bones/Walking/Down/Postacie_-_Adam_BonesRuch_Przod2.png" id="6_wotvp"]
-[ext_resource type="Texture2D" uid="uid://caryb8q68fsxt" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod7.png" id="7_5wlum"]
 [ext_resource type="Texture2D" uid="uid://c85ohmyfh7bpx" path="res://Textures/Characters/Adam Bones/Walking/Down/Postacie_-_Adam_BonesRuch_Przod3.png" id="7_lt1mx"]
 [ext_resource type="Texture2D" uid="uid://cqhrj2wqxon6p" path="res://Textures/Characters/Adam Bones/Walking/Down/Postacie_-_Adam_BonesRuch_Przod4.png" id="8_6xped"]
-[ext_resource type="Texture2D" uid="uid://byapt62qksi8y" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod8.png" id="8_wt7v2"]
-[ext_resource type="Texture2D" uid="uid://casfvjtognrqi" path="res://Textures/Characters/Adam Bones/Running/Left/Postacie_-_Adam_BonesSprint_Lewo1.png" id="9_3psev"]
 [ext_resource type="Texture2D" uid="uid://bfg2c662hbva6" path="res://Textures/Characters/Adam Bones/Walking/Down/Postacie_-_Adam_BonesRuch_Przod5.png" id="9_f1gda"]
-[ext_resource type="Texture2D" uid="uid://b7obis0df77bh" path="res://Textures/Characters/Adam Bones/Running/Left/Postacie_-_Adam_BonesSprint_Lewo2.png" id="10_0xxni"]
 [ext_resource type="Texture2D" uid="uid://b33mtmmjnhsyd" path="res://Textures/Characters/Adam Bones/Walking/Down/Postacie_-_Adam_BonesRuch_Przod6.png" id="10_thpnd"]
-[ext_resource type="Texture2D" uid="uid://d08injtijqpa2" path="res://Textures/Characters/Adam Bones/Running/Left/Postacie_-_Adam_BonesSprint_Lewo3.png" id="11_dnbua"]
 [ext_resource type="Texture2D" uid="uid://wu0f6wex7w1v" path="res://Textures/Characters/Adam Bones/Walking/Down/Postacie_-_Adam_BonesRuch_Przod7.png" id="11_rumbk"]
 [ext_resource type="Texture2D" uid="uid://cg1868yafxrni" path="res://Textures/Characters/Adam Bones/Walking/Down/Postacie_-_Adam_BonesRuch_Przod8.png" id="12_3stby"]
-[ext_resource type="Texture2D" uid="uid://deio2h36msqqp" path="res://Textures/Characters/Adam Bones/Running/Left/Postacie_-_Adam_BonesSprint_Lewo4.png" id="12_fwrdv"]
 [ext_resource type="Texture2D" uid="uid://cg3p6e1bpen75" path="res://Textures/Characters/Adam Bones/Walking/Left/Postacie_-_Adam_BonesRuch_Lewo1.png" id="13_d3x54"]
-[ext_resource type="Texture2D" uid="uid://dk00fgb1fofaw" path="res://Textures/Characters/Adam Bones/Running/Left/Postacie_-_Adam_BonesSprint_Lewo5.png" id="13_j7o7x"]
 [ext_resource type="Texture2D" uid="uid://ba0vna3wyjc4j" path="res://Textures/Characters/Adam Bones/Walking/Left/Postacie_-_Adam_BonesRuch_Lewo2.png" id="14_2137v"]
-[ext_resource type="Texture2D" uid="uid://rlhn7xv8kvo8" path="res://Textures/Characters/Adam Bones/Running/Left/Postacie_-_Adam_BonesSprint_Lewo6.png" id="14_q2odh"]
-[ext_resource type="Texture2D" uid="uid://040ey3u42taq" path="res://Textures/Characters/Adam Bones/Running/Left/Postacie_-_Adam_BonesSprint_Lewo7.png" id="15_et1js"]
 [ext_resource type="Texture2D" uid="uid://4bxi2haqjfn2" path="res://Textures/Characters/Adam Bones/Walking/Left/Postacie_-_Adam_BonesRuch_Lewo3.png" id="15_sbuqq"]
 [ext_resource type="Texture2D" uid="uid://clypmsyl7fvbo" path="res://Textures/Characters/Adam Bones/Walking/Left/Postacie_-_Adam_BonesRuch_Lewo4.png" id="16_ce3w7"]
-[ext_resource type="Texture2D" uid="uid://ro3u5j67dmqg" path="res://Textures/Characters/Adam Bones/Running/Left/Postacie_-_Adam_BonesSprint_Lewo8.png" id="16_sqmvt"]
-[ext_resource type="Texture2D" uid="uid://c5frkw5i0urnm" path="res://Textures/Characters/Adam Bones/Running/Right/Postacie_-_Adam_BonesSprint_Prawo1.png" id="17_5jcs4"]
 [ext_resource type="Texture2D" uid="uid://dlcccdvbpoamr" path="res://Textures/Characters/Adam Bones/Walking/Left/Postacie_-_Adam_BonesRuch_Lewo5.png" id="17_y8abj"]
 [ext_resource type="Texture2D" uid="uid://bv5ffbst1ibbo" path="res://Textures/Characters/Adam Bones/Walking/Left/Postacie_-_Adam_BonesRuch_Lewo6.png" id="18_ggbmh"]
-[ext_resource type="Texture2D" uid="uid://b2chsymtxbo84" path="res://Textures/Characters/Adam Bones/Running/Right/Postacie_-_Adam_BonesSprint_Prawo2.png" id="18_sakr5"]
 [ext_resource type="Texture2D" uid="uid://du07mnnmffyhx" path="res://Textures/Characters/Adam Bones/Walking/Left/Postacie_-_Adam_BonesRuch_Lewo7.png" id="19_5qjts"]
-[ext_resource type="Texture2D" uid="uid://bhwy6i43ij13x" path="res://Textures/Characters/Adam Bones/Running/Right/Postacie_-_Adam_BonesSprint_Prawo3.png" id="19_5xl2k"]
-[ext_resource type="Texture2D" uid="uid://b3m1w3jyw3o56" path="res://Textures/Characters/Adam Bones/Running/Right/Postacie_-_Adam_BonesSprint_Prawo4.png" id="20_0fsg0"]
 [ext_resource type="Texture2D" uid="uid://ul85hr3jlxub" path="res://Textures/Characters/Adam Bones/Walking/Left/Postacie_-_Adam_BonesRuch_Lewo8.png" id="20_yx6cx"]
-[ext_resource type="Texture2D" uid="uid://bsujqperlnf56" path="res://Textures/Characters/Adam Bones/Running/Right/Postacie_-_Adam_BonesSprint_Prawo5.png" id="21_an713"]
 [ext_resource type="Texture2D" uid="uid://bv6c8k84hl6gs" path="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo1.png" id="21_ikrr6"]
-[ext_resource type="Texture2D" uid="uid://c114p51f7f1ks" path="res://Textures/Characters/Adam Bones/Running/Right/Postacie_-_Adam_BonesSprint_Prawo6.png" id="22_g1kld"]
 [ext_resource type="Texture2D" uid="uid://bt156vdcgp4yw" path="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo2.png" id="22_u5t6b"]
-[ext_resource type="Texture2D" uid="uid://ber4pj7oea7um" path="res://Textures/Characters/Adam Bones/Running/Right/Postacie_-_Adam_BonesSprint_Prawo7.png" id="23_6q5j3"]
 [ext_resource type="Texture2D" uid="uid://bnk4ysslnu6w6" path="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo3.png" id="23_7jfsn"]
 [ext_resource type="Texture2D" uid="uid://b01sjvv5inxw3" path="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo4.png" id="24_3sgmg"]
-[ext_resource type="Texture2D" uid="uid://dvu4rdggxatlf" path="res://Textures/Characters/Adam Bones/Running/Right/Postacie_-_Adam_BonesSprint_Prawo8.png" id="24_elgqb"]
-[ext_resource type="Texture2D" uid="uid://bllw185lyyh5b" path="res://Textures/Characters/Adam Bones/Running/Up/Postacie_-_Adam_BonesSprint_ty1.png" id="25_duge0"]
 [ext_resource type="Texture2D" uid="uid://d4ah0uhhlvg03" path="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo5.png" id="25_ujji8"]
 [ext_resource type="Texture2D" uid="uid://bwtaoms5vlbu8" path="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo6.png" id="26_7ds30"]
-[ext_resource type="Texture2D" uid="uid://cr1pxjnn2s1dh" path="res://Textures/Characters/Adam Bones/Running/Up/Postacie_-_Adam_BonesSprint_ty2.png" id="26_wlcqa"]
-[ext_resource type="Texture2D" uid="uid://dnirjblv1vhwp" path="res://Textures/Characters/Adam Bones/Running/Up/Postacie_-_Adam_BonesSprint_ty3.png" id="27_io0xb"]
 [ext_resource type="Texture2D" uid="uid://bcb5l5y5306c1" path="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo7.png" id="27_wnfdt"]
 [ext_resource type="Texture2D" uid="uid://cbnfrwlutiv16" path="res://Textures/Characters/Adam Bones/Walking/Right/Postacie_-_Adam_BonesRuch_Prawo8.png" id="28_g4egh"]
-[ext_resource type="Texture2D" uid="uid://3jvdol7yu58b" path="res://Textures/Characters/Adam Bones/Running/Up/Postacie_-_Adam_BonesSprint_ty4.png" id="28_gst41"]
 [ext_resource type="Texture2D" uid="uid://cr5ba0u7tsbgc" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty1.png" id="29_bulwq"]
-[ext_resource type="Texture2D" uid="uid://dy1wd61520rba" path="res://Textures/Characters/Adam Bones/Running/Up/Postacie_-_Adam_BonesSprint_ty5.png" id="29_qwlxq"]
 [ext_resource type="Texture2D" uid="uid://be6jvdknrvw1m" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty2.png" id="30_e5hhm"]
-[ext_resource type="Texture2D" uid="uid://mfecivmdojah" path="res://Textures/Characters/Adam Bones/Running/Up/Postacie_-_Adam_BonesSprint_ty6.png" id="30_hr8s6"]
 [ext_resource type="Texture2D" uid="uid://h5s41p7s3kj6" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty3.png" id="31_oqdae"]
-[ext_resource type="Texture2D" uid="uid://qj3c68r7v2i3" path="res://Textures/Characters/Adam Bones/Running/Up/Postacie_-_Adam_BonesSprint_ty7.png" id="31_y3o5l"]
 [ext_resource type="Texture2D" uid="uid://cicc6hk6umw4i" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty4.png" id="32_n5lkl"]
-[ext_resource type="Texture2D" uid="uid://ctl35fxlh1c4q" path="res://Textures/Characters/Adam Bones/Running/Up/Postacie_-_Adam_BonesSprint_ty8.png" id="32_xmmmm"]
 [ext_resource type="Texture2D" uid="uid://c4bp8ycmtp18s" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty5.png" id="33_lt1y4"]
 [ext_resource type="Texture2D" uid="uid://d1bbyiwkq1cb" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty6.png" id="34_x7t16"]
 [ext_resource type="Texture2D" uid="uid://ckwmci6ql63na" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty7.png" id="35_tx0ld"]
@@ -71,122 +39,6 @@
 
 [resource]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_gog00")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_hhxav")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_i2jn3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_amqm4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_6oxnd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ss4ap")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_5wlum")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_wt7v2")
-}],
-"loop": true,
-"name": &"Running_Down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_3psev")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_0xxni")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_dnbua")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_fwrdv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_j7o7x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_q2odh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_et1js")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_sqmvt")
-}],
-"loop": true,
-"name": &"Running_Left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_5jcs4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_sakr5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_5xl2k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_0fsg0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_an713")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_g1kld")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_6q5j3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_elgqb")
-}],
-"loop": true,
-"name": &"Running_Right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("25_duge0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_wlcqa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_io0xb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_gst41")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_qwlxq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_hr8s6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_y3o5l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_xmmmm")
-}],
-"loop": true,
-"name": &"Running_Up",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_vaate")
