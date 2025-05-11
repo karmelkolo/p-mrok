@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Półmrok"
 run/main_scene="res://Scenes/test.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Systemy_-_Ikona.png"
 
 [display]

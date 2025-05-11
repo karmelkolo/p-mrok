@@ -1,7 +1,6 @@
 [gd_scene load_steps=43 format=4 uid="uid://51qr3tu6ex3n"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_3y2t8"]
-[ext_resource type="Script" path="res://Scripts/audio/bunkier_audio.gd" id="1_xk2jr"]
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_e0avo"]
 [ext_resource type="Texture2D" uid="uid://dtqat2wbbkph5" path="res://Textures/World/Walls/Teren_-_Drewno.png" id="3_p2dsw"]
 [ext_resource type="Texture2D" uid="uid://brm433qicel6q" path="res://Textures/World/Walls/Teren_-_Sciana.png" id="4_6o3qr"]
@@ -14,14 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://dtwiful8stggi" path="res://Textures/Objects/Mirror/Obiekt_-_Lustro1.png" id="9_8a8un"]
 [ext_resource type="Texture2D" uid="uid://cd1soxq3ghjjc" path="res://Textures/Objects/Radio/Obiekty_-_Radio1.png" id="10_rve5h"]
 [ext_resource type="Texture2D" uid="uid://cvmhe357rgvtr" path="res://Textures/Objects/Bed/Obiekt_-_ozko1.png" id="11_6l7yn"]
-[ext_resource type="Script" path="res://Scripts/Objects/ladder_exit_bunker.gd" id="11_eyjap"]
+[ext_resource type="Script" uid="uid://brv2gqtf55mqj" path="res://Scripts/Objects/ladder_exit_bunker.gd" id="11_eyjap"]
 [ext_resource type="Texture2D" uid="uid://bh64yubdk5215" path="res://Textures/Objects/Chair/Obiekty_-_Krzeseko1.png" id="12_bfeyo"]
 [ext_resource type="Texture2D" uid="uid://pm26k2hq6ekk" path="res://Textures/Objects/Detector/Obiekty_-_Wykrywacz.png" id="13_0ommp"]
 [ext_resource type="Texture2D" uid="uid://b5kfdjajkqvm4" path="res://Textures/Objects/Box/Obiekt_-_Mae_pudo.png" id="14_6lkjq"]
 [ext_resource type="Texture2D" uid="uid://dwnpnggy3q1ol" path="res://Textures/Objects/Box/Obiekt_-_Duze_pudo.png" id="15_7sa5d"]
 [ext_resource type="Texture2D" uid="uid://suj6cw2qqda0" path="res://Textures/Objects/Box/Obiekt_-_Wysokie_pudo.png" id="16_nfp4o"]
 [ext_resource type="Texture2D" uid="uid://cvp47jm2sd5rj" path="res://Systemy_-_Ikona.png" id="17_gv0xu"]
-[ext_resource type="Script" path="res://Scripts/Objects/camera.gd" id="18_7pt2q"]
+[ext_resource type="Script" uid="uid://wx07ogyu6mio" path="res://Scripts/Objects/camera.gd" id="18_7pt2q"]
 [ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Prefabs/HUD.tscn" id="19_pk5n5"]
 [ext_resource type="AudioStream" uid="uid://snmh51kyklpw" path="res://Audio/bunkier_ambient.mp3" id="22_70rxu"]
 
@@ -58,7 +57,6 @@ texture = ExtResource("4_tggms")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_laqrc"]
-load_path = "res://.godot/imported/Teren_-_Gora.png-9c66defad0aeec811b6b02758679da1b.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0mow"]
 texture = SubResource("CompressedTexture2D_laqrc")
@@ -107,6 +105,9 @@ size = Vector2(16, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33y4b"]
 size = Vector2(33, 37)
+
+[sub_resource type="Resource" id="Resource_slcd3"]
+metadata/__load_path__ = "res://Scripts/audio/bunkier_audio.gd"
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -344,7 +345,7 @@ texture = ExtResource("16_nfp4o")
 
 [node name="Ambient" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("22_70rxu")
-script = ExtResource("1_xk2jr")
+script = SubResource("Resource_slcd3")
 
 [connection signal="body_entered" from="Wyjscie_interaction" to="Wyjscie_interaction" method="_on_body_entered"]
 [connection signal="body_exited" from="Wyjscie_interaction" to="Wyjscie_interaction" method="_on_body_exited"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://dxfvp3i0nxpm2"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_tc74r"]
+[ext_resource type="Script" uid="uid://c7ivjx78kbree" path="res://Scripts/Characters/player.gd" id="1_tc74r"]
 [ext_resource type="SpriteFrames" uid="uid://c1hberdwe7ehs" path="res://Prefabs/Characters/Player/Player_Animation.tres" id="1_tugc6"]
 [ext_resource type="Texture2D" uid="uid://dikpr8h656nyg" path="res://Textures/World/ciemnosc.png" id="3_kydbe"]
 
@@ -212,15 +212,15 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xctvd"]
 _data = {
-"RESET": SubResource("Animation_3lkjw"),
-"Standing_Down": SubResource("Animation_gv36p"),
-"Standing_Left": SubResource("Animation_8bqmg"),
-"Standing_Right": SubResource("Animation_lpr43"),
-"Standing_Up": SubResource("Animation_5j8sd"),
-"Walking_Down": SubResource("Animation_w42n8"),
-"Walking_Left": SubResource("Animation_eh1e8"),
-"Walking_Right": SubResource("Animation_rk1f8"),
-"Walking_Up": SubResource("Animation_3kv12")
+&"RESET": SubResource("Animation_3lkjw"),
+&"Standing_Down": SubResource("Animation_gv36p"),
+&"Standing_Left": SubResource("Animation_8bqmg"),
+&"Standing_Right": SubResource("Animation_lpr43"),
+&"Standing_Up": SubResource("Animation_5j8sd"),
+&"Walking_Down": SubResource("Animation_w42n8"),
+&"Walking_Left": SubResource("Animation_eh1e8"),
+&"Walking_Right": SubResource("Animation_rk1f8"),
+&"Walking_Up": SubResource("Animation_3kv12")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oy6ii"]
