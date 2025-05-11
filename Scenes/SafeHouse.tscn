@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://51qr3tu6ex3n"]
+[gd_scene load_steps=44 format=4 uid="uid://51qr3tu6ex3n"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_3y2t8"]
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_e0avo"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://wx07ogyu6mio" path="res://Scripts/Objects/camera.gd" id="18_7pt2q"]
 [ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Prefabs/HUD.tscn" id="19_pk5n5"]
 [ext_resource type="AudioStream" uid="uid://snmh51kyklpw" path="res://Audio/bunkier_ambient.mp3" id="22_70rxu"]
+[ext_resource type="Script" uid="uid://cmcwwwnafakgg" path="res://Scripts/Objects/lamp_interaction.gd" id="24_7f7oh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eir3j"]
 texture = ExtResource("2_e0avo")
@@ -106,8 +107,8 @@ size = Vector2(16, 19)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33y4b"]
 size = Vector2(33, 37)
 
-[sub_resource type="Resource" id="Resource_slcd3"]
-metadata/__load_path__ = "res://Scripts/audio/bunkier_audio.gd"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnhtk"]
+size = Vector2(28, 26)
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -237,7 +238,7 @@ metadata/_edit_group_ = true
 [node name="Obiekty-Sto" type="Sprite2D" parent="Props"]
 show_behind_parent = true
 y_sort_enabled = true
-position = Vector2(94, 102)
+position = Vector2(95.5, 101.5)
 texture = ExtResource("5_ltxfe")
 
 [node name="Obiekt-Szafka" type="Sprite2D" parent="Props"]
@@ -319,6 +320,7 @@ position = Vector2(56, 156)
 texture = ExtResource("16_nfp4o")
 
 [node name="Systemy-Ikona" type="Sprite2D" parent="Props"]
+unique_name_in_owner = true
 show_behind_parent = true
 z_index = 1
 y_sort_enabled = true
@@ -345,7 +347,25 @@ texture = ExtResource("16_nfp4o")
 
 [node name="Ambient" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("22_70rxu")
-script = SubResource("Resource_slcd3")
+
+[node name="Lamp_interaction" type="Area2D" parent="."]
+script = ExtResource("24_7f7oh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lamp_interaction"]
+position = Vector2(153, 149)
+shape = SubResource("RectangleShape2D_nnhtk")
+
+[node name="Label" type="Label" parent="Lamp_interaction"]
+z_index = 1
+offset_left = 80.0
+offset_top = 135.0
+offset_right = 230.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 6
+text = "Press [E] to pick up."
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Wyjscie_interaction" to="Wyjscie_interaction" method="_on_body_entered"]
 [connection signal="body_exited" from="Wyjscie_interaction" to="Wyjscie_interaction" method="_on_body_exited"]
+[connection signal="body_entered" from="Lamp_interaction" to="Lamp_interaction" method="_on_body_entered"]
+[connection signal="body_exited" from="Lamp_interaction" to="Lamp_interaction" method="_on_body_exited"]

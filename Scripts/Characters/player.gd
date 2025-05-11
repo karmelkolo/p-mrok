@@ -53,3 +53,7 @@ func _physics_process(_delta: float) -> void:
 
 func _on_wyjscie_interaction_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+	
+func expand_darkness(scale: int):
+	%Ciemnosc.scale *= scale
+	

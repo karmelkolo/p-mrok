@@ -54,7 +54,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Running_Left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -83,7 +83,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Running_Right",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -91,7 +91,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Standing_Left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -99,7 +99,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Standing_Right",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="Animation" id="Animation_0i62t"]
@@ -130,6 +130,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_yiheq"]
 resource_name = "Running_Left"
+length = 0.7
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -152,11 +153,12 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"times": PackedFloat32Array(0, 0.7)
 }
 
 [sub_resource type="Animation" id="Animation_57x2p"]
 resource_name = "Running_Right"
+length = 0.7
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -179,11 +181,12 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"times": PackedFloat32Array(0, 0.7)
 }
 
 [sub_resource type="Animation" id="Animation_83lmj"]
 resource_name = "Standing_Left"
+length = 0.7
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -200,6 +203,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_fj7d0"]
 resource_name = "Standing_Right"
+length = 0.7
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -308,7 +312,7 @@ animation = &"Standing_Right"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_esycp")
+&"": SubResource("AnimationLibrary_esycp")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
