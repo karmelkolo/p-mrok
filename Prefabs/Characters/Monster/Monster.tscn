@@ -329,4 +329,15 @@ script = ExtResource("20_prdxt")
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_ptb87")
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_layers = 2
+avoidance_mask = 2
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="NavigationAgent2D"]
+process_callback = 0
+wait_time = 0.5
+autostart = true
+
 [connection signal="body_entered" from="DeathCollison" to="." method="_on_death_collison_body_entered"]
+[connection signal="timeout" from="NavigationAgent2D/Timer" to="." method="_on_timer_timeout"]
