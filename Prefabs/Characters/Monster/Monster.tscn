@@ -296,8 +296,8 @@ transitions = ["Start", "Standing", SubResource("AnimationNodeStateMachineTransi
 radius = 21.0
 
 [node name="Monster" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_2f8lw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -330,8 +330,8 @@ position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_ptb87")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-avoidance_layers = 2
-avoidance_mask = 2
+radius = 30.0
+avoidance_layers = 0
 debug_enabled = true
 
 [node name="Timer" type="Timer" parent="NavigationAgent2D"]
