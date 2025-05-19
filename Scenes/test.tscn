@@ -63,10 +63,10 @@ sources/1 = SubResource("TileSetAtlasSource_vniu7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpma6"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_q8sys"]
-vertices = PackedVector2Array(183, 242, 183, 138, 482, 30, 482, 482, 30, 30, 47, 138, 30, 482, 47, 242)
+vertices = PackedVector2Array(180, 239, 180, 141, 485, 27, 485, 485, 27, 27, 50, 141, 27, 485, 50, 239)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 2, 1, 5), PackedInt32Array(6, 4, 5, 7), PackedInt32Array(0, 3, 6, 7)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(512, 512, 0, 512, 0, 0, 512, 0)])
-agent_radius = 30.0
+agent_radius = 27.0
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
