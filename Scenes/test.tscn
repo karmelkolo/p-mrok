@@ -72,7 +72,7 @@ one_shot = true
 [node name="walking" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("2_sjnoa")
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(-34, -2)
 limit_left = -16
 limit_top = -16
@@ -80,6 +80,7 @@ limit_right = 528
 limit_bottom = 528
 editor_draw_limits = true
 script = ExtResource("5_3umwe")
+player = NodePath("../Player")
 
 [node name="Detector" type="Area2D" parent="."]
 script = ExtResource("7_a6n1a")
