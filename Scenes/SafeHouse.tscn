@@ -130,7 +130,7 @@ stream = ExtResource("6_57ycc")
 [node name="Timer" type="Timer" parent="Player"]
 one_shot = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(-13, -20)
 limit_left = 0
 limit_top = 0
@@ -138,6 +138,7 @@ limit_right = 192
 limit_bottom = 176
 editor_draw_limits = true
 script = ExtResource("18_7pt2q")
+player = NodePath("../Player")
 
 [node name="HUD" parent="." instance=ExtResource("19_pk5n5")]
 

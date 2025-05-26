@@ -276,6 +276,7 @@ texture = ExtResource("12_gxgaf")
 offset = Vector2(0, -35)
 
 [node name="Obiekt-CiaoI" type="Sprite2D" parent="Props"]
+z_index = -1
 position = Vector2(218, 27)
 texture = ExtResource("14_euti5")
 
