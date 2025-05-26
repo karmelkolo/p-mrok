@@ -57,3 +57,7 @@ func _on_wyjscie_interaction_body_entered(body: Node2D) -> void:
 func expand_darkness(scale: int):
 	%Ciemnosc.scale *= scale
 	
+
+
+func _on_mina_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=33 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://cch6r01l74xky" path="res://Textures/Objects/Tree/Obiekt_-_Drzewo_III.png" id="13_7vgmr"]
 [ext_resource type="Texture2D" uid="uid://c7k8162tgjjlr" path="res://Textures/Objects/Dead Bodies/Obiekt_-_Ciao_I.png" id="14_euti5"]
 [ext_resource type="Script" uid="uid://b5fkbytmfsbnw" path="res://Scripts/Audio/main_audio.gd" id="16_71emk"]
+[ext_resource type="AudioStream" uid="uid://gmcxdps6lgdi" path="res://Audio/main_ambient.mp3" id="17_o76pg"]
+[ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Prefabs/HUD.tscn" id="19_4o52e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hr6nw"]
 texture = ExtResource("1_8640m")
@@ -459,4 +461,7 @@ position = Vector2(453.5, 475)
 shape = SubResource("RectangleShape2D_gxgaf")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_o76pg")
 script = ExtResource("16_71emk")
+
+[node name="HUD" parent="." instance=ExtResource("19_4o52e")]

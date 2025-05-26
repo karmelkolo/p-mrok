@@ -26,20 +26,19 @@ func _ready() -> void:
 		detector_in_world.show_detector.connect(_on_detector_picked_up)
 	
 func _process(delta: float) -> void:
+	var player = get_node(\"../Player\")
+	var monster = get_node(\"../Monster\")
+	var distance = player.global_position.distance_to(monster.global_position)
+	
 	if get_tree().current_scene.scene_file_path == \"res://Scenes/test.tscn\":
 		$HUD_Layer/Detector_Sprite.visible = true
 		$HUD_Layer/Detector_Sprite.play(\"default\")
-		
-		var player = get_node(\"../Player\")
-		var monster = get_node(\"../Monster\")
-		var distance = player.global_position.distance_to(monster.global_position)
-		
-		if distance < 80:
-			detector_sprite.speed_scale = 1.2
-		elif distance < 160:
-			detector_sprite.speed_scale = 1
+		if distance < 100:
+			detector_sprite.speed_scale = 3.0
+		elif distance < 200:
+			detector_sprite.speed_scale = 1.5
 		else:
-			detector_sprite.speed_scale = 0.85
+			detector_sprite.speed_scale = 0.5
 			
 	if get_tree().current_scene.scene_file_path == \"res://Scenes/Surface.tscn\":
 		$HUD_Layer/Detector_Sprite.visible = true
