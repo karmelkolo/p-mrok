@@ -6,8 +6,8 @@ class_name Player
 @export var ciemnosc = true
 
 var facing = "Down"
-
 var carrying: bool = false
+var inDialogue = false
 
 func _ready() -> void:
 	%Ciemnosc.visible = ciemnosc
@@ -43,13 +43,11 @@ func _physics_process(_delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 		
-	
-	if velocity != Vector2.ZERO:
-		$AnimationTree.set("parameters/Standing/blend_position", velocity)
-		$AnimationTree.set("parameters/Walking/blend_position", velocity)
-		
-		
-	move_and_slide()
+	if !inDialogue:
+		if velocity != Vector2.ZERO:
+			$AnimationTree.set("parameters/Standing/blend_position", velocity)
+			$AnimationTree.set("parameters/Walking/blend_position", velocity)
+		move_and_slide()
 
 
 func _on_wyjscie_interaction_body_entered(body: Node2D) -> void:
@@ -58,7 +56,13 @@ func _on_wyjscie_interaction_body_entered(body: Node2D) -> void:
 func expand_darkness(scale: int):
 	%Ciemnosc.scale *= scale
 	
-
-
 func _on_mina_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+
+
+func _on_hud_stop_player() -> void:
+	inDialogue = true;
+
+
+func _on_hud_start_plyer() -> void:
+	inDialogue = false

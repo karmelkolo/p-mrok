@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dftcqovls2fyx"]
+[gd_scene load_steps=10 format=3 uid="uid://dftcqovls2fyx"]
 
 [ext_resource type="Texture2D" uid="uid://cf6lsv40ilssb" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_1.png" id="2_dohpg"]
 [ext_resource type="Texture2D" uid="uid://6qdrpy4wm84f" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_2.png" id="3_8er30"]
 [ext_resource type="Texture2D" uid="uid://dxjkpq3mubjj2" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_3.png" id="4_l7tng"]
 [ext_resource type="Texture2D" uid="uid://cvd0wn1gvg2m6" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_4_.png" id="5_jp42r"]
+[ext_resource type="Texture2D" uid="uid://fuv4ottduwfa" path="res://Textures/UI/Dialogue Box/System_-_Dialog.png" id="6_dohpg"]
 [ext_resource type="Texture2D" uid="uid://dvv6meaaokm0c" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_5_.png" id="6_hwwul"]
 
 [sub_resource type="GDScript" id="GDScript_rej13"]
@@ -11,8 +12,10 @@ resource_name = "hud"
 script/source = "extends Node
 
 var detector_sprite: AnimatedSprite2D
+var inDialogue = false
 
-
+signal Stop_Player
+signal Start_Plyer
 	
 func _ready() -> void:
 	#%Ciemnosc.visible = true
@@ -43,12 +46,33 @@ func _process(delta: float) -> void:
 			
 	if get_tree().current_scene.scene_file_path == \"res://Scenes/Surface.tscn\":
 		$HUD_Layer/Detector_Sprite.visible = true
+		
+func _input(event: InputEvent) -> void:
+	if inDialogue && event.is_action_pressed(\"ui_accept\"):
+		stop_dialogue()
+		
+func show_dialogue(content: String) -> void:
+	inDialogue = true
+	Stop_Player.emit()
+	$HUD_Layer/Detector_Sprite.visible = false
+	$\"HUD_Layer/System-Dialog\".visible = true
+	$\"HUD_Layer/System-Dialog/Text\".text = content
+	
+func stop_dialogue() -> void:
+	$HUD_Layer/Detector_Sprite.visible = true
+	$\"HUD_Layer/System-Dialog\".visible = false
+	Start_Plyer.emit()
+	inDialogue = false
 
 func _on_detector_show_detector() -> void:
 	$HUD_Layer/Detector_Sprite.visible = true
 	
 func _on_detector_picked_up():
 	detector_sprite.visible = true
+
+
+func _on_area_2d_start_dialogue() -> void:
+	show_dialogue(\"Jestem Drzewem\")
 "
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6bqx2"]
@@ -74,6 +98,10 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_8er30"]
+line_spacing = 0.0
+font_size = 4
+
 [node name="HUD" type="Node"]
 script = SubResource("GDScript_rej13")
 
@@ -83,3 +111,20 @@ script = SubResource("GDScript_rej13")
 position = Vector2(130, 129)
 scale = Vector2(0.925, 0.973684)
 sprite_frames = SubResource("SpriteFrames_6bqx2")
+
+[node name="System-Dialog" type="Sprite2D" parent="HUD_Layer"]
+visible = false
+position = Vector2(75, 75)
+texture = ExtResource("6_dohpg")
+
+[node name="Text" type="Label" parent="HUD_Layer/System-Dialog"]
+offset_left = -74.0
+offset_top = 47.0
+offset_right = 74.0
+offset_bottom = 71.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis, felis semper efficitur fermentum, mi lacus dictum lacus, quis congue felis enim vel sapien. Integer sollicitudin tortor nisl, quis convallis mauris lobortis at. Etiam in magna lacinia, rhoncus nibh id, commodo felis. Nunc luctus augue augue, eget consectetur diam malesuada eget. Praesent malesuada imperdiet iaculis. Phasellus congue rutrum diam, in accumsan metus vestibulum ut. Donec sit amet augue eget est dignissim fringilla. Vivamus lacinia ultricies nibh placerat rutrum. Morbi ut elit a sem tincidunt molestie et vel augue. Quisque eget pulvinar felis. Aenean non neque eu purus tempor consequat. Donec suscipit cursus orci eget aliquet. Etiam consectetur condimentum lorem eget faucibus. Pellentesque convallis nisi et neque rutrum, eget tempor diam mollis.
+
+"
+label_settings = SubResource("LabelSettings_8er30")
+autowrap_mode = 2
+clip_text = true

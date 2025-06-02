@@ -299,14 +299,14 @@ radius = 21.0
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_2f8lw")
+SPEED = 27
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_k3gep")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -21)
+position = Vector2(0, -29)
 sprite_frames = SubResource("SpriteFrames_nhapx")
 animation = &"Standing_Right"
 
@@ -323,6 +323,7 @@ parameters/Running/blend_position = Vector2(-0.294323, 0.221239)
 parameters/Standing/blend_position = Vector2(0.186026, 0.0707965)
 
 [node name="DeathCollison" type="Area2D" parent="."]
+position = Vector2(0, -8)
 script = ExtResource("20_prdxt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathCollison"]

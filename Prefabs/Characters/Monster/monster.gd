@@ -25,4 +25,5 @@ func _on_death_collison_body_entered(body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
-	make_path()
+	if target != null:
+		make_path()
