@@ -1,0 +1,133 @@
+[gd_scene load_steps=4 format=3 uid="uid://x2qgnb7vkkc7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_beu5a"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_beu5a"]
+script/source = "extends Button
+	
+func _pressed() -> void:
+		
+	get_tree().change_scene_to_file(\"res://Scenes/SafeHouse.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_3kf3n"]
+script/source = "extends Button
+
+func _pressed() -> void:
+	load_game()
+
+# Note: This can be called from anywhere inside the tree. This function
+# is path independent.
+func load_game():
+	if not FileAccess.file_exists(\"user://savegame.save\"):
+		return # Error! We don't have a save to load.
+	var save_file = FileAccess.open(\"user://savegame.save\", FileAccess.READ)
+	
+	var level_path_json = save_file.get_line()
+	var json = JSON.new()
+	var level_path = json.parse(level_path_json)
+	var data = json.data
+	
+	get_tree().change_scene_to_file(data[\"level\"])
+	
+	# We need to revert the game state so we're not cloning objects
+	# during loading. This will vary wildly depending on the needs of a
+	# project, so take care with this step.
+	# For our example, we will accomplish this by deleting saveable objects.
+	var save_nodes = get_tree().get_nodes_in_group(\"Persist\")
+	for i in save_nodes:
+		i.queue_free()
+
+	# Load the file line by line and process that dictionary to restore
+	# the object it represents.
+	while save_file.get_position() < save_file.get_length():
+		var json_string = save_file.get_line()
+
+		# Check if there is any error while parsing the JSON string, skip in case of failure.
+		var parse_result = json.parse(json_string)
+		if not parse_result == OK:
+			print(\"JSON Parse Error: \", json.get_error_message(), \" in \", json_string, \" at line \", json.get_error_line())
+			continue
+
+		# Get the data from the JSON object.
+		var node_data = json.data
+
+		# Firstly, we need to create the object and add it to the tree and set its position.
+		var new_object = load(node_data[\"filename\"]).instantiate()
+		get_node(node_data[\"parent\"]).add_child(new_object)
+		new_object.position = Vector2(node_data[\"pos_x\"], node_data[\"pos_y\"])
+
+		# Now we set the remaining variables.
+		for i in node_data.keys():
+			if i == \"filename\" or i == \"parent\" or i == \"pos_x\" or i == \"pos_y\":
+				continue
+			new_object.set(i, node_data[i])
+"
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -33.0
+offset_top = 22.0
+offset_right = 33.0
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Półmrok"
+label_settings = SubResource("LabelSettings_beu5a")
+
+[node name="New Game" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -20.0
+offset_right = 42.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Nowa Gra"
+script = SubResource("GDScript_beu5a")
+
+[node name="Continue" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 19.5
+offset_right = 50.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wczytaj Gre"
+script = SubResource("GDScript_3kf3n")

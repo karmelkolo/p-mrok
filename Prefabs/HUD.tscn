@@ -12,8 +12,6 @@ script/source = "extends Node
 
 var detector_sprite: AnimatedSprite2D
 
-
-	
 func _ready() -> void:
 	#%Ciemnosc.visible = true
 	

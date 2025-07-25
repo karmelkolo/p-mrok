@@ -1,6 +1,7 @@
-[gd_scene load_steps=51 format=4 uid="uid://51qr3tu6ex3n"]
+[gd_scene load_steps=52 format=4 uid="uid://51qr3tu6ex3n"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_3y2t8"]
+[ext_resource type="Script" uid="uid://mioymadqo5vm" path="res://Scripts/Objects/autosave.gd" id="1_hhged"]
 [ext_resource type="Texture2D" uid="uid://b00vq0jrdef8g" path="res://Textures/Objects/FadeIn/fadein.png" id="1_y53bk"]
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_e0avo"]
 [ext_resource type="Script" uid="uid://u2bamvp2fnp8" path="res://Scripts/Objects/fadein.gd" id="2_hhged"]
@@ -123,6 +124,7 @@ data = PackedByteArray("SUQzAwAAAAAAPFRZRVIAAAAFAAAAMjAyNVRFTkMAAAAVAAAATEFNRSBp
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_hhged")
 
 [node name="FadeIn" type="Sprite2D" parent="."]
 z_index = 1000
