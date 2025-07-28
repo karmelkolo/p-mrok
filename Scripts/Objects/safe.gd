@@ -9,7 +9,10 @@ func _process(_delta: float) -> void:
 		queue_free()
 
 func _on_body_entered(body):
-	if body is Player: showInteractionLabel = true
+	if body is Player:
+		showInteractionLabel = true
+		
 
 func _on_body_exited(body):
-	if body is Player: showInteractionLabel = false
+	if body is Player:
+		showInteractionLabel = false

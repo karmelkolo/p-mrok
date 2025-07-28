@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=35 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://b5fkbytmfsbnw" path="res://Scripts/Audio/main_audio.gd" id="16_71emk"]
 [ext_resource type="AudioStream" uid="uid://gmcxdps6lgdi" path="res://Audio/main_ambient.mp3" id="17_o76pg"]
 [ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Prefabs/HUD.tscn" id="19_4o52e"]
+[ext_resource type="Script" uid="uid://6pu8nmcgxku6" path="res://Textures/Objects/hatch.gd" id="20_x2kxo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hr6nw"]
 texture = ExtResource("1_8640m")
@@ -69,6 +70,9 @@ size = Vector2(17, 6.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxgaf"]
 size = Vector2(13, 10)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vgmr"]
+size = Vector2(33, 30)
+
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
 
@@ -101,6 +105,7 @@ region_enabled = true
 region_rect = Rect2(96, 0, 34, 25)
 
 [node name="Obiekt-Waz" type="Sprite2D" parent="Props"]
+unique_name_in_owner = true
 z_index = -1
 position = Vector2(248, 248)
 texture = ExtResource("5_di0hy")
@@ -465,3 +470,25 @@ stream = ExtResource("17_o76pg")
 script = ExtResource("16_71emk")
 
 [node name="HUD" parent="." instance=ExtResource("19_4o52e")]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("20_x2kxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(247.5, 248)
+shape = SubResource("RectangleShape2D_7vgmr")
+
+[node name="Label" type="Label" parent="Area2D"]
+z_index = 3
+offset_left = 228.0
+offset_top = 215.0
+offset_right = 264.0
+offset_bottom = 232.0
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "[E]"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

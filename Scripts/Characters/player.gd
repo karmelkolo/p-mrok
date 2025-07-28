@@ -62,3 +62,7 @@ func expand_darkness(scale: int):
 
 func _on_mina_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+
+
+func _on_mirror_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

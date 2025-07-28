@@ -4,20 +4,22 @@ class_name Detector
 var showInteractionLabel = false
 signal show_detector
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
+		%"Obiekty-Wykrywacz".queue_free()
 		queue_free()
 		show_detector.emit()
 
 func _on_body_entered(body):
-	if body is Player: showInteractionLabel = true
+	if body is Player:
+		%"Obiekty-Wykrywacz".texture = load('res://Textures/Objects/Detector/Obiekty_-_Wykrywacz_Interakcja.png')
+		%"Obiekty-Wykrywacz".position += Vector2(1.5,0.5)
+		showInteractionLabel = true
 
 func _on_body_exited(body:):
-	if body is Player: showInteractionLabel = false
+	if body is Player && is_instance_valid(%"Obiekty-Wykrywacz"):
+		%"Obiekty-Wykrywacz".texture = load('res://Textures/Objects/Detector/Obiekty_-_Wykrywacz.png')
+		%"Obiekty-Wykrywacz".position += Vector2(-1.5,-0.5)
+		showInteractionLabel = false

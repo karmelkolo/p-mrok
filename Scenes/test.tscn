@@ -151,12 +151,12 @@ shape = SubResource("RectangleShape2D_hn1lo")
 
 [node name="Label" type="Label" parent="Safe_interaction"]
 z_index = 2
-offset_left = 44.0
+offset_left = 69.0
 offset_top = 25.0
-offset_right = 148.0
-offset_bottom = 48.0
+offset_right = 77.0
+offset_bottom = 38.0
 theme_override_font_sizes/font_size = 6
-text = "Press [E] to open safe"
+text = "[E]"
 
 [node name="mina" type="Area2D" parent="."]
 script = ExtResource("6_7nf3m")
@@ -219,6 +219,7 @@ stream = ExtResource("13_mie3u")
 script = ExtResource("7_ow1fm")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(0, -1)
 navigation_polygon = SubResource("NavigationPolygon_q8sys")
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
