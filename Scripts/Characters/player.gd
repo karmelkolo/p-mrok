@@ -4,6 +4,7 @@ class_name Player
 @export var SPEED = 25
 @export var czas = 0.6
 @export var ciemnosc = true
+@export var hasLamp = true
 
 var facing = "Down"
 
@@ -11,6 +12,8 @@ var carrying: bool = false
 
 func _ready() -> void:
 	%Ciemnosc.visible = ciemnosc
+	if hasLamp:
+		expand_darkness(2);
 
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
