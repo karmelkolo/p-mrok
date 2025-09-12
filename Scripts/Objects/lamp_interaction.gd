@@ -5,10 +5,11 @@ var showInteractionLabel = false
 func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	
-	if showInteractionLabel && Input.is_action_just_pressed("interact"):
+	if (showInteractionLabel && Input.is_action_just_pressed("interact")) || %Player.was_surface == 1:
 		%"Systemy-Ikona".queue_free()
 		$".".queue_free()
 		%Player.expand_darkness(2)
+		%Player.has_items += 1
 
 func _on_body_entered(body):
 	if body is Player:

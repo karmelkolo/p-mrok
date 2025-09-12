@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/test.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Systemy_-_Ikona.png"
 
+[autoload]
+
+GameState="*res://Scripts/Game_State.gd"
+
 [display]
 
 window/size/viewport_width=150

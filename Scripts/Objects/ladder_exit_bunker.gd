@@ -6,7 +6,10 @@ func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
-		get_tree().change_scene_to_file("res://Scenes/test.tscn")
+		if %Player.has_items == 2:
+			get_tree().change_scene_to_file("res://Scenes/Surface.tscn")
+		#else:
+			
 
 func _on_body_entered(body):
 	if body is Player: showInteractionLabel = true

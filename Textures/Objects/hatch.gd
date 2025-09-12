@@ -6,6 +6,7 @@ func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
+		GameState.was_surface = 1
 		get_tree().change_scene_to_file("res://Scenes/SafeHouse.tscn")
 
 func _on_body_entered(body):

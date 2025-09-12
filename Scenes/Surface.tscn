@@ -71,7 +71,7 @@ size = Vector2(17, 6.5)
 size = Vector2(13, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vgmr"]
-size = Vector2(33, 30)
+size = Vector2(28, 25)
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -83,6 +83,7 @@ tile_set = SubResource("TileSet_6t17n")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_323lg")]
+unique_name_in_owner = true
 position = Vector2(247, 232)
 
 [node name="Timer" type="Timer" parent="Player"]
@@ -475,7 +476,7 @@ script = ExtResource("16_71emk")
 script = ExtResource("20_x2kxo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(247.5, 248)
+position = Vector2(246, 246.5)
 shape = SubResource("RectangleShape2D_7vgmr")
 
 [node name="Label" type="Label" parent="Area2D"]

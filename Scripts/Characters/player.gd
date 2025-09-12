@@ -9,8 +9,15 @@ var facing = "Down"
 
 var carrying: bool = false
 
+var has_items = 0
+var was_surface = 0
+
 func _ready() -> void:
 	%Ciemnosc.visible = ciemnosc
+	if get_tree().current_scene.scene_file_path == "res://Scenes/Surface.tscn":
+		expand_darkness(2)
+	has_items = GameState.has_items
+	was_surface = GameState.was_surface
 
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
