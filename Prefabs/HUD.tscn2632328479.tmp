@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dftcqovls2fyx"]
+[gd_scene load_steps=10 format=3 uid="uid://dftcqovls2fyx"]
 
 [ext_resource type="Texture2D" uid="uid://cf6lsv40ilssb" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_1.png" id="2_dohpg"]
 [ext_resource type="Texture2D" uid="uid://6qdrpy4wm84f" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_2.png" id="3_8er30"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://4xd8rs5vgmlg" path="res://Textures/Dialogues/System_-_Dialog.png" id="6_dohpg"]
 [ext_resource type="Texture2D" uid="uid://dvv6meaaokm0c" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_5_.png" id="6_hwwul"]
 [ext_resource type="Script" uid="uid://dayfqbpn56eob" path="res://Prefabs/dialogue.gd" id="7_8er30"]
-[ext_resource type="FontFile" uid="uid://dmq5ter7i6ikq" path="res://Textures/Dialogues/font/PressStart2P.ttf" id="8_l7tng"]
 
 [sub_resource type="GDScript" id="GDScript_rej13"]
 resource_name = "hud"
@@ -16,21 +15,21 @@ script/source = "extends Node
 var detector_sprite: AnimatedSprite2D
 var dialogue_sprite: Sprite2D
 
+	
 func _ready() -> void:
 	#%Ciemnosc.visible = true
 	
 	detector_sprite = get_tree().get_root().find_child(\"Detector_Sprite\", true, false)
 	if detector_sprite:
 		detector_sprite.visible = false
+		
+	dialogue_sprite = get_tree().get_root().find_child(\"Dialogue\", true, false)
+	if dialogue_sprite:
+		dialogue_sprite.visible = false
 	
 	var detector_in_world = get_tree().get_root().find_child(\"Detector\", true, false)
 	if detector_in_world:
 		detector_in_world.show_detector.connect(_on_detector_picked_up)
-		
-	dialogue_sprite = get_tree().get_root().find_child(\"Dialogue\", true, false)
-	if dialogue_sprite:
-		dialogue_sprite.start(\"The lights in this bunker are starting to fade away.\", 3.0)
-	
 	
 func _process(delta: float) -> void:
 	if get_tree().current_scene.scene_file_path == \"res://Scenes/test.tscn\":
@@ -51,10 +50,14 @@ func _process(delta: float) -> void:
 	if get_tree().current_scene.scene_file_path == \"res://Scenes/Surface.tscn\":
 		$HUD_Layer/Detector_Sprite.visible = true
 		
+	if get_tree().current_scene.scene_file_path == \"res://Scenes/Safehouse.tscn\":
+		$HUD_Layer/Dialogue.visible = true
+		
 		
 
 func _on_detector_show_detector() -> void:
 	$HUD_Layer/Detector_Sprite.visible = true
+	#if Input.is_action_just_pressed(\"continue\"):
 			
 	
 func _on_detector_picked_up():
@@ -96,21 +99,12 @@ scale = Vector2(0.925, 0.973684)
 sprite_frames = SubResource("SpriteFrames_6bqx2")
 
 [node name="Dialogue" type="Sprite2D" parent="HUD_Layer"]
-visible = false
 position = Vector2(75, 77)
 texture = ExtResource("6_dohpg")
 script = ExtResource("7_8er30")
 
 [node name="Intro1" type="RichTextLabel" parent="HUD_Layer/Dialogue"]
-offset_left = -71.0
-offset_top = 49.0
-offset_right = 70.0
-offset_bottom = 69.0
-theme_override_constants/line_separation = 4
-theme_override_fonts/normal_font = ExtResource("8_l7tng")
-theme_override_font_sizes/normal_font_size = 4
-scroll_active = false
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Timer" type="Timer" parent="HUD_Layer/Dialogue/Intro1"]
-
-[connection signal="timeout" from="HUD_Layer/Dialogue/Intro1/Timer" to="HUD_Layer/Dialogue" method="_on_timer_timeout"]

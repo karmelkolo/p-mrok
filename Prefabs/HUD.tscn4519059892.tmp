@@ -16,6 +16,7 @@ script/source = "extends Node
 var detector_sprite: AnimatedSprite2D
 var dialogue_sprite: Sprite2D
 
+	
 func _ready() -> void:
 	#%Ciemnosc.visible = true
 	
@@ -27,9 +28,13 @@ func _ready() -> void:
 	if detector_in_world:
 		detector_in_world.show_detector.connect(_on_detector_picked_up)
 		
+		
 	dialogue_sprite = get_tree().get_root().find_child(\"Dialogue\", true, false)
 	if dialogue_sprite:
-		dialogue_sprite.start(\"The lights in this bunker are starting to fade away.\", 3.0)
+		dialogue_sprite.visible = false
+	
+	await get_tree().create_timer(3.8).timeout
+	dialogue_sprite.visible = true
 	
 	
 func _process(delta: float) -> void:
@@ -96,7 +101,6 @@ scale = Vector2(0.925, 0.973684)
 sprite_frames = SubResource("SpriteFrames_6bqx2")
 
 [node name="Dialogue" type="Sprite2D" parent="HUD_Layer"]
-visible = false
 position = Vector2(75, 77)
 texture = ExtResource("6_dohpg")
 script = ExtResource("7_8er30")
