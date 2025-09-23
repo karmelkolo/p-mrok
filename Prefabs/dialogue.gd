@@ -5,6 +5,7 @@ extends Sprite2D
 
 var full_text: String = ""
 var current_index: int = 0
+var currently_playing = -1
 
 func _ready():
 	label.text = ""
@@ -21,10 +22,12 @@ func start(new_text: String, delay:= 0.0):
 	visible = true
 	timer.wait_time = 0.04
 	timer.start()
+	currently_playing = 1
 
 func _on_timer_timeout():
 	if current_index < full_text.length():
 		label.text += full_text[current_index]
 		current_index += 1
 	else:
+		currently_playing = 0
 		timer.stop()

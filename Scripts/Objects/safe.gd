@@ -5,9 +5,8 @@ var showInteractionLabel = false
 func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	
-	if showInteractionLabel && Input.is_action_just_pressed("interact"):
-		%"Obiekt-Sejf1".queue_free()
-		$".".queue_free()
+	#IMPLEMENTACJA DIALOGU DO SEJFU if showInteractionLabel && Input.is_action_just_pressed("interact"):
+		
 
 func _on_body_entered(body):
 	if body is Player:
