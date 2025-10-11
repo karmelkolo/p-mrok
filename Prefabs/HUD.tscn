@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cvd0wn1gvg2m6" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_4_.png" id="5_jp42r"]
 [ext_resource type="Texture2D" uid="uid://4xd8rs5vgmlg" path="res://Textures/Dialogues/System_-_Dialog.png" id="6_dohpg"]
 [ext_resource type="Texture2D" uid="uid://dvv6meaaokm0c" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_5_.png" id="6_hwwul"]
-[ext_resource type="Script" path="res://Prefabs/dialogue.gd" id="7_8er30"]
+[ext_resource type="Script" uid="uid://dayfqbpn56eob" path="res://Prefabs/dialogue.gd" id="7_8er30"]
 [ext_resource type="FontFile" uid="uid://dmq5ter7i6ikq" path="res://Textures/Dialogues/font/PressStart2P.ttf" id="8_l7tng"]
 
 [sub_resource type="GDScript" id="GDScript_rej13"]
@@ -21,6 +21,7 @@ var dialogues = [\"The lights in this bunker are starting to fade away.\",
 \"I have my last lamp sitting here somewhere.\",
 \"It is my last chance to try to leave this God's abandoned place.\"]
 var dialogue_index = 0
+var dialogue_source = null
 
 func _ready() -> void:
 	#%Ciemnosc.visible = true
@@ -34,9 +35,10 @@ func _ready() -> void:
 		detector_in_world.show_detector.connect(_on_detector_picked_up)
 		
 	dialogue_sprite = get_tree().get_root().find_child(\"Dialogue\", true, false)
-	if dialogue_sprite and get_tree().current_scene.scene_file_path == \"res://Scenes/SafeHouse.tscn\":
+	if dialogue_sprite and get_tree().current_scene.scene_file_path == \"res://Scenes/SafeHouse.tscn\" and %Player.was_surface == 0:
+		dialogue_source = self
+		dialogue_index = 0
 		dialogue_sprite.start(dialogues[dialogue_index], 3.0)
-	
 	
 func _process(delta: float) -> void:
 	if get_tree().current_scene.scene_file_path == \"res://Scenes/test.tscn\":
@@ -73,13 +75,19 @@ func _input(event):
 			dialogue_sprite.current_index = dialogue_sprite.full_text.length()
 			dialogue_sprite.currently_playing = 0
 			dialogue_sprite.timer.stop()
-		elif dialogue_sprite.currently_playing == 0:
-			dialogue_index += 1
-			if dialogue_index < dialogues.size():
-				dialogue_sprite.start(dialogues[dialogue_index],0.0)
+		elif dialogue_sprite.currently_playing == 0 and dialogue_source:
+			dialogue_source.dialogue_index += 1
+			if dialogue_source.dialogue_index < dialogue_source.dialogues.size():
+				dialogue_sprite.start(dialogue_source.dialogues[dialogue_source.dialogue_index],0.0)
 			else:
 				dialogue_sprite.currently_playing = -1
 				dialogue_sprite.visible = false
+				dialogue_source = null
+				
+func display_dialogue(source: Node) -> void:
+	dialogue_source = source
+	source.dialogue_index = 0
+	dialogue_sprite.start(source.dialogues[source.dialogue_index], 0.0)
 "
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6bqx2"]
