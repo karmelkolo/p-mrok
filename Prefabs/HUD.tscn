@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cvd0wn1gvg2m6" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_4_.png" id="5_jp42r"]
 [ext_resource type="Texture2D" uid="uid://4xd8rs5vgmlg" path="res://Textures/Dialogues/System_-_Dialog.png" id="6_dohpg"]
 [ext_resource type="Texture2D" uid="uid://dvv6meaaokm0c" path="res://Textures/Objects/Detector/Systemy_-_Wykrywacz_Nowe_5_.png" id="6_hwwul"]
-[ext_resource type="Script" uid="uid://dayfqbpn56eob" path="res://Prefabs/dialogue.gd" id="7_8er30"]
+[ext_resource type="Script" path="res://Prefabs/dialogue.gd" id="7_8er30"]
 [ext_resource type="FontFile" uid="uid://dmq5ter7i6ikq" path="res://Textures/Dialogues/font/PressStart2P.ttf" id="8_l7tng"]
 
 [sub_resource type="GDScript" id="GDScript_rej13"]

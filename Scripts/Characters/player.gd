@@ -26,6 +26,8 @@ func _input(event) -> void:
 	if event.is_action_released("run"):
 		SPEED = SPEED / 2.0
 		czas = czas * 1.33
+		if SPEED < 25:
+			SPEED = 25
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
 
