@@ -446,7 +446,7 @@ player = NodePath("../Player")
 [node name="Player" parent="." instance=ExtResource("3_323lg")]
 unique_name_in_owner = true
 y_sort_enabled = true
-position = Vector2(247, 247)
+position = Vector2(229, 239)
 
 [node name="Trenches" type="TileMapLayer" parent="."]
 z_index = -1
@@ -470,6 +470,7 @@ texture = ExtResource("22_sdqpc")
 
 [node name="Surface1" type="Node2D" parent="."]
 y_sort_enabled = true
+position = Vector2(-17, -9)
 
 [node name="Props" type="Node2D" parent="Surface1"]
 y_sort_enabled = true
@@ -750,39 +751,39 @@ position = Vector2(339.5, 225.5)
 shape = SubResource("RectangleShape2D_gxoma")
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(389, 206)
+position = Vector2(390, 214)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(428, 184)
+position = Vector2(429, 192)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(479, 196)
+position = Vector2(480, 204)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(375, 244)
+position = Vector2(376, 252)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(421, 251)
+position = Vector2(422, 259)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(455, 224)
+position = Vector2(456, 232)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D33" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(397, 288)
+position = Vector2(398, 296)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D34" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(447, 300)
+position = Vector2(446, 308)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D35" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(473, 260)
+position = Vector2(474, 268)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D36" type="CollisionShape2D" parent="Surface1/Collisions"]
@@ -812,6 +813,7 @@ shape = SubResource("RectangleShape2D_gxgaf")
 [node name="Graves" type="Node2D" parent="Surface1"]
 
 [node name="NoName" type="Area2D" parent="Surface1/Graves"]
+position = Vector2(0, 8)
 script = ExtResource("19_7vgmr")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Surface1/Graves/NoName"]
@@ -831,7 +833,7 @@ position = Vector2(475, 260)
 shape = SubResource("RectangleShape2D_euti5")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Surface1/Graves/NoName"]
-position = Vector2(446.5, 296.5)
+position = Vector2(446, 295)
 shape = SubResource("RectangleShape2D_euti5")
 
 [node name="Label" type="Label" parent="Surface1/Graves/NoName"]
@@ -845,8 +847,10 @@ theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 6
 text = "kocham sklep żabka"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Miller" type="Area2D" parent="Surface1/Graves"]
+position = Vector2(0, 8)
 script = ExtResource("20_euti5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Surface1/Graves/Miller"]
@@ -864,8 +868,10 @@ theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 6
 text = "kocham sklep żabka"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Lee" type="Area2D" parent="Surface1/Graves"]
+position = Vector2(0, 8)
 script = ExtResource("21_t5l5y")
 
 [node name="Label" type="Label" parent="Surface1/Graves/Lee"]
@@ -879,12 +885,14 @@ theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 6
 text = "kocham sklep żabka"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Surface1/Graves/Lee"]
 position = Vector2(420, 247)
 shape = SubResource("RectangleShape2D_dtdgo")
 
 [node name="Samuel" type="Area2D" parent="Surface1/Graves"]
+position = Vector2(0, 8)
 script = ExtResource("22_dtdgo")
 
 [node name="Label" type="Label" parent="Surface1/Graves/Samuel"]
@@ -898,12 +906,14 @@ theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 6
 text = "kocham sklep żabka"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Surface1/Graves/Samuel"]
 position = Vector2(395.5, 285)
 shape = SubResource("RectangleShape2D_f1h5k")
 
 [node name="Nolan" type="Area2D" parent="Surface1/Graves"]
+position = Vector2(0, 8)
 script = ExtResource("23_f1h5k")
 
 [node name="Label" type="Label" parent="Surface1/Graves/Nolan"]
@@ -917,45 +927,46 @@ theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 6
 text = "kocham sklep żabka"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Surface1/Graves/Nolan"]
 position = Vector2(389, 204)
 shape = SubResource("RectangleShape2D_uhl2e")
 
 [node name="Props#Obiekt-GrobIii" type="Sprite2D" parent="."]
-position = Vector2(391.5, 198.5)
+position = Vector2(374.5, 197.5)
 texture = ExtResource("9_4o52e")
 
 [node name="Props#Obiekt-GrobIii2" type="Sprite2D" parent="."]
-position = Vector2(431.5, 180.5)
+position = Vector2(414.5, 179.5)
 texture = ExtResource("12_7vgmr")
 
 [node name="Props#Obiekt-GrobIii3" type="Sprite2D" parent="."]
-position = Vector2(481.5, 186.5)
+position = Vector2(464.5, 185.5)
 texture = ExtResource("13_euti5")
 
 [node name="Props#Obiekt-GrobIii4" type="Sprite2D" parent="."]
-position = Vector2(377.5, 234.5)
+position = Vector2(360.5, 233.5)
 texture = ExtResource("13_euti5")
 
 [node name="Props#Obiekt-GrobIii5" type="Sprite2D" parent="."]
-position = Vector2(422.5, 242.5)
+position = Vector2(405.5, 241.5)
 texture = ExtResource("9_4o52e")
 
 [node name="Props#Obiekt-GrobIii6" type="Sprite2D" parent="."]
-position = Vector2(458.5, 220.5)
+position = Vector2(441.5, 219.5)
 texture = ExtResource("12_7vgmr")
 
 [node name="Props#Obiekt-GrobIii7" type="Sprite2D" parent="."]
-position = Vector2(397.5, 279.5)
+position = Vector2(380.5, 278.5)
 texture = ExtResource("13_euti5")
 
 [node name="Props#Obiekt-GrobIii8" type="Sprite2D" parent="."]
-position = Vector2(448.5, 290.5)
+position = Vector2(431.5, 289.5)
 texture = ExtResource("13_euti5")
 
 [node name="Props#Obiekt-GrobIii9" type="Sprite2D" parent="."]
-position = Vector2(476.5, 256.5)
+position = Vector2(459.5, 255.5)
 texture = ExtResource("12_7vgmr")
 
 [node name="Props#Obiekty-Krzeseko1" type="Sprite2D" parent="."]
@@ -966,15 +977,15 @@ texture = ExtResource("10_x2kxo")
 script = ExtResource("20_x2kxo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hatch"]
-position = Vector2(247.5, 248)
+position = Vector2(229.5, 240)
 shape = SubResource("RectangleShape2D_7vgmr")
 
 [node name="Label" type="Label" parent="Hatch"]
 z_index = 3
-offset_left = 228.0
-offset_top = 215.0
-offset_right = 264.0
-offset_bottom = 232.0
+offset_left = 212.0
+offset_top = 212.0
+offset_right = 248.0
+offset_bottom = 229.0
 scale = Vector2(1.05717, 1.00271)
 theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 6
@@ -986,19 +997,19 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("28_uhl2e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
-position = Vector2(216, 27)
+position = Vector2(199, 18)
 shape = SubResource("RectangleShape2D_067lj")
 
 [node name="Label" type="Label" parent="Body"]
 z_index = 3
-offset_left = 228.0
-offset_top = 215.0
-offset_right = 264.0
-offset_bottom = 232.0
+offset_left = 609.0
+offset_top = 192.0
+offset_right = 645.0
+offset_bottom = 209.0
 scale = Vector2(1.05717, 1.00271)
 theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 6
-text = "[E]"
+text = "Więcej ciałka do kochanka"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -1298,6 +1309,7 @@ position = Vector2(48, -541)
 shape = SubResource("RectangleShape2D_iglxr")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-17, -9)
 stream = ExtResource("17_o76pg")
 script = ExtResource("16_71emk")
 
