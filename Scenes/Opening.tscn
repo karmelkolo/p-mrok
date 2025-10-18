@@ -1,11 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0tkx226q5g26"]
+[gd_scene load_steps=3 format=3 uid="uid://d0tkx226q5g26"]
 
 [ext_resource type="Script" uid="uid://djc6fhkd6v8i1" path="res://Scripts/Objects/opening.gd" id="1_64kpt"]
+[ext_resource type="FontFile" uid="uid://dmq5ter7i6ikq" path="res://Textures/Dialogues/font/PressStart2P.ttf" id="2_laf7e"]
 
 [node name="Opening" type="Node2D"]
+visible = false
 script = ExtResource("1_64kpt")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Intro" type="RichTextLabel" parent="CanvasLayer"]
+z_index = 1
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 145.0
+offset_bottom = 125.0
+theme_override_fonts/normal_font = ExtResource("2_laf7e")
+theme_override_font_sizes/normal_font_size = 6
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Intro"]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 8
@@ -20,3 +34,5 @@ offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[connection signal="timeout" from="CanvasLayer/Intro/Timer" to="." method="_on_timer_timeout"]

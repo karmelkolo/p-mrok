@@ -2,12 +2,13 @@ extends Sprite2D
 
 @onready var label: RichTextLabel = $Intro1
 @onready var timer: Timer = $Intro1/Timer
+@onready var type_sound: AudioStreamPlayer2D = $Type_Sound
 
 var full_text: String = ""
 var current_index: int = 0
 var currently_playing = -1
 
-func _ready():
+func _ready() -> void:
 	label.text = ""
 	timer.timeout.connect(_on_timer_timeout)
 	visible = false
@@ -27,6 +28,8 @@ func start(new_text: String, delay:= 0.0):
 func _on_timer_timeout():
 	if current_index < full_text.length():
 		label.text += full_text[current_index]
+		if not type_sound.playing:
+			type_sound.play()
 		current_index += 1
 	else:
 		currently_playing = 0

@@ -75,3 +75,7 @@ func _on_mina_body_entered(body: Node2D) -> void:
 
 func _on_mirror_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+
+
+func _on_miller_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

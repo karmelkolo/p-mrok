@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=49 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -13,13 +13,21 @@
 [ext_resource type="Texture2D" uid="uid://dnhf56mpn0ya7" path="res://Textures/Objects/Grave/Obiekt_-_Grob_III.png" id="9_4o52e"]
 [ext_resource type="Texture2D" uid="uid://bh64yubdk5215" path="res://Textures/Objects/Chair/Obiekty_-_Krzeseko1.png" id="10_x2kxo"]
 [ext_resource type="Texture2D" uid="uid://ddo8oqeckg27b" path="res://Textures/Objects/Tree/Obiekt_-_Drzewo_I.png" id="11_gxoma"]
+[ext_resource type="Texture2D" uid="uid://ikca4cdingt8" path="res://Textures/Objects/Grave/Obiekt_-_Grob_II.png" id="12_7vgmr"]
 [ext_resource type="Texture2D" uid="uid://bww1aqj0wqbjd" path="res://Textures/Objects/Tree/Obiekt_-_Drzewo_II.png" id="12_gxgaf"]
 [ext_resource type="Texture2D" uid="uid://cch6r01l74xky" path="res://Textures/Objects/Tree/Obiekt_-_Drzewo_III.png" id="13_7vgmr"]
+[ext_resource type="Texture2D" uid="uid://bwi31b4pqu7dy" path="res://Textures/Objects/Grave/Obiekt_-_Grob_I.png" id="13_euti5"]
 [ext_resource type="Texture2D" uid="uid://c7k8162tgjjlr" path="res://Textures/Objects/Dead Bodies/Obiekt_-_Ciao_I.png" id="14_euti5"]
 [ext_resource type="Script" uid="uid://b5fkbytmfsbnw" path="res://Scripts/Audio/main_audio.gd" id="16_71emk"]
 [ext_resource type="AudioStream" uid="uid://gmcxdps6lgdi" path="res://Audio/main_ambient.mp3" id="17_o76pg"]
 [ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Prefabs/HUD.tscn" id="19_4o52e"]
+[ext_resource type="Script" uid="uid://xkpl5mx2q2es" path="res://Scripts/Objects/grave/no_name.gd" id="19_7vgmr"]
+[ext_resource type="Script" uid="uid://dglwodd8fgalq" path="res://Scripts/Objects/grave/miller.gd" id="20_euti5"]
 [ext_resource type="Script" uid="uid://6pu8nmcgxku6" path="res://Textures/Objects/hatch.gd" id="20_x2kxo"]
+[ext_resource type="Script" uid="uid://c1kgwh085inrp" path="res://Scripts/Objects/grave/lee.gd" id="21_t5l5y"]
+[ext_resource type="Script" uid="uid://c573jovn6rtqe" path="res://Scripts/Objects/grave/samuel.gd" id="22_dtdgo"]
+[ext_resource type="Script" uid="uid://mlrwqy22gliu" path="res://Scripts/Objects/grave/nolan.gd" id="23_f1h5k"]
+[ext_resource type="Script" uid="uid://c1cgmp18yeqti" path="res://Scripts/Objects/body.gd" id="28_uhl2e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hr6nw"]
 texture = ExtResource("1_8640m")
@@ -70,8 +78,26 @@ size = Vector2(17, 6.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxgaf"]
 size = Vector2(13, 10)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euti5"]
+size = Vector2(25, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5l5y"]
+size = Vector2(25, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtdgo"]
+size = Vector2(25, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1h5k"]
+size = Vector2(27, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhl2e"]
+size = Vector2(24, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vgmr"]
 size = Vector2(28, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_744ua"]
+size = Vector2(27, 42)
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -175,41 +201,41 @@ texture = ExtResource("8_o76pg")
 position = Vector2(191, 94)
 texture = ExtResource("8_o76pg")
 
-[node name="Obiekt-GrobIii4" type="Sprite2D" parent="Props"]
-position = Vector2(387, 231)
-texture = ExtResource("9_4o52e")
-
-[node name="Obiekt-GrobIii5" type="Sprite2D" parent="Props"]
-position = Vector2(419, 235)
-texture = ExtResource("9_4o52e")
-
-[node name="Obiekt-GrobIii7" type="Sprite2D" parent="Props"]
-position = Vector2(385, 265)
-texture = ExtResource("9_4o52e")
-
-[node name="Obiekt-GrobIii8" type="Sprite2D" parent="Props"]
-position = Vector2(427, 268)
-texture = ExtResource("9_4o52e")
-
-[node name="Obiekt-GrobIii9" type="Sprite2D" parent="Props"]
-position = Vector2(460, 249)
-texture = ExtResource("9_4o52e")
-
-[node name="Obiekt-GrobIii6" type="Sprite2D" parent="Props"]
-position = Vector2(446, 220)
-texture = ExtResource("9_4o52e")
-
 [node name="Obiekt-GrobIii" type="Sprite2D" parent="Props"]
-position = Vector2(401, 202)
+position = Vector2(391.5, 198.5)
 texture = ExtResource("9_4o52e")
 
 [node name="Obiekt-GrobIii2" type="Sprite2D" parent="Props"]
-position = Vector2(429, 190)
-texture = ExtResource("9_4o52e")
+position = Vector2(431.5, 180.5)
+texture = ExtResource("12_7vgmr")
 
 [node name="Obiekt-GrobIii3" type="Sprite2D" parent="Props"]
-position = Vector2(462, 189)
+position = Vector2(481.5, 186.5)
+texture = ExtResource("13_euti5")
+
+[node name="Obiekt-GrobIii4" type="Sprite2D" parent="Props"]
+position = Vector2(377.5, 234.5)
+texture = ExtResource("13_euti5")
+
+[node name="Obiekt-GrobIii5" type="Sprite2D" parent="Props"]
+position = Vector2(422.5, 242.5)
 texture = ExtResource("9_4o52e")
+
+[node name="Obiekt-GrobIii6" type="Sprite2D" parent="Props"]
+position = Vector2(458.5, 220.5)
+texture = ExtResource("12_7vgmr")
+
+[node name="Obiekt-GrobIii7" type="Sprite2D" parent="Props"]
+position = Vector2(397.5, 279.5)
+texture = ExtResource("13_euti5")
+
+[node name="Obiekt-GrobIii8" type="Sprite2D" parent="Props"]
+position = Vector2(448.5, 290.5)
+texture = ExtResource("13_euti5")
+
+[node name="Obiekt-GrobIii9" type="Sprite2D" parent="Props"]
+position = Vector2(476.5, 256.5)
+texture = ExtResource("12_7vgmr")
 
 [node name="Obiekty-Krzeseko1" type="Sprite2D" parent="Props"]
 position = Vector2(272, 401)
@@ -407,39 +433,39 @@ position = Vector2(339.5, 225.5)
 shape = SubResource("RectangleShape2D_gxoma")
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(399, 210.25)
+position = Vector2(389.5, 206.75)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(427, 198.25)
+position = Vector2(429.5, 188.75)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(460, 197.25)
+position = Vector2(479.5, 194.75)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(385, 239.25)
+position = Vector2(375.5, 242.75)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(417, 243.25)
+position = Vector2(420.5, 250.75)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(444, 228.25)
+position = Vector2(456.5, 228.75)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D33" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(383, 273.25)
+position = Vector2(395.5, 287.75)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D34" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(425, 276.25)
+position = Vector2(446.5, 299.5)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D35" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(458, 257.25)
+position = Vector2(474.5, 264.75)
 shape = SubResource("RectangleShape2D_o76pg")
 
 [node name="CollisionShape2D36" type="CollisionShape2D" parent="Collisions"]
@@ -466,20 +492,133 @@ shape = SubResource("RectangleShape2D_gxgaf")
 position = Vector2(453.5, 475)
 shape = SubResource("RectangleShape2D_gxgaf")
 
+[node name="Graves" type="Node2D" parent="."]
+
+[node name="NoName" type="Area2D" parent="Graves"]
+script = ExtResource("19_7vgmr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Graves/NoName"]
+position = Vector2(457, 224)
+shape = SubResource("RectangleShape2D_euti5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graves/NoName"]
+position = Vector2(429, 186)
+shape = SubResource("RectangleShape2D_euti5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Graves/NoName"]
+position = Vector2(480, 192)
+shape = SubResource("RectangleShape2D_euti5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Graves/NoName"]
+position = Vector2(475, 260)
+shape = SubResource("RectangleShape2D_euti5")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Graves/NoName"]
+position = Vector2(446.5, 296.5)
+shape = SubResource("RectangleShape2D_euti5")
+
+[node name="Label" type="Label" parent="Graves/NoName"]
+z_index = 3
+offset_left = 594.0
+offset_top = 238.0
+offset_right = 653.0
+offset_bottom = 262.0
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "kocham sklep żabka"
+horizontal_alignment = 1
+
+[node name="Miller" type="Area2D" parent="Graves"]
+script = ExtResource("20_euti5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graves/Miller"]
+position = Vector2(375, 239)
+shape = SubResource("RectangleShape2D_t5l5y")
+
+[node name="Label" type="Label" parent="Graves/Miller"]
+z_index = 3
+offset_left = 594.0
+offset_top = 247.0
+offset_right = 653.0
+offset_bottom = 271.0
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "kocham sklep żabka"
+horizontal_alignment = 1
+
+[node name="Lee" type="Area2D" parent="Graves"]
+script = ExtResource("21_t5l5y")
+
+[node name="Label" type="Label" parent="Graves/Lee"]
+z_index = 3
+offset_left = 594.0
+offset_top = 265.0
+offset_right = 653.0
+offset_bottom = 289.0
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "kocham sklep żabka"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graves/Lee"]
+position = Vector2(420.5, 248)
+shape = SubResource("RectangleShape2D_dtdgo")
+
+[node name="Samuel" type="Area2D" parent="Graves"]
+script = ExtResource("22_dtdgo")
+
+[node name="Label" type="Label" parent="Graves/Samuel"]
+z_index = 3
+offset_left = 594.0
+offset_top = 229.0
+offset_right = 653.0
+offset_bottom = 253.0
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "kocham sklep żabka"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graves/Samuel"]
+position = Vector2(395.5, 285)
+shape = SubResource("RectangleShape2D_f1h5k")
+
+[node name="Nolan" type="Area2D" parent="Graves"]
+script = ExtResource("23_f1h5k")
+
+[node name="Label" type="Label" parent="Graves/Nolan"]
+z_index = 3
+offset_left = 594.0
+offset_top = 256.0
+offset_right = 653.0
+offset_bottom = 280.0
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "kocham sklep żabka"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graves/Nolan"]
+position = Vector2(389, 204)
+shape = SubResource("RectangleShape2D_uhl2e")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_o76pg")
 script = ExtResource("16_71emk")
 
 [node name="HUD" parent="." instance=ExtResource("19_4o52e")]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Hatch" type="Area2D" parent="."]
 script = ExtResource("20_x2kxo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hatch"]
 position = Vector2(246, 246.5)
 shape = SubResource("RectangleShape2D_7vgmr")
 
-[node name="Label" type="Label" parent="Area2D"]
+[node name="Label" type="Label" parent="Hatch"]
 z_index = 3
 offset_left = 228.0
 offset_top = 215.0
@@ -491,5 +630,36 @@ theme_override_font_sizes/font_size = 6
 text = "[E]"
 horizontal_alignment = 1
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[node name="Body" type="Area2D" parent="."]
+script = ExtResource("28_uhl2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+position = Vector2(215.5, 27)
+shape = SubResource("RectangleShape2D_744ua")
+
+[node name="Label" type="Label" parent="Body"]
+z_index = 3
+offset_left = 176.0
+offset_top = -86.0
+offset_right = 252.0
+offset_bottom = -69.0
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "Więcej ciałka do kochanka"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Graves/NoName" to="Graves/NoName" method="_on_body_entered"]
+[connection signal="body_exited" from="Graves/NoName" to="Graves/NoName" method="_on_body_exited"]
+[connection signal="body_entered" from="Graves/Miller" to="Graves/Miller" method="_on_body_entered"]
+[connection signal="body_exited" from="Graves/Miller" to="Graves/Miller" method="_on_body_exited"]
+[connection signal="body_entered" from="Graves/Lee" to="Graves/Lee" method="_on_body_entered"]
+[connection signal="body_exited" from="Graves/Lee" to="Graves/Lee" method="_on_body_exited"]
+[connection signal="body_entered" from="Graves/Samuel" to="Graves/Samuel" method="_on_body_entered"]
+[connection signal="body_exited" from="Graves/Samuel" to="Graves/Samuel" method="_on_body_exited"]
+[connection signal="body_entered" from="Graves/Nolan" to="Graves/Nolan" method="_on_body_entered"]
+[connection signal="body_exited" from="Graves/Nolan" to="Graves/Nolan" method="_on_body_exited"]
+[connection signal="body_entered" from="Hatch" to="Hatch" method="_on_body_entered"]
+[connection signal="body_exited" from="Hatch" to="Hatch" method="_on_body_exited"]
+[connection signal="body_entered" from="Body" to="Body" method="_on_body_entered"]
+[connection signal="body_exited" from="Body" to="Body" method="_on_body_exited"]

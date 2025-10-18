@@ -4,6 +4,12 @@ class_name Detector
 var showInteractionLabel = false
 signal show_detector
 
+var dialogue_sprite: Sprite2D
+var dialogues = ["This thing sees more than eyes.",
+"The warmth of the skin, the silence in the nerves.",
+"They don't scream when infected but this detector hears their silence."]
+var dialogue_index = 0
+
 func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	

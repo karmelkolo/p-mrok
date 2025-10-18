@@ -131,12 +131,13 @@ size = Vector2(4.80809, 1.86837)
 size = Vector2(17.2043, 2.02245)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfpy5"]
-size = Vector2(16, 8)
+size = Vector2(16, 3)
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
 
 [node name="FadeIn" type="Sprite2D" parent="."]
+visible = false
 z_index = 1000
 position = Vector2(96, 88)
 scale = Vector2(1.28, 1.17333)
@@ -483,20 +484,8 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("32_v5sre")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Radio"]
-position = Vector2(126, 75)
+position = Vector2(126, 72.5)
 shape = SubResource("RectangleShape2D_lfpy5")
-
-[node name="Label" type="Label" parent="Radio"]
-z_index = 5
-offset_left = 226.0
-offset_top = 59.0
-offset_right = 314.0
-offset_bottom = 82.0
-scale = Vector2(1.00671, 1)
-theme_override_font_sizes/font_size = 6
-text = "Radio easteregg lol"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Wyjscie_interaction" to="Wyjscie_interaction" method="_on_body_entered"]
 [connection signal="body_exited" from="Wyjscie_interaction" to="Wyjscie_interaction" method="_on_body_exited"]
@@ -509,5 +498,3 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_exited" from="Mirror" to="Mirror" method="_on_body_exited"]
 [connection signal="body_entered" from="Safe" to="Safe" method="_on_body_entered"]
 [connection signal="body_exited" from="Safe" to="Safe" method="_on_body_exited"]
-[connection signal="body_entered" from="Radio" to="Radio" method="_on_body_entered"]
-[connection signal="body_exited" from="Radio" to="Radio" method="_on_body_exited"]

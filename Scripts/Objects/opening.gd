@@ -1,7 +1,34 @@
 extends Node2D
 
+@onready var label: RichTextLabel = $CanvasLayer/Intro
+@onready var timer: Timer = $CanvasLayer/Intro/Timer
+
+var full_text: String = "Hello, my name is Adam Bones.\n\nI suffer from the worst disease known to world.\n\nI'm making this recording in the hope that somebody, somewhere will make a cure for it.\n\nAs for me it's already too late."
+var current_index: int = 0
+var currently_playing = -1
+
 func _ready() -> void:
-	pass
-	
-func _process(delta: float) -> void:
-	get_tree().change_scene_to_file("res://Scenes/SafeHouse.tscn")
+	label.text = ""
+	timer.timeout.connect(_on_timer_timeout)
+	visible = true
+	timer.wait_time = 0.04
+	timer.start()
+	currently_playing = 1
+
+func _on_timer_timeout():
+	if current_index < full_text.length():
+		label.text += full_text[current_index]
+		current_index += 1
+	else:
+		currently_playing = 0
+		timer.stop()
+		
+func _input(event):
+	if event.is_action_pressed("continue"):
+		if currently_playing == 1:
+			label.text = full_text
+			current_index = full_text.length()
+			currently_playing = 0
+			timer.stop()
+		elif currently_playing == 0:
+			get_tree().change_scene_to_file("res://Scenes/SafeHouse.tscn")
