@@ -439,6 +439,12 @@ size = Vector2(448, 112)
 [node name="Surface" type="Node2D"]
 y_sort_enabled = true
 
+[node name="Ambience" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_o76pg")
+max_distance = 4096.0
+attenuation = 1e-05
+script = ExtResource("16_71emk")
+
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("4_di0hy")
 player = NodePath("../Player")
@@ -1296,10 +1302,6 @@ shape = SubResource("RectangleShape2D_r5tdu")
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="Border"]
 position = Vector2(48, -541)
 shape = SubResource("RectangleShape2D_iglxr")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("17_o76pg")
-script = ExtResource("16_71emk")
 
 [connection signal="body_entered" from="Hatch" to="Hatch" method="_on_body_entered"]
 [connection signal="body_exited" from="Hatch" to="Hatch" method="_on_body_exited"]

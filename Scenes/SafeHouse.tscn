@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://51qr3tu6ex3n"]
+[gd_scene load_steps=56 format=4 uid="uid://51qr3tu6ex3n"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_3y2t8"]
 [ext_resource type="Texture2D" uid="uid://b00vq0jrdef8g" path="res://Textures/Objects/FadeIn/fadein.png" id="1_y53bk"]
@@ -136,6 +136,7 @@ size = Vector2(16, 8)
 y_sort_enabled = true
 
 [node name="FadeIn" type="Sprite2D" parent="."]
+visible = false
 z_index = 1000
 position = Vector2(96, 88)
 scale = Vector2(1.28, 1.17333)
