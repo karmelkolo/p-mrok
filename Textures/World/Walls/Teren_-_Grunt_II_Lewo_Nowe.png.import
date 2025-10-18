@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbh4v6v1foojj"
-path="res://.godot/imported/Teren_-_Grunt_II_Prawo_Nowe.png-ebe1e89503e0789337a3c5a2b49e6a58.ctex"
+uid="uid://cawoji8wycx2n"
+path="res://.godot/imported/Teren_-_Grunt_II_Lewo_Nowe.png-7b51e53adf2c1bca1fd3c367f7e38d68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Teren_-_Grunt_II_Prawo_Nowe.png"
-dest_files=["res://.godot/imported/Teren_-_Grunt_II_Prawo_Nowe.png-ebe1e89503e0789337a3c5a2b49e6a58.ctex"]
+source_file="res://Textures/World/Walls/Teren_-_Grunt_II_Lewo_Nowe.png"
+dest_files=["res://.godot/imported/Teren_-_Grunt_II_Lewo_Nowe.png-7b51e53adf2c1bca1fd3c367f7e38d68.ctex"]
 
 [params]
 

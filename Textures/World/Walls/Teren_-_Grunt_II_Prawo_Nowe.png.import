@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgxjltcasf2af"
-path="res://.godot/imported/Teren_-_Skret_Prawo_Do_Nowe.png-1fbaf27f72611a9fabe85c3c50320ab2.ctex"
+uid="uid://cbh4v6v1foojj"
+path="res://.godot/imported/Teren_-_Grunt_II_Prawo_Nowe.png-af673cf83a081ac90557fc1d76daaafb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Teren_-_Skret_Prawo_Do_Nowe.png"
-dest_files=["res://.godot/imported/Teren_-_Skret_Prawo_Do_Nowe.png-1fbaf27f72611a9fabe85c3c50320ab2.ctex"]
+source_file="res://Textures/World/Walls/Teren_-_Grunt_II_Prawo_Nowe.png"
+dest_files=["res://.godot/imported/Teren_-_Grunt_II_Prawo_Nowe.png-af673cf83a081ac90557fc1d76daaafb.ctex"]
 
 [params]
 

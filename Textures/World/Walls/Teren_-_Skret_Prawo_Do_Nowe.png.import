@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcoaebu6stxjo"
-path="res://.godot/imported/Teren_-_Skret_Lewo_Do_Nowe.png-ec5a492e404fa3c63154a279383d40cf.ctex"
+uid="uid://cgxjltcasf2af"
+path="res://.godot/imported/Teren_-_Skret_Prawo_Do_Nowe.png-ab2b8a902c627a4d8fef56f98b2d3f62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Teren_-_Skret_Lewo_Do_Nowe.png"
-dest_files=["res://.godot/imported/Teren_-_Skret_Lewo_Do_Nowe.png-ec5a492e404fa3c63154a279383d40cf.ctex"]
+source_file="res://Textures/World/Walls/Teren_-_Skret_Prawo_Do_Nowe.png"
+dest_files=["res://.godot/imported/Teren_-_Skret_Prawo_Do_Nowe.png-ab2b8a902c627a4d8fef56f98b2d3f62.ctex"]
 
 [params]
 

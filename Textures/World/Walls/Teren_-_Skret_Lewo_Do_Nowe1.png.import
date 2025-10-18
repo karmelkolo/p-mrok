@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db4yeygjejkkv"
-path="res://.godot/imported/Teren_-_Sciana_II_Gora_Nowe.png-65de4e87a8828c4e2267baedcd4baa9f.ctex"
+uid="uid://dops7buiqnk5l"
+path="res://.godot/imported/Teren_-_Skret_Lewo_Do_Nowe1.png-e2c0acf94673872bbbefd8bb42554e8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Teren_-_Sciana_II_Gora_Nowe.png"
-dest_files=["res://.godot/imported/Teren_-_Sciana_II_Gora_Nowe.png-65de4e87a8828c4e2267baedcd4baa9f.ctex"]
+source_file="res://Textures/World/Walls/Teren_-_Skret_Lewo_Do_Nowe1.png"
+dest_files=["res://.godot/imported/Teren_-_Skret_Lewo_Do_Nowe1.png-e2c0acf94673872bbbefd8bb42554e8b.ctex"]
 
 [params]
 
