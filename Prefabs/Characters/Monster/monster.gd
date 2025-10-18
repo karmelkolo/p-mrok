@@ -4,6 +4,10 @@ extends CharacterBody2D
 @export var SPEED = 10
 @onready var nav_agent = $NavigationAgent2D
 
+func _ready() -> void:
+	if !target:
+		$NavigationAgent2D/Timer.stop()
+
 func _physics_process(_delta: float) -> void:
 	var direction = to_local(nav_agent.get_next_path_position()).normalized()
 	velocity = direction * SPEED

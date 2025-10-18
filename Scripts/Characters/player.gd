@@ -4,6 +4,7 @@ class_name Player
 @export var SPEED = 25
 @export var czas = 0.6
 @export var ciemnosc = true
+@export var hasLamp = true
 
 var facing = "Down"
 
