@@ -20,6 +20,10 @@ func start(new_text: String, delay:= 0.0):
 	
 	await get_tree().create_timer(delay).timeout
 	
+	var player = get_tree().get_root().find_child("Player", true, false)
+	if player:
+		player.can_move = true
+	
 	visible = true
 	timer.wait_time = 0.04
 	timer.start()

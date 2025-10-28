@@ -1,4 +1,4 @@
-[gd_scene load_steps=154 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=156 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://bs0buy4cae4am" path="res://Textures/Objects/station/Obiekt_-_Pret_Stanowisko.png" id="43_ou8jh"]
 [ext_resource type="Texture2D" uid="uid://cgsxuiwf2heu5" path="res://Textures/Objects/station/Obiekt_-_Nowe_Stanowisko.png" id="44_j3bmc"]
 [ext_resource type="Texture2D" uid="uid://c330cxjumwjp3" path="res://Textures/Objects/station/Obiekt_-_Cien_Stanowisko.png" id="45_ktbx4"]
+[ext_resource type="Script" uid="uid://g8x5bnqcxb6p" path="res://Scripts/Objects/tank.gd" id="46_j3bmc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ev0y6"]
 texture = ExtResource("3_nimv8")
@@ -523,6 +524,9 @@ size = Vector2(14, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ih66b"]
 size = Vector2(14, 26)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krh6j"]
+size = Vector2(198, 103)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nimv8"]
 size = Vector2(48, 349)
 
@@ -604,7 +608,7 @@ player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_323lg")]
 unique_name_in_owner = true
-position = Vector2(-410, -117)
+position = Vector2(230, 239)
 
 [node name="Trenches" type="TileMapLayer" parent="."]
 z_index = -1
@@ -1012,8 +1016,6 @@ position = Vector2(453.5, 475)
 shape = SubResource("RectangleShape2D_ko86w")
 
 [node name="Graves" type="Node2D" parent="Surface1"]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="NoName" type="Area2D" parent="Surface1/Graves"]
 position = Vector2(0, 8)
@@ -1495,6 +1497,21 @@ shape = SubResource("RectangleShape2D_go17d")
 position = Vector2(-475, -121)
 shape = SubResource("RectangleShape2D_ih66b")
 
+[node name="Tank" type="Area2D" parent="Surface2"]
+script = ExtResource("46_j3bmc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Surface2/Tank"]
+position = Vector2(-508, -101.5)
+shape = SubResource("RectangleShape2D_krh6j")
+
+[node name="Label" type="Label" parent="Surface2/Tank"]
+offset_left = 679.0
+offset_top = 143.0
+offset_right = 794.0
+offset_bottom = 192.0
+text = "Tank Trouble 2
+"
+
 [node name="Border" type="StaticBody2D" parent="."]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
@@ -1608,7 +1625,19 @@ position = Vector2(-17, -9)
 stream = ExtResource("17_o76pg")
 script = ExtResource("16_71emk")
 
+[connection signal="body_entered" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_entered"]
+[connection signal="body_exited" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_exited"]
+[connection signal="body_entered" from="Surface1/Graves/Miller" to="Surface1/Graves/Miller" method="_on_body_entered"]
+[connection signal="body_exited" from="Surface1/Graves/Miller" to="Surface1/Graves/Miller" method="_on_body_exited"]
+[connection signal="body_entered" from="Surface1/Graves/Lee" to="Surface1/Graves/Lee" method="_on_body_entered"]
+[connection signal="body_exited" from="Surface1/Graves/Lee" to="Surface1/Graves/Lee" method="_on_body_exited"]
+[connection signal="body_entered" from="Surface1/Graves/Samuel" to="Surface1/Graves/Samuel" method="_on_body_entered"]
+[connection signal="body_exited" from="Surface1/Graves/Samuel" to="Surface1/Graves/Samuel" method="_on_body_exited"]
+[connection signal="body_entered" from="Surface1/Graves/Nolan" to="Surface1/Graves/Nolan" method="_on_body_entered"]
+[connection signal="body_exited" from="Surface1/Graves/Nolan" to="Surface1/Graves/Nolan" method="_on_body_exited"]
 [connection signal="body_entered" from="Hatch" to="Hatch" method="_on_body_entered"]
 [connection signal="body_exited" from="Hatch" to="Hatch" method="_on_body_exited"]
 [connection signal="body_entered" from="Body" to="Body" method="_on_body_entered"]
 [connection signal="body_exited" from="Body" to="Body" method="_on_body_exited"]
+[connection signal="body_entered" from="Surface2/Tank" to="Surface2/Tank" method="_on_body_entered"]
+[connection signal="body_exited" from="Surface2/Tank" to="Surface2/Tank" method="_on_body_exited"]

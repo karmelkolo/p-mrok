@@ -12,6 +12,7 @@ var carrying: bool = false
 
 var has_items = 0
 var was_surface = 0
+var can_move: bool = true
 
 func _ready() -> void:
 	%Ciemnosc.visible = ciemnosc
@@ -33,6 +34,9 @@ func _input(event) -> void:
 		get_tree().quit(0)
 
 func _physics_process(_delta: float) -> void:
+	if not can_move:
+		return
+		
 	var direction_x := Input.get_axis("ui_left", "ui_right")
 	if direction_x:
 		velocity.x = direction_x * SPEED
