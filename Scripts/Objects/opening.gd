@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var label: RichTextLabel = $CanvasLayer/Intro
 @onready var timer: Timer = $CanvasLayer/Intro/Timer
+@onready var type_sound: AudioStreamPlayer2D = $Type_Sound
 
 var full_text: String = "Hello, my name is Adam Bones.\n\nI suffer from the worst disease known to world.\n\nI'm making this recording in the hope that somebody, somewhere will make a cure for it.\n\nAs for me it's already too late."
 var current_index: int = 0
@@ -18,6 +19,8 @@ func _ready() -> void:
 func _on_timer_timeout():
 	if current_index < full_text.length():
 		label.text += full_text[current_index]
+		if not type_sound.playing:
+			type_sound.play()
 		current_index += 1
 	else:
 		currently_playing = 0
