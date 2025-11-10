@@ -13,6 +13,7 @@ var carrying: bool = false
 var has_items = 0
 var was_surface = 0
 var can_move: bool = true
+var running = false
 
 func _ready() -> void:
 	%Ciemnosc.visible = ciemnosc
@@ -23,9 +24,13 @@ func _ready() -> void:
 
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
+		if !running:
+			running = true
 		SPEED = SPEED * 2
 		czas = czas / 1.33
 	if event.is_action_released("run"):
+		if running:
+			running = false
 		SPEED = SPEED / 2.0
 		czas = czas * 1.33
 		if SPEED < 25:
@@ -61,6 +66,7 @@ func _physics_process(_delta: float) -> void:
 	if velocity != Vector2.ZERO:
 		$AnimationTree.set("parameters/Standing/blend_position", velocity)
 		$AnimationTree.set("parameters/Walking/blend_position", velocity)
+		$AnimationTree.set("parameters/Running/blend_position", velocity)
 		
 		
 	move_and_slide()

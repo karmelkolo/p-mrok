@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://cuot6jtv18rh8"]
+
+[ext_resource type="Script" uid="uid://ds0mv1jltl2o6" path="res://Scripts/Objects/mina.gd" id="1_dlik2"]
+[ext_resource type="Texture2D" uid="uid://bgyveso46xkna" path="res://Textures/Objects/Mine/Obiekty_-_Mina.png" id="2_m1fym"]
+[ext_resource type="Texture2D" uid="uid://dhwpen1bkesa" path="res://Textures/Objects/Mine/System_-_Boom1.png" id="3_otahl"]
+[ext_resource type="Texture2D" uid="uid://dbjt053r7vbrt" path="res://Textures/Objects/Mine/System_-_Boom2.png" id="4_qigib"]
+[ext_resource type="Texture2D" uid="uid://7nh0054ctbv5" path="res://Textures/Objects/Mine/System_-_Boom3.png" id="5_hm82p"]
+[ext_resource type="Texture2D" uid="uid://ba075ak4kvs3f" path="res://Textures/Objects/Mine/System_-_Boom4.png" id="6_1tav0"]
+[ext_resource type="Texture2D" uid="uid://bjoxrohjkj6rq" path="res://Textures/Objects/Mine/System_-_Boom5.png" id="7_l0ifd"]
+[ext_resource type="Texture2D" uid="uid://dg3reynfaywpq" path="res://Textures/Objects/Mine/System_-_Boom6.png" id="8_sx6vd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kuf18"]
+radius = 5.0
+height = 10.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pgu05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_otahl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qigib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hm82p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1tav0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l0ifd")
+}, {
+"duration": 5.0,
+"texture": ExtResource("8_sx6vd")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="mina" type="Area2D"]
+script = ExtResource("1_dlik2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kuf18")
+
+[node name="Minasprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_m1fym")
+
+[node name="Wybuch" type="AnimatedSprite2D" parent="."]
+z_index = 5
+sprite_frames = SubResource("SpriteFrames_pgu05")
+animation = &"idle"

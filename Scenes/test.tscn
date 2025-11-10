@@ -1,24 +1,18 @@
-[gd_scene load_steps=32 format=4 uid="uid://dtsox0iwji0pb"]
+[gd_scene load_steps=24 format=4 uid="uid://dtsox0iwji0pb"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_c0xso"]
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_o10i0"]
 [ext_resource type="PackedScene" uid="uid://dftcqovls2fyx" path="res://Prefabs/HUD.tscn" id="3_3qonj"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="3_lyx4m"]
 [ext_resource type="Texture2D" uid="uid://bhp5ykx0he3an" path="res://Textures/Objects/Safe/Obiekt_-_Sejf1.png" id="3_r807r"]
+[ext_resource type="PackedScene" uid="uid://cuot6jtv18rh8" path="res://Prefabs/mina.tscn" id="4_aees8"]
 [ext_resource type="Script" uid="uid://3hshyjontpi6" path="res://Scripts/Objects/safe.gd" id="5_55jlr"]
-[ext_resource type="Script" uid="uid://ds0mv1jltl2o6" path="res://Scripts/Objects/mina.gd" id="6_7nf3m"]
-[ext_resource type="Texture2D" uid="uid://bgyveso46xkna" path="res://Textures/Objects/Mine/Obiekty_-_Mina.png" id="7_2ocox"]
 [ext_resource type="Script" uid="uid://cp2csd3urcquo" path="res://Scripts/Audio/beep.gd" id="7_ow1fm"]
-[ext_resource type="Texture2D" uid="uid://dhwpen1bkesa" path="res://Textures/Objects/Mine/System_-_Boom1.png" id="8_wojap"]
-[ext_resource type="Texture2D" uid="uid://dbjt053r7vbrt" path="res://Textures/Objects/Mine/System_-_Boom2.png" id="9_copon"]
-[ext_resource type="Texture2D" uid="uid://7nh0054ctbv5" path="res://Textures/Objects/Mine/System_-_Boom3.png" id="10_wjyqs"]
-[ext_resource type="Texture2D" uid="uid://ba075ak4kvs3f" path="res://Textures/Objects/Mine/System_-_Boom4.png" id="11_kxtw2"]
 [ext_resource type="PackedScene" uid="uid://bv2fpuk7708ki" path="res://Prefabs/Characters/Monster/Monster.tscn" id="11_nnmni"]
-[ext_resource type="Texture2D" uid="uid://bjoxrohjkj6rq" path="res://Textures/Objects/Mine/System_-_Boom5.png" id="12_rhq6j"]
-[ext_resource type="Texture2D" uid="uid://dg3reynfaywpq" path="res://Textures/Objects/Mine/System_-_Boom6.png" id="13_copon"]
 [ext_resource type="AudioStream" uid="uid://df6ffuauar55s" path="res://Audio/sfx/detektor.mp3" id="13_mie3u"]
 [ext_resource type="Script" uid="uid://b5fkbytmfsbnw" path="res://Scripts/Audio/main_audio.gd" id="14_xi2i4"]
 [ext_resource type="AudioStream" uid="uid://gmcxdps6lgdi" path="res://Audio/main_ambient.mp3" id="15_7nf3m"]
+[ext_resource type="Script" uid="uid://wx07ogyu6mio" path="res://Scripts/Objects/camera.gd" id="20_n0wup"]
 
 [sub_resource type="GDScript" id="GDScript_ummv0"]
 script/source = "extends StaticBody2D
@@ -39,41 +33,6 @@ size = Vector2(16, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hn1lo"]
 size = Vector2(26, 32)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kuf18"]
-radius = 5.0
-height = 10.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pgu05"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_wojap")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_copon")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_wjyqs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_kxtw2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_rhq6j")
-}, {
-"duration": 5.0,
-"texture": ExtResource("13_copon")
-}],
-"loop": false,
-"name": &"explode",
-"speed": 10.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qy5o"]
 size = Vector2(75, 44)
@@ -143,22 +102,11 @@ offset_bottom = 38.0
 theme_override_font_sizes/font_size = 6
 text = "[E]"
 
-[node name="mina" type="Area2D" parent="."]
-script = ExtResource("6_7nf3m")
+[node name="mina" parent="." instance=ExtResource("4_aees8")]
+position = Vector2(58, 143)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mina"]
-position = Vector2(76, 162)
-shape = SubResource("CapsuleShape2D_kuf18")
-
-[node name="Minasprite" type="Sprite2D" parent="mina"]
-position = Vector2(76, 161)
-texture = ExtResource("7_2ocox")
-
-[node name="Wybuch" type="AnimatedSprite2D" parent="mina"]
-z_index = 5
-position = Vector2(76, 143)
-sprite_frames = SubResource("SpriteFrames_pgu05")
-animation = &"idle"
+[node name="mina2" parent="." instance=ExtResource("4_aees8")]
+position = Vector2(141, 124)
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 position = Vector2(102, 223)
@@ -225,6 +173,9 @@ shape = SubResource("RectangleShape2D_wojap")
 position = Vector2(520, 256)
 shape = SubResource("RectangleShape2D_n0wup")
 
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("20_n0wup")
+player = NodePath("../Player")
+
 [connection signal="body_entered" from="Safe_interaction" to="Safe_interaction" method="_on_body_entered"]
 [connection signal="body_exited" from="Safe_interaction" to="Safe_interaction" method="_on_body_exited"]
-[connection signal="body_entered" from="mina" to="Player" method="_on_mina_body_entered"]
