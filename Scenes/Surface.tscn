@@ -1,4 +1,4 @@
-[gd_scene load_steps=225 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=293 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://cgsxuiwf2heu5" path="res://Textures/Objects/station/Obiekt_-_Nowe_Stanowisko.png" id="44_j3bmc"]
 [ext_resource type="Texture2D" uid="uid://c330cxjumwjp3" path="res://Textures/Objects/station/Obiekt_-_Cien_Stanowisko.png" id="45_ktbx4"]
 [ext_resource type="Script" uid="uid://g8x5bnqcxb6p" path="res://Scripts/Objects/tank.gd" id="46_j3bmc"]
+[ext_resource type="Texture2D" uid="uid://nt3y44lufiv8" path="res://Textures/Objects/Living Wall/Teren_-_Zywa_Sciana.png" id="49_ktbx4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ev0y6"]
 texture = ExtResource("3_nimv8")
@@ -324,17 +325,146 @@ load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e67
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jd8kd"]
 load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2bwyk"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_48vxu"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fcuqq"]
 load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8u5a8"]
 load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5q17r"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_im5dm"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ixhq0"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ujv1i"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ptinx"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v4lyd"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h2dgi"]
 load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2bwyk"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jin4o"]
 load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rjji0"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vbwi6"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jfy6a"]
+load_path = "res://.godot/imported/Obiekt_-_Worki_Piasku.png-ae981288b9685e37e678198d7552fd53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jgtj"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_III.png-32e07e01f3b0a97e4a2669eb28a0e9fd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1jp2e"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_III.png-32e07e01f3b0a97e4a2669eb28a0e9fd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yhsho"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_III.png-32e07e01f3b0a97e4a2669eb28a0e9fd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8b3vj"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_III.png-32e07e01f3b0a97e4a2669eb28a0e9fd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nfg57"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_III.png-32e07e01f3b0a97e4a2669eb28a0e9fd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ipklw"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_III.png-32e07e01f3b0a97e4a2669eb28a0e9fd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_24vty"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_III.png-32e07e01f3b0a97e4a2669eb28a0e9fd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r5tdu"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iglxr"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_067lj"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_go17d"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wfbjt"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_borgg"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0fmm"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kkamb"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2h1wf"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_I.png-1898c8b2a1219b110abbd04935820766.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yrb47"]
+load_path = "res://.godot/imported/Obiekt_-_Ciao_I.png-9657b1beada4d5b7339fac455e11eedb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6dtv8"]
+load_path = "res://.godot/imported/Obiekt_-_Ciao_I.png-9657b1beada4d5b7339fac455e11eedb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6fgu4"]
+load_path = "res://.godot/imported/Obiekt_-_Ciao_I.png-9657b1beada4d5b7339fac455e11eedb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_060fd"]
+load_path = "res://.godot/imported/Obiekt_-_Ciao_I.png-9657b1beada4d5b7339fac455e11eedb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4251a"]
+load_path = "res://.godot/imported/Obiekt_-_Ciao_I.png-9657b1beada4d5b7339fac455e11eedb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_utavx"]
+load_path = "res://.godot/imported/Obiekt_-_Ciao_I.png-9657b1beada4d5b7339fac455e11eedb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_al27h"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_olatj"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dborj"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c7txx"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xu2tw"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4f070"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t3ycc"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ih66b"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_krh6j"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qebk8"]
+load_path = "res://.godot/imported/Obiekt_-_Drzewo_II.png-846139388189a80e74052bad61ecdf84.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_al27h"]
 size = Vector2(6, 13)
@@ -381,6 +511,21 @@ size = Vector2(6, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_borgg"]
 size = Vector2(6, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gyt7"]
+size = Vector2(5.0000267, 30.000008)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2oek"]
+size = Vector2(5.0000267, 30.000008)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86b2g"]
+size = Vector2(5.0000267, 31.000006)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rjms"]
+size = Vector2(5.0000267, 31.000006)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wgbw"]
+size = Vector2(5.0000267, 31.000006)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qv5v"]
 size = Vector2(6, 12.5)
@@ -472,7 +617,49 @@ size = Vector2(96, 12)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_im5dm"]
 size = Vector2(96, 12)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rutb"]
+size = Vector2(96, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpgmy"]
+size = Vector2(96, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pr3u"]
+size = Vector2(96, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngoh0"]
+size = Vector2(96, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3878f"]
+size = Vector2(96, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbbh1"]
+size = Vector2(96, 12)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixhq0"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7xt5"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aesdo"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_328na"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb25b"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sndfj"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52w5b"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qanr0"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nne03"]
 size = Vector2(33, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ujv1i"]
@@ -595,6 +782,15 @@ size = Vector2(33, 30)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_067lj"]
 size = Vector2(28, 40)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0gyt7"]
+load_path = "res://.godot/imported/Obiekt_-_Zasieki.png-f9b1679c650ef291f719bd527082b76b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86b2g"]
+load_path = "res://.godot/imported/Obiekt_-_Zasieki.png-f9b1679c650ef291f719bd527082b76b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2rjms"]
+load_path = "res://.godot/imported/Obiekt_-_Zasieki.png-f9b1679c650ef291f719bd527082b76b.ctex"
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j73o4"]
 radius = 13.0
 height = 88.0
@@ -603,13 +799,13 @@ height = 88.0
 size = Vector2(64, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iptjq"]
-size = Vector2(129, 12)
+size = Vector2(149, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55c28"]
-size = Vector2(129, 12)
+size = Vector2(156.64465, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bjpf"]
-size = Vector2(129, 12)
+size = Vector2(147.5, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2hjd"]
 size = Vector2(150, 10)
@@ -707,11 +903,17 @@ size = Vector2(13, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdy1w"]
 size = Vector2(13.5, 10)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anrmr"]
+size = Vector2(33.9375, 75.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wik3l"]
+size = Vector2(35.9375, 11.625)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d78j4"]
 size = Vector2(13.5, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkcnx"]
-size = Vector2(12.625, 10)
+size = Vector2(13, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6gbaq"]
 size = Vector2(13.166504, 10)
@@ -859,56 +1061,122 @@ position = Vector2(248, 248)
 texture = ExtResource("5_di0hy")
 
 [node name="Obiekt-WorkiPiasku" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(286, 185)
+position = Vector2(300, 194)
 texture = ExtResource("4_gdppd")
 region_enabled = true
 region_rect = Rect2(0, 0, 96, 25)
 
 [node name="Obiekt-WorkiPiasku9" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(-1382, 57)
+position = Vector2(21, -142)
 texture = SubResource("CompressedTexture2D_j3bmc")
 region_enabled = true
 region_rect = Rect2(0, 0, 96, 25)
 
 [node name="Obiekt-WorkiPiasku10" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(-1379, 23)
+position = Vector2(229, -147)
 texture = SubResource("CompressedTexture2D_ktbx4")
 region_enabled = true
 region_rect = Rect2(0, 0, 96, 25)
 
 [node name="Obiekt-WorkiPiasku11" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(-1385, 95)
+position = Vector2(-394, -85)
 texture = SubResource("CompressedTexture2D_jd8kd")
 region_enabled = true
 region_rect = Rect2(0, 0, 96, 25)
 
+[node name="Obiekt-WorkiPiasku17" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-408, -273)
+texture = SubResource("CompressedTexture2D_2bwyk")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 25)
+
+[node name="Obiekt-WorkiPiasku16" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-576, -97)
+texture = SubResource("CompressedTexture2D_48vxu")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 25)
+
 [node name="Obiekt-WorkiPiasku12" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(-1251, 163)
+position = Vector2(-82, 189)
 texture = SubResource("CompressedTexture2D_fcuqq")
 region_enabled = true
 region_rect = Rect2(0, 0, 96, 25)
 
 [node name="Obiekt-WorkiPiasku2" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(167, 233)
+position = Vector2(162, 201)
 texture = ExtResource("4_gdppd")
 region_enabled = true
 region_rect = Rect2(96, 0, 34, 25)
 
 [node name="Obiekt-WorkiPiasku6" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(-1277, 70)
+position = Vector2(54, -172)
 texture = SubResource("CompressedTexture2D_8u5a8")
 region_enabled = true
 region_rect = Rect2(96, 0, 34, 25)
 
+[node name="Obiekt-WorkiPiasku18" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-341, -129)
+texture = SubResource("CompressedTexture2D_5q17r")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
+[node name="Obiekt-WorkiPiasku19" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-644, -209)
+texture = SubResource("CompressedTexture2D_im5dm")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
+[node name="Obiekt-WorkiPiasku20" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-637, -228)
+texture = SubResource("CompressedTexture2D_ixhq0")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
+[node name="Obiekt-WorkiPiasku21" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-576, -248)
+texture = SubResource("CompressedTexture2D_ujv1i")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
+[node name="Obiekt-WorkiPiasku22" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-330, -196)
+texture = SubResource("CompressedTexture2D_ptinx")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
+[node name="Obiekt-WorkiPiasku23" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-164, -148)
+texture = SubResource("CompressedTexture2D_v4lyd")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
 [node name="Obiekt-WorkiPiasku7" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(-1218, 73)
+position = Vector2(-157, 176)
 texture = SubResource("CompressedTexture2D_h2dgi")
 region_enabled = true
 region_rect = Rect2(96, 0, 34, 25)
 
 [node name="Obiekt-WorkiPiasku8" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(-1251, 40)
-texture = SubResource("CompressedTexture2D_2bwyk")
+position = Vector2(-679, 64)
+texture = SubResource("CompressedTexture2D_jin4o")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
+[node name="Obiekt-WorkiPiasku13" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-685, 82)
+texture = SubResource("CompressedTexture2D_rjji0")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
+[node name="Obiekt-WorkiPiasku14" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-668, 99)
+texture = SubResource("CompressedTexture2D_vbwi6")
+region_enabled = true
+region_rect = Rect2(96, 0, 34, 25)
+
+[node name="Obiekt-WorkiPiasku15" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-679, 114)
+texture = SubResource("CompressedTexture2D_jfy6a")
 region_enabled = true
 region_rect = Rect2(96, 0, 34, 25)
 
@@ -1014,14 +1282,99 @@ position = Vector2(418, 231)
 texture = ExtResource("13_7vgmr")
 offset = Vector2(5, -58)
 
+[node name="Obiekt-DrzewoIii4" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-157, 130)
+texture = SubResource("CompressedTexture2D_0jgtj")
+offset = Vector2(5, -58)
+
+[node name="Obiekt-DrzewoIii5" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(132, -337)
+texture = SubResource("CompressedTexture2D_1jp2e")
+offset = Vector2(5, -58)
+
+[node name="Obiekt-DrzewoIii6" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-485, -489)
+texture = SubResource("CompressedTexture2D_yhsho")
+offset = Vector2(5, -58)
+
+[node name="Obiekt-DrzewoIii7" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-897, -241)
+texture = SubResource("CompressedTexture2D_8b3vj")
+offset = Vector2(5, -58)
+
+[node name="Obiekt-DrzewoIii8" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-897, -241)
+texture = SubResource("CompressedTexture2D_8b3vj")
+offset = Vector2(5, -58)
+
+[node name="Obiekt-DrzewoIii9" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-902, 27)
+texture = SubResource("CompressedTexture2D_nfg57")
+offset = Vector2(5, -58)
+
+[node name="Obiekt-DrzewoIii10" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-921, 148)
+texture = SubResource("CompressedTexture2D_ipklw")
+offset = Vector2(5, -58)
+
+[node name="Obiekt-DrzewoIii11" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-857, 229)
+texture = SubResource("CompressedTexture2D_24vty")
+offset = Vector2(5, -58)
+
 [node name="Obiekt-DrzewoIi4" type="Sprite2D" parent="Surface1/Props"]
 position = Vector2(343, 419)
 texture = ExtResource("12_gxgaf")
 offset = Vector2(0, -35)
 
 [node name="Obiekt-DrzewoI3" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(68, 156)
+position = Vector2(67, 156)
 texture = ExtResource("11_gxoma")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI5" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-23, -428)
+texture = SubResource("CompressedTexture2D_r5tdu")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI6" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-346, -397)
+texture = SubResource("CompressedTexture2D_iglxr")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI4" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-333, -17)
+texture = SubResource("CompressedTexture2D_067lj")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI7" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-778, 146)
+texture = SubResource("CompressedTexture2D_go17d")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI8" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-860, 148)
+texture = SubResource("CompressedTexture2D_wfbjt")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI9" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-959, 188)
+texture = SubResource("CompressedTexture2D_borgg")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI10" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-999, 235)
+texture = SubResource("CompressedTexture2D_j0fmm")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI11" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-1073, 235)
+texture = SubResource("CompressedTexture2D_kkamb")
+offset = Vector2(0, -44)
+
+[node name="Obiekt-DrzewoI12" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-1070, 154)
+texture = SubResource("CompressedTexture2D_2h1wf")
 offset = Vector2(0, -44)
 
 [node name="Obiekt-CiaoI" type="Sprite2D" parent="Surface1/Props"]
@@ -1029,14 +1382,96 @@ z_index = -1
 position = Vector2(187, 45)
 texture = ExtResource("14_euti5")
 
+[node name="Obiekt-CiaoI2" type="Sprite2D" parent="Surface1/Props"]
+z_index = -1
+position = Vector2(-299, 67)
+rotation = 2.6179938
+texture = SubResource("CompressedTexture2D_yrb47")
+
+[node name="Obiekt-CiaoI3" type="Sprite2D" parent="Surface1/Props"]
+z_index = -1
+position = Vector2(-257, -351)
+rotation = 4.4505897
+texture = SubResource("CompressedTexture2D_6dtv8")
+
+[node name="Obiekt-CiaoI4" type="Sprite2D" parent="Surface1/Props"]
+z_index = -1
+position = Vector2(-670, -281)
+rotation = 4.712389
+texture = SubResource("CompressedTexture2D_6fgu4")
+
+[node name="Obiekt-CiaoI5" type="Sprite2D" parent="Surface1/Props"]
+z_index = -1
+position = Vector2(-976, -372)
+rotation = 1.3089969
+texture = SubResource("CompressedTexture2D_060fd")
+
+[node name="Obiekt-CiaoI6" type="Sprite2D" parent="Surface1/Props"]
+z_index = -1
+position = Vector2(-810.99994, -115.99997)
+rotation = -0.5235988
+texture = SubResource("CompressedTexture2D_4251a")
+
+[node name="Obiekt-CiaoI7" type="Sprite2D" parent="Surface1/Props"]
+z_index = -1
+position = Vector2(-844, 40)
+rotation = -2.8797934
+texture = SubResource("CompressedTexture2D_utavx")
+
 [node name="Obiekt-DrzewoIi6" type="Sprite2D" parent="Surface1/Props"]
 position = Vector2(100, 295)
 texture = ExtResource("12_gxgaf")
 offset = Vector2(0, -35)
 
-[node name="Obiekt-DrzewoIii3" type="Sprite2D" parent="Surface1/Props"]
-position = Vector2(-479, -542)
-texture = ExtResource("13_7vgmr")
+[node name="Obiekt-DrzewoIi7" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-273, -113)
+texture = SubResource("CompressedTexture2D_al27h")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi8" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(32, -181)
+texture = SubResource("CompressedTexture2D_olatj")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi9" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-653, -390)
+texture = SubResource("CompressedTexture2D_dborj")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi10" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-726, -7)
+texture = SubResource("CompressedTexture2D_c7txx")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi12" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-780, 229)
+texture = SubResource("CompressedTexture2D_xu2tw")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi13" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-921, 231)
+texture = SubResource("CompressedTexture2D_4f070")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi14" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-815, 173)
+texture = SubResource("CompressedTexture2D_t3ycc")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi15" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-888, 183)
+texture = SubResource("CompressedTexture2D_ih66b")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi16" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-1037, 179)
+texture = SubResource("CompressedTexture2D_krh6j")
+offset = Vector2(0, -35)
+
+[node name="Obiekt-DrzewoIi11" type="Sprite2D" parent="Surface1/Props"]
+position = Vector2(-495, 94)
+texture = SubResource("CompressedTexture2D_qebk8")
+offset = Vector2(0, -35)
 
 [node name="Obiekt-NamiotI4" type="Sprite2D" parent="Surface1/Props"]
 position = Vector2(30, -358)
@@ -1151,6 +1586,31 @@ shape = SubResource("RectangleShape2D_wfbjt")
 position = Vector2(168, 165)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_borgg")
+
+[node name="CollisionShape2D95" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-39, -261.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_0gyt7")
+
+[node name="CollisionShape2D99" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-479, -97)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_j2oek")
+
+[node name="CollisionShape2D96" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-820, -390)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_86b2g")
+
+[node name="CollisionShape2D97" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-1052, -303)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_2rjms")
+
+[node name="CollisionShape2D98" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-973, 243)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7wgbw")
 
 [node name="CollisionShape2D44" type="CollisionShape2D" parent="Surface1/Collisions"]
 position = Vector2(265.25, -453)
@@ -1287,12 +1747,68 @@ position = Vector2(261, 298.5)
 shape = SubResource("RectangleShape2D_5q17r")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(286, 191.5)
+position = Vector2(300, 201)
 shape = SubResource("RectangleShape2D_im5dm")
 
+[node name="CollisionShape2D81" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-82, 195)
+shape = SubResource("RectangleShape2D_6rutb")
+
+[node name="CollisionShape2D83" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(230, -140)
+shape = SubResource("RectangleShape2D_xpgmy")
+
+[node name="CollisionShape2D84" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(21, -134)
+shape = SubResource("RectangleShape2D_7pr3u")
+
+[node name="CollisionShape2D86" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-394, -79)
+shape = SubResource("RectangleShape2D_ngoh0")
+
+[node name="CollisionShape2D87" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-576, -91)
+shape = SubResource("RectangleShape2D_3878f")
+
+[node name="CollisionShape2D88" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-409, -267)
+shape = SubResource("RectangleShape2D_wbbh1")
+
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(167, 238)
+position = Vector2(162, 208)
 shape = SubResource("RectangleShape2D_ixhq0")
+
+[node name="CollisionShape2D82" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-157, 182)
+shape = SubResource("RectangleShape2D_v7xt5")
+
+[node name="CollisionShape2D85" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(54, -166)
+shape = SubResource("RectangleShape2D_aesdo")
+
+[node name="CollisionShape2D89" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-341, -122)
+shape = SubResource("RectangleShape2D_328na")
+
+[node name="CollisionShape2D90" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-330, -189)
+shape = SubResource("RectangleShape2D_tb25b")
+
+[node name="CollisionShape2D94" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-164, -141)
+shape = SubResource("RectangleShape2D_sndfj")
+
+[node name="CollisionShape2D91" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-576, -241)
+shape = SubResource("RectangleShape2D_52w5b")
+
+[node name="CollisionShape2D92" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-637, -221)
+shape = SubResource("RectangleShape2D_qanr0")
+
+[node name="CollisionShape2D93" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-644, -203)
+shape = SubResource("RectangleShape2D_nne03")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Surface1/Collisions"]
 position = Vector2(187.5, 278.5)
@@ -1575,7 +2091,7 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("28_uhl2e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
-position = Vector2(168, 35)
+position = Vector2(168, 38)
 shape = SubResource("RectangleShape2D_067lj")
 
 [node name="Label" type="Label" parent="Body"]
@@ -1605,17 +2121,29 @@ texture = ExtResource("23_w7xge")
 offset = Vector2(-17, -74)
 
 [node name="Obiekt-Zasieki" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-1343, -152)
+position = Vector2(-327, 108)
 texture = ExtResource("24_vto77")
 region_rect = Rect2(100, 0, 50, 22)
 
-[node name="Obiekt-DrzewoI" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-40, -481)
-texture = ExtResource("11_gxoma")
+[node name="Obiekt-Zasieki2" type="Sprite2D" parent="Surface2/props"]
+position = Vector2(-327, 108)
+texture = ExtResource("24_vto77")
+region_rect = Rect2(100, 0, 50, 22)
 
-[node name="Obiekt-DrzewoIi" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-512, 49)
-texture = ExtResource("12_gxgaf")
+[node name="Obiekt-Zasieki3" type="Sprite2D" parent="Surface2/props"]
+position = Vector2(115, -320)
+texture = SubResource("CompressedTexture2D_0gyt7")
+region_rect = Rect2(100, 0, 50, 22)
+
+[node name="Obiekt-Zasieki4" type="Sprite2D" parent="Surface2/props"]
+position = Vector2(-975, 35)
+texture = SubResource("CompressedTexture2D_86b2g")
+region_rect = Rect2(100, 0, 50, 22)
+
+[node name="Obiekt-Zasieki5" type="Sprite2D" parent="Surface2/props"]
+position = Vector2(-753, 35)
+texture = SubResource("CompressedTexture2D_2rjms")
+region_rect = Rect2(100, 0, 50, 22)
 
 [node name="Obiekty-Mina" type="Sprite2D" parent="Surface2/props"]
 z_index = -1
@@ -1629,12 +2157,12 @@ texture = ExtResource("25_42tgc")
 
 [node name="Obiekty-Mina3" type="Sprite2D" parent="Surface2/props"]
 z_index = -1
-position = Vector2(181, -238)
+position = Vector2(179, -257)
 texture = ExtResource("25_42tgc")
 
 [node name="Obiekty-Mina4" type="Sprite2D" parent="Surface2/props"]
 z_index = -1
-position = Vector2(95, -272)
+position = Vector2(47, -242)
 texture = ExtResource("25_42tgc")
 
 [node name="Obiekty-Mina5" type="Sprite2D" parent="Surface2/props"]
@@ -1644,49 +2172,24 @@ texture = ExtResource("25_42tgc")
 
 [node name="Obiekty-Mina6" type="Sprite2D" parent="Surface2/props"]
 z_index = -1
-position = Vector2(-202, 144)
+position = Vector2(-274, 155)
 rotation = 0.0089854915
 texture = ExtResource("25_42tgc")
 
 [node name="Obiekty-Mina7" type="Sprite2D" parent="Surface2/props"]
 z_index = -1
-position = Vector2(-229, 198)
+position = Vector2(-213, 192)
 texture = ExtResource("25_42tgc")
 
 [node name="Obiekty-Mina8" type="Sprite2D" parent="Surface2/props"]
 z_index = -1
-position = Vector2(-143, 224)
+position = Vector2(-158, 225)
 texture = ExtResource("25_42tgc")
 
 [node name="Obiekty-Mina10" type="Sprite2D" parent="Surface2/props"]
 z_index = -1
 position = Vector2(-344, -321)
 texture = ExtResource("25_42tgc")
-
-[node name="Obiekt-CiaoI" type="Sprite2D" parent="Surface2/props"]
-z_index = -1
-position = Vector2(-816, -140)
-rotation = -0.51836276
-texture = ExtResource("14_euti5")
-
-[node name="Obiekt-CiaoI2" type="Sprite2D" parent="Surface2/props"]
-z_index = -1
-position = Vector2(-310, 61)
-rotation = 2.878048
-scale = Vector2(1.0275862, 0.9564416)
-texture = ExtResource("14_euti5")
-
-[node name="Obiekt-CiaoI3" type="Sprite2D" parent="Surface2/props"]
-z_index = -1
-position = Vector2(-687, -291)
-rotation = -1.5708
-texture = ExtResource("14_euti5")
-
-[node name="Obiekt-CiaoI4" type="Sprite2D" parent="Surface2/props"]
-z_index = -1
-position = Vector2(-271, -365.99997)
-rotation = 4.565781
-texture = ExtResource("14_euti5")
 
 [node name="Obiekt-GrobIii" type="Sprite2D" parent="Surface2/props"]
 position = Vector2(-746, 240)
@@ -1725,34 +2228,6 @@ texture = ExtResource("8_o76pg")
 position = Vector2(-593, -570)
 texture = ExtResource("8_o76pg")
 
-[node name="Obiekt-DrzewoIi2" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-743, -51)
-texture = ExtResource("12_gxgaf")
-
-[node name="Obiekt-DrzewoIii" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-169, 63)
-texture = ExtResource("13_7vgmr")
-
-[node name="Obiekt-DrzewoIii2" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-909, -306)
-texture = ExtResource("13_7vgmr")
-
-[node name="Obiekt-DrzewoI3" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-350, -71)
-texture = ExtResource("11_gxoma")
-
-[node name="Obiekt-DrzewoIi3" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(15, -225)
-texture = ExtResource("12_gxgaf")
-
-[node name="Obiekt-DrzewoIii3" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-914, -40)
-texture = ExtResource("13_7vgmr")
-
-[node name="Obiekt-DrzewoI2" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-363, -450)
-texture = ExtResource("11_gxoma")
-
 [node name="Obiekt-CiaoIi" type="Sprite2D" parent="Surface2/props"]
 z_index = -1
 position = Vector2(-989, 236)
@@ -1769,7 +2244,7 @@ texture = ExtResource("26_g6kmm")
 flip_h = true
 
 [node name="Obiekt-CiaoIii2" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-169, 179)
+position = Vector2(-133, 192)
 texture = ExtResource("27_koir8")
 
 [node name="Obiekt-CiaoIii3" type="Sprite2D" parent="Surface2/props"]
@@ -1796,7 +2271,7 @@ position = Vector2(113, -43)
 texture = ExtResource("26_g6kmm")
 
 [node name="ObiektCiaoIi2" type="Sprite2D" parent="Surface2/props"]
-position = Vector2(-837, -400)
+position = Vector2(-836, -397)
 texture = ExtResource("26_g6kmm")
 
 [node name="ObiektCiaoIi3" type="Sprite2D" parent="Surface2/props"]
@@ -1815,20 +2290,20 @@ position = Vector2(13, -353)
 shape = SubResource("RectangleShape2D_y68kx")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="Surface2/Collisions"]
-position = Vector2(-1298, -61)
+position = Vector2(116.5, -314)
 shape = SubResource("RectangleShape2D_iptjq")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Surface2/Collisions"]
-position = Vector2(-1312, -21)
+position = Vector2(-975.64935, 40)
 scale = Vector2(0.9658721, 1)
 shape = SubResource("RectangleShape2D_55c28")
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Surface2/Collisions"]
-position = Vector2(-1329, -104)
+position = Vector2(-753, 40)
 shape = SubResource("RectangleShape2D_2bjpf")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Surface2/Collisions"]
-position = Vector2(-1294, -133)
+position = Vector2(-327, 114)
 shape = SubResource("RectangleShape2D_h2hjd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Surface2/Collisions"]
@@ -1963,12 +2438,20 @@ shape = SubResource("RectangleShape2D_kxkks")
 position = Vector2(-743.25, -16)
 shape = SubResource("RectangleShape2D_tdy1w")
 
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Surface2/Collisions"]
+position = Vector2(-699.03125, 85.375)
+shape = SubResource("RectangleShape2D_anrmr")
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="Surface2/Collisions"]
+position = Vector2(-686, 97)
+shape = SubResource("RectangleShape2D_wik3l")
+
 [node name="CollisionShape2D40" type="CollisionShape2D" parent="Surface2/Collisions"]
 position = Vector2(-670, -399)
 shape = SubResource("RectangleShape2D_d78j4")
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="Surface2/Collisions"]
-position = Vector2(-512.3125, 84)
+position = Vector2(-512.5, 84)
 shape = SubResource("RectangleShape2D_rkcnx")
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="Surface2/Collisions"]
@@ -2138,7 +2621,7 @@ position = Vector2(-739, -67)
 texture = ExtResource("25_42tgc")
 
 [node name="ObiektyMina2" type="Sprite2D" parent="."]
-position = Vector2(-727, 59)
+position = Vector2(-664, 17)
 texture = ExtResource("25_42tgc")
 
 [node name="ObiektyMina3" type="Sprite2D" parent="."]
@@ -2194,80 +2677,16 @@ texture = ExtResource("14_euti5")
 position = Vector2(-1039, -187)
 texture = ExtResource("25_42tgc")
 
-[node name="ObiektDrzewoIi" type="Sprite2D" parent="."]
-position = Vector2(-669, -434)
-texture = ExtResource("12_gxgaf")
-
-[node name="ObiektDrzewoI2" type="Sprite2D" parent="."]
-position = Vector2(-1087, 101)
-texture = ExtResource("11_gxoma")
-
-[node name="ObiektDrzewoIii" type="Sprite2D" parent="."]
-position = Vector2(120, -404)
-texture = ExtResource("13_7vgmr")
-
-[node name="ObiektDrzewoIi2" type="Sprite2D" parent="."]
-position = Vector2(-290, -158)
-texture = ExtResource("12_gxgaf")
-
 [node name="ObiektDrzewoI3" type="Sprite2D" parent="."]
 position = Vector2(-723, -266)
-texture = ExtResource("11_gxoma")
-
-[node name="ObiektDrzewoI4" type="Sprite2D" parent="."]
-position = Vector2(-876, 93)
-texture = ExtResource("11_gxoma")
-
-[node name="ObiektDrzewoI5" type="Sprite2D" parent="."]
-position = Vector2(-976, 134)
-texture = ExtResource("11_gxoma")
-
-[node name="ObiektDrzewoI6" type="Sprite2D" parent="."]
-position = Vector2(-1016, 181)
-texture = ExtResource("11_gxoma")
-
-[node name="ObiektDrzewoI7" type="Sprite2D" parent="."]
-position = Vector2(-1090, 181)
 texture = ExtResource("11_gxoma")
 
 [node name="ObiektDrzewoIi3" type="Sprite2D" parent="."]
 position = Vector2(-1013, 101)
 texture = ExtResource("12_gxgaf")
 
-[node name="ObiektDrzewoIi4" type="Sprite2D" parent="."]
-position = Vector2(-797, 185)
-texture = ExtResource("12_gxgaf")
-
-[node name="ObiektDrzewoIi5" type="Sprite2D" parent="."]
-position = Vector2(-1054, 143)
-texture = ExtResource("12_gxgaf")
-
-[node name="ObiektDrzewoIii2" type="Sprite2D" parent="."]
-position = Vector2(-933, 81)
-texture = ExtResource("13_7vgmr")
-
-[node name="ObiektDrzewoIii3" type="Sprite2D" parent="."]
-position = Vector2(-869, 162)
-texture = ExtResource("13_7vgmr")
-
-[node name="ObiektDrzewoIi6" type="Sprite2D" parent="."]
-position = Vector2(-905, 139)
-texture = ExtResource("12_gxgaf")
-
-[node name="ObiektDrzewoIi7" type="Sprite2D" parent="."]
-position = Vector2(-938, 187)
-texture = ExtResource("12_gxgaf")
-
-[node name="ObiektDrzewoI8" type="Sprite2D" parent="."]
-position = Vector2(-795, 92)
-texture = ExtResource("11_gxoma")
-
-[node name="ObiektDrzewoIi8" type="Sprite2D" parent="."]
-position = Vector2(-831, 138)
-texture = ExtResource("12_gxgaf")
-
 [node name="ObiektCiaoIi" type="Sprite2D" parent="."]
-position = Vector2(-58, -270)
+position = Vector2(-56, -269)
 texture = ExtResource("26_g6kmm")
 flip_h = true
 
@@ -2290,16 +2709,6 @@ texture = ExtResource("27_koir8")
 [node name="ObiektCiaoIii5" type="Sprite2D" parent="."]
 position = Vector2(-914, -244)
 texture = ExtResource("27_koir8")
-
-[node name="ObiektCiaoI2" type="Sprite2D" parent="."]
-position = Vector2(-997, -386)
-rotation = 1.4643313
-texture = ExtResource("14_euti5")
-
-[node name="ObiektCiaoI3" type="Sprite2D" parent="."]
-position = Vector2(-854, 52.99997)
-rotation = -2.195624
-texture = ExtResource("14_euti5")
 
 [node name="ObiektNamiotI1" type="Sprite2D" parent="."]
 position = Vector2(-215, -3)
@@ -2447,6 +2856,10 @@ texture = ExtResource("12_7vgmr")
 [node name="ObiektCiaoIii7" type="Sprite2D" parent="."]
 position = Vector2(243, -223)
 texture = ExtResource("27_koir8")
+
+[node name="TerenZywaSciana" type="Sprite2D" parent="."]
+position = Vector2(-1643, -193)
+texture = ExtResource("49_ktbx4")
 
 [connection signal="body_entered" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_exited"]
