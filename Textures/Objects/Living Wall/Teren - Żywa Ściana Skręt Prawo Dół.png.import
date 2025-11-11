@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nt3y44lufiv8"
-path="res://.godot/imported/Teren_-_Zywa_Sciana.png-859992e3975b2995755862b8feb012cf.ctex"
+uid="uid://c3ws0seihq5n5"
+path="res://.godot/imported/Teren - Żywa Ściana Skręt Prawo Dół.png-b219e9eddc2a9e0a3e688eab100bca32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Objects/Living Wall/Teren_-_Zywa_Sciana.png"
-dest_files=["res://.godot/imported/Teren_-_Zywa_Sciana.png-859992e3975b2995755862b8feb012cf.ctex"]
+source_file="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Prawo Dół.png"
+dest_files=["res://.godot/imported/Teren - Żywa Ściana Skręt Prawo Dół.png-b219e9eddc2a9e0a3e688eab100bca32.ctex"]
 
 [params]
 

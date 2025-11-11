@@ -106,7 +106,7 @@ text = "[E]"
 position = Vector2(58, 143)
 
 [node name="mina2" parent="." instance=ExtResource("4_aees8")]
-position = Vector2(141, 124)
+position = Vector2(136, 124)
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 position = Vector2(102, 223)
