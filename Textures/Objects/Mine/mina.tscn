@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cuot6jtv18rh8"]
+[gd_scene load_steps=12 format=3 uid="uid://cuot6jtv18rh8"]
 
 [ext_resource type="Script" uid="uid://ds0mv1jltl2o6" path="res://Scripts/Objects/mina.gd" id="1_dlik2"]
 [ext_resource type="Texture2D" uid="uid://bgyveso46xkna" path="res://Textures/Objects/Mine/Obiekty_-_Mina.png" id="2_m1fym"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ba075ak4kvs3f" path="res://Textures/Objects/Mine/System_-_Boom4.png" id="6_1tav0"]
 [ext_resource type="Texture2D" uid="uid://bjoxrohjkj6rq" path="res://Textures/Objects/Mine/System_-_Boom5.png" id="7_l0ifd"]
 [ext_resource type="Texture2D" uid="uid://dg3reynfaywpq" path="res://Textures/Objects/Mine/System_-_Boom6.png" id="8_sx6vd"]
+[ext_resource type="AudioStream" uid="uid://c0gflt174y223" path="res://Audio/boommina.mp3" id="9_s2ki2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kuf18"]
 radius = 5.0
@@ -57,3 +58,6 @@ texture = ExtResource("2_m1fym")
 z_index = 5
 sprite_frames = SubResource("SpriteFrames_pgu05")
 animation = &"idle"
+
+[node name="boom" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_s2ki2")
