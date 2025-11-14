@@ -25,8 +25,10 @@ func _process(_delta: float) -> void:
 			hud.display_dialogue(self) 
 	
 	if (showInteractionLabel && Input.is_action_just_pressed("interact") && is_instance_valid(%"Obiekty-Wykrywacz")) || %Player.was_surface == 1:
-		%"Obiekty-Wykrywacz".queue_free()
-		$Label.queue_free()
+		if is_instance_valid(%"Obiekty-Wykrywacz"):
+			%"Obiekty-Wykrywacz".queue_free()
+		if is_instance_valid($Label):
+			$Label.queue_free()
 		show_detector.emit()
 		taken = 1
 		%Player.has_items += 1
