@@ -48,7 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://cgsxuiwf2heu5" path="res://Textures/Objects/station/Obiekt_-_Nowe_Stanowisko.png" id="44_j3bmc"]
 [ext_resource type="Texture2D" uid="uid://c330cxjumwjp3" path="res://Textures/Objects/station/Obiekt_-_Cien_Stanowisko.png" id="45_ktbx4"]
 [ext_resource type="Script" uid="uid://g8x5bnqcxb6p" path="res://Scripts/Objects/tank.gd" id="46_j3bmc"]
-[ext_resource type="PackedScene" path="res://Textures/Objects/Mine/mina.tscn" id="50_jd8kd"]
+[ext_resource type="PackedScene" uid="uid://cuot6jtv18rh8" path="res://Textures/Objects/Mine/mina.tscn" id="50_jd8kd"]
 [ext_resource type="Texture2D" uid="uid://rfqnjmiw6avf" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana.png" id="50_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://bh27skh88i3dp" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewe Continiuum.png" id="51_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://qjwnh4hpo845" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewo.png" id="52_iglxr"]
