@@ -134,6 +134,7 @@ size = Vector2(16, 8)
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
+position = Vector2(-1, 1)
 
 [node name="FadeIn" type="Sprite2D" parent="."]
 visible = false
