@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://c5s2rxcbhyo87"]
+
+[ext_resource type="Texture2D" uid="uid://52ujcm60wjyl" path="res://Textures/Menu/System_-_Lobby.png" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://bfpbjtstl1osx" path="res://Scenes/menu.gd" id="1_158mb"]
+[ext_resource type="Texture2D" uid="uid://d0wg83vle2wcn" path="res://Textures/Menu/System_-_Exit.png" id="2_cayip"]
+[ext_resource type="Texture2D" uid="uid://cjakx4l7e0qpn" path="res://Textures/Menu/System_-_Start.png" id="3_158mb"]
+[ext_resource type="Texture2D" uid="uid://d21jfa5wm0y61" path="res://Textures/Menu/System_-_Start_Wybrany.png" id="3_jsrd8"]
+[ext_resource type="Texture2D" uid="uid://rivw6yoxyxa3" path="res://Textures/Menu/System_-_Exit_Wybrany.png" id="5_wbdvm"]
+[ext_resource type="Texture2D" uid="uid://dikpr8h656nyg" path="res://Textures/World/ciemnosc.png" id="7_q3rjx"]
+[ext_resource type="Script" uid="uid://c4sdvs6fpq78g" path="res://Scenes/ciemnosc.gd" id="8_6swd7"]
+[ext_resource type="AudioStream" uid="uid://gmcxdps6lgdi" path="res://Audio/main_ambient.mp3" id="9_7qvly"]
+[ext_resource type="Script" uid="uid://brss5fdxjwgim" path="res://Scenes/audio_stream_player_2d.gd" id="10_rfqti"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_158mb")
+
+[node name="SystemLobby" type="Sprite2D" parent="."]
+scale = Vector2(0.60400003, 0.59999996)
+texture = ExtResource("1_1rerr")
+centered = false
+
+[node name="button manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="start" type="TextureButton" parent="button manager"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 165.0
+offset_bottom = 135.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_158mb")
+texture_hover = ExtResource("3_jsrd8")
+stretch_mode = 0
+
+[node name="exit" type="TextureButton" parent="button manager"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 90.0
+offset_right = 165.0
+offset_bottom = 165.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_cayip")
+texture_hover = ExtResource("5_wbdvm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SystemExit" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(50, 120)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_cayip")
+
+[node name="SystemStart" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(50, 90)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_158mb")
+
+[node name="Ciemnosc" type="Sprite2D" parent="."]
+position = Vector2(1046, 60)
+scale = Vector2(1.013, 0.9290001)
+texture = ExtResource("7_q3rjx")
+script = ExtResource("8_6swd7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_7qvly")
+autoplay = true
+script = ExtResource("10_rfqti")
+
+[connection signal="pressed" from="button manager/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button manager/exit" to="." method="_on_exit_pressed"]
