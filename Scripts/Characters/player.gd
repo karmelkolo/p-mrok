@@ -9,7 +9,7 @@ class_name Player
 var facing = "Down"
 
 var carrying: bool = false
-
+var has_key: bool = false
 var has_items = 0
 var was_surface = 0
 var can_move: bool = true

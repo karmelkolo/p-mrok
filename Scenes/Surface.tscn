@@ -1,4 +1,4 @@
-[gd_scene load_steps=435 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=438 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -44,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://dx7bopynowv6u" path="res://Textures/Objects/Dead Bodies/Obiekt_-_Ciao_II.png" id="26_g6kmm"]
 [ext_resource type="Texture2D" uid="uid://hekf5eeh6764" path="res://Textures/Objects/Dead Bodies/Obiekt_-_Ciao_III.png" id="27_koir8"]
 [ext_resource type="Script" uid="uid://c1cgmp18yeqti" path="res://Scripts/Objects/body.gd" id="28_uhl2e"]
+[ext_resource type="AudioStream" uid="uid://m76o1jrhd1f1" path="res://Audio/key_pick_up.wav" id="39_al27h"]
 [ext_resource type="Texture2D" uid="uid://bs0buy4cae4am" path="res://Textures/Objects/station/Obiekt_-_Pret_Stanowisko.png" id="43_ou8jh"]
 [ext_resource type="Texture2D" uid="uid://cgsxuiwf2heu5" path="res://Textures/Objects/station/Obiekt_-_Nowe_Stanowisko.png" id="44_j3bmc"]
 [ext_resource type="Texture2D" uid="uid://c330cxjumwjp3" path="res://Textures/Objects/station/Obiekt_-_Cien_Stanowisko.png" id="45_ktbx4"]
@@ -56,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://ccyb3qqk6v3ei" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawo.png" id="54_al27h"]
 [ext_resource type="Texture2D" uid="uid://dtk1gmwgyqtvs" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Lewo Dół.png" id="55_olatj"]
 [ext_resource type="Texture2D" uid="uid://c3ws0seihq5n5" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Prawo Dół.png" id="57_dborj"]
+[ext_resource type="Script" uid="uid://daot2kgi6n32c" path="res://Scenes/klucz.gd" id="59_067lj"]
 [ext_resource type="Texture2D" uid="uid://bgjjsjwgs08ny" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Środek.png" id="59_qebk8"]
 [ext_resource type="PackedScene" uid="uid://bv2fpuk7708ki" path="res://Prefabs/Characters/Monster/Monster.tscn" id="60_iglxr"]
 [ext_resource type="Texture2D" uid="uid://diatbbvx4yrk1" path="res://Textures/Objects/Bear Trap/Obiekt - Sidła(Nowe).png" id="61_067lj"]
@@ -927,6 +929,8 @@ size = Vector2(33, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_067lj"]
 size = Vector2(28, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37cei"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0gyt7"]
 load_path = "res://.godot/imported/Obiekt_-_Zasieki.png-f9b1679c650ef291f719bd527082b76b.ctex"
@@ -2162,7 +2166,7 @@ player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_323lg")]
 unique_name_in_owner = true
-position = Vector2(230, 241)
+position = Vector2(203, 231)
 
 [node name="Trenches" type="TileMapLayer" parent="."]
 z_index = -1
@@ -3479,6 +3483,35 @@ scale = Vector2(1.05717, 1.00271)
 theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 6
 text = "Więcej ciałka do kochanka"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="pick_up_key" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1853, -132)
+stream = ExtResource("39_al27h")
+
+[node name="klucz" type="Area2D" parent="."]
+position = Vector2(-1853, -132)
+script = ExtResource("59_067lj")
+
+[node name="ObiektKlucz" type="Sprite2D" parent="klucz"]
+position = Vector2(0, -1)
+texture = ExtResource("62_al27h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="klucz"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_37cei")
+
+[node name="Label" type="Label" parent="klucz"]
+z_index = 3
+offset_left = -19.999954
+offset_top = -26.0
+offset_right = 16.00003
+offset_bottom = -9.0
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "[E]"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -5015,10 +5048,6 @@ texture = ExtResource("27_koir8")
 position = Vector2(-1416, -628)
 texture = ExtResource("27_koir8")
 
-[node name="ObiektKlucz" type="Sprite2D" parent="."]
-position = Vector2(-1856, -129)
-texture = ExtResource("62_al27h")
-
 [connection signal="body_entered" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_exited"]
 [connection signal="body_entered" from="Surface1/Graves/Miller" to="Surface1/Graves/Miller" method="_on_body_entered"]
@@ -5033,5 +5062,9 @@ texture = ExtResource("62_al27h")
 [connection signal="body_exited" from="Hatch" to="Hatch" method="_on_body_exited"]
 [connection signal="body_entered" from="Body" to="Body" method="_on_body_entered"]
 [connection signal="body_exited" from="Body" to="Body" method="_on_body_exited"]
+[connection signal="body_entered" from="klucz" to="Camera2D" method="_on_klucz_body_entered"]
+[connection signal="body_entered" from="klucz" to="Player" method="_on_klucz_body_entered"]
+[connection signal="body_entered" from="klucz" to="klucz" method="_on_body_entered"]
+[connection signal="body_exited" from="klucz" to="klucz" method="_on_body_exited"]
 [connection signal="body_entered" from="Surface2/Tank" to="Surface2/Tank" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface2/Tank" to="Surface2/Tank" method="_on_body_exited"]
