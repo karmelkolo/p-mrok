@@ -14,34 +14,50 @@ var has_items = 0
 var was_surface = 0
 var can_move: bool = true
 var running = false
+var is_out = false
 
 func _ready() -> void:
 	%Ciemnosc.visible = ciemnosc
 	if get_tree().current_scene.scene_file_path == "res://Scenes/Surface.tscn":
+		is_out = true
 		expand_darkness(2)
+	else:
+		is_out = false 
 	has_items = GameState.has_items
 	was_surface = GameState.was_surface	
 
 func _input(event) -> void:
 	if event.is_action_pressed("run"):
 		if !running:
-			running = true
-		SPEED = SPEED * 2
+			running = true		
+		
 		czas = czas / 1.33
 	if event.is_action_released("run"):
 		if running:
 			running = false
-		SPEED = SPEED / 2.0
-		czas = czas * 1.33
+		#SPEED = SPEED / 2.0
+		czas = czas * 1.33		
 		if SPEED < 25:
 			SPEED = 25
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
 
 func _physics_process(_delta: float) -> void:
+	
 	if not can_move:
 		velocity = Vector2.ZERO
 		return
+	
+	if is_out:
+		%Ciemnosc.scale = Vector2(25.0 / SPEED , 25.0 / SPEED)
+	
+	if(running):
+		if (SPEED < 50):
+			SPEED = SPEED + 1
+		
+	if(!running):
+		if (SPEED > 25):
+			SPEED = SPEED - 1
 		
 	var direction_x := Input.get_axis("ui_left", "ui_right")
 	if direction_x:
