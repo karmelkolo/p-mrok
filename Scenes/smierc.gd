@@ -34,4 +34,4 @@ func _input(event):
 			currently_playing = 0
 			timer.stop()
 		elif currently_playing == 0:
-			get_tree().change_scene_to_file("res://Scenes/SafeHouse.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Surface.tscn")
