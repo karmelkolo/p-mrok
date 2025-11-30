@@ -40,6 +40,7 @@ func _input(event) -> void:
 
 func _physics_process(_delta: float) -> void:
 	if not can_move:
+		velocity = Vector2.ZERO
 		return
 		
 	var direction_x := Input.get_axis("ui_left", "ui_right")
@@ -90,3 +91,7 @@ func _on_mirror_body_entered(body: Node2D) -> void:
 
 func _on_miller_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+
+
+func _on_monster_killed() -> void:
+	can_move = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=438 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=439 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -57,7 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://ccyb3qqk6v3ei" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawo.png" id="54_al27h"]
 [ext_resource type="Texture2D" uid="uid://dtk1gmwgyqtvs" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Lewo Dół.png" id="55_olatj"]
 [ext_resource type="Texture2D" uid="uid://c3ws0seihq5n5" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Prawo Dół.png" id="57_dborj"]
-[ext_resource type="Script" uid="uid://daot2kgi6n32c" path="res://Scenes/klucz.gd" id="59_067lj"]
+[ext_resource type="Script" path="res://Scenes/klucz.gd" id="59_067lj"]
 [ext_resource type="Texture2D" uid="uid://bgjjsjwgs08ny" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Środek.png" id="59_qebk8"]
 [ext_resource type="PackedScene" uid="uid://bv2fpuk7708ki" path="res://Prefabs/Characters/Monster/Monster.tscn" id="60_iglxr"]
 [ext_resource type="Texture2D" uid="uid://diatbbvx4yrk1" path="res://Textures/Objects/Bear Trap/Obiekt - Sidła(Nowe).png" id="61_067lj"]
@@ -1734,6 +1734,13 @@ load_path = "res://.godot/imported/Teren - Żywa Ściana Środek.png-7dcdf06ddad
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_128oo"]
 load_path = "res://.godot/imported/Teren - Żywa Ściana Środek.png-7dcdf06ddad962a7945b07fa2b3ecfe1.ctex"
+
+[sub_resource type="GDScript" id="GDScript_al27h"]
+script/source = "extends Timer
+
+func _on_timeout() -> void:
+	%Monster.visible = true
+"
 
 [node name="Surface" type="Node2D"]
 y_sort_enabled = true
@@ -4877,6 +4884,8 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Monster" parent="." node_paths=PackedStringArray("target") instance=ExtResource("60_iglxr")]
+unique_name_in_owner = true
+visible = false
 position = Vector2(211, -455)
 target = NodePath("../Player")
 SPEED = 45
@@ -5048,6 +5057,12 @@ texture = ExtResource("27_koir8")
 position = Vector2(-1416, -628)
 texture = ExtResource("27_koir8")
 
+[node name="Spawn Dezerter" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+script = SubResource("GDScript_al27h")
+
 [connection signal="body_entered" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_exited"]
 [connection signal="body_entered" from="Surface1/Graves/Miller" to="Surface1/Graves/Miller" method="_on_body_entered"]
@@ -5068,3 +5083,6 @@ texture = ExtResource("27_koir8")
 [connection signal="body_exited" from="klucz" to="klucz" method="_on_body_exited"]
 [connection signal="body_entered" from="Surface2/Tank" to="Surface2/Tank" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface2/Tank" to="Surface2/Tank" method="_on_body_exited"]
+[connection signal="killed" from="Monster" to="Player" method="_on_monster_killed"]
+[connection signal="timeout" from="Spawn Dezerter" to="Monster" method="start_moving"]
+[connection signal="timeout" from="Spawn Dezerter" to="Spawn Dezerter" method="_on_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://bv2fpuk7708ki"]
+[gd_scene load_steps=46 format=3 uid="uid://bv2fpuk7708ki"]
 
 [ext_resource type="Script" uid="uid://cmglrq8bp2s5j" path="res://Prefabs/Characters/Monster/monster.gd" id="1_2f8lw"]
 [ext_resource type="Texture2D" uid="uid://cdjrs21q6pua7" path="res://Textures/Characters/Monster/Running/Left/Postacie_DezerterSprint_Lewo1.png" id="1_60kds"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dy22c6f8hfxcb" path="res://Textures/Characters/Monster/Standing/Postacie_-_DezerterLewo.png" id="17_0qddc"]
 [ext_resource type="Texture2D" uid="uid://c2f54iejpbn18" path="res://Textures/Characters/Monster/Standing/Postacie_-_DezerterPrawo.png" id="18_sh8hp"]
 [ext_resource type="Script" uid="uid://hyjp28frxw3c" path="res://Scripts/Objects/Pole_Smierc.gd" id="20_prdxt"]
+[ext_resource type="AudioStream" uid="uid://de77350taeaax" path="res://Audio/dezerter_ryk.mp3" id="21_ki7mh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k3gep"]
 radius = 8.0
@@ -295,6 +296,9 @@ transitions = ["Start", "Standing", SubResource("AnimationNodeStateMachineTransi
 [sub_resource type="CircleShape2D" id="CircleShape2D_ptb87"]
 radius = 21.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_o6t4t"]
+radius = 67.0
+
 [node name="Monster" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 2
@@ -337,8 +341,22 @@ debug_enabled = true
 
 [node name="Timer" type="Timer" parent="NavigationAgent2D"]
 process_callback = 0
-wait_time = 0.5
+wait_time = 0.2
 autostart = true
+
+[node name="Aggro" type="Timer" parent="."]
+
+[node name="player_detect" type="Area2D" parent="."]
+position = Vector2(0, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_detect"]
+shape = SubResource("CircleShape2D_o6t4t")
+
+[node name="roar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_ki7mh")
 
 [connection signal="body_entered" from="DeathCollison" to="." method="_on_death_collison_body_entered"]
 [connection signal="timeout" from="NavigationAgent2D/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Aggro" to="." method="_on_aggro_timeout"]
+[connection signal="body_entered" from="player_detect" to="." method="_on_player_detect_body_entered"]
+[connection signal="finished" from="roar" to="." method="_on_roar_finished"]
