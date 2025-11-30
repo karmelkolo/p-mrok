@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var target: Node2D
 @export var SPEED = 10
+@export var can_move = false
 @export var aggro_time = {
 	"min_time": 20,
 	"max_time": 30
@@ -13,7 +14,6 @@ extends CharacterBody2D
 
 var follow = true
 var found_player = false
-var can_move = false
 signal killed
 
 func _ready() -> void:
@@ -47,9 +47,9 @@ func make_path() -> void:
 
 func _on_death_collison_body_entered(body: Node2D) -> void:
 	if body == target:
-		audio_player.play()
 		SPEED = 0
 		emit_signal("killed")
+		get_tree().change_scene_to_file("res://Scenes/Smierc.tscn")
 
 
 func _on_timer_timeout() -> void:
@@ -70,15 +70,11 @@ func _on_aggro_timeout() -> void:
 func _on_player_detect_body_entered(body: Node2D) -> void:
 	if body == target && !found_player:
 		found_player = true
+		audio_player.play()
 		aggro_timer.stop()
 		follow = true
-		SPEED *= 10
+		SPEED *= 8
 		print_debug("Target found")
-	
-
-
-func _on_roar_finished() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Smierc.tscn")
 
 
 func start_moving() -> void:

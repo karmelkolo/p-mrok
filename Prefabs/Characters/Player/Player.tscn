@@ -488,6 +488,7 @@ offset_right = 500.0
 offset_bottom = 500.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 pivot_offset = Vector2(500, 500)
 texture = ExtResource("3_kydbe")
 
