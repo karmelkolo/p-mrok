@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0tkx226q5g26"]
+[gd_scene load_steps=5 format=3 uid="uid://d0tkx226q5g26"]
 
 [ext_resource type="Script" uid="uid://djc6fhkd6v8i1" path="res://Scripts/Objects/opening.gd" id="1_64kpt"]
 [ext_resource type="FontFile" uid="uid://dmq5ter7i6ikq" path="res://Textures/Dialogues/font/PressStart2P.ttf" id="2_laf7e"]
 [ext_resource type="AudioStream" uid="uid://dyumys7y8hg4f" path="res://Audio/sfx/napisyfx.mp3" id="3_76xge"]
+[ext_resource type="Texture2D" uid="uid://uvlpjuea7rsx" path="res://Textures/Obrazki/prolog.png" id="4_oyf75"]
 
 [node name="Opening" type="Node2D"]
-visible = false
 script = ExtResource("1_64kpt")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -23,6 +23,7 @@ scroll_active = false
 [node name="Timer" type="Timer" parent="CanvasLayer/Intro"]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -38,5 +39,10 @@ color = Color(0, 0, 0, 1)
 
 [node name="Type_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_76xge")
+
+[node name="Prolog" type="Sprite2D" parent="."]
+position = Vector2(75, 75)
+scale = Vector2(0.05, 0.050000004)
+texture = ExtResource("4_oyf75")
 
 [connection signal="timeout" from="CanvasLayer/Intro/Timer" to="." method="_on_timer_timeout"]
