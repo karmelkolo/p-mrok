@@ -73,7 +73,7 @@ func _on_player_detect_body_entered(body: Node2D) -> void:
 		audio_player.play()
 		aggro_timer.stop()
 		follow = true
-		SPEED *= 8
+		SPEED *= 2
 		print_debug("Target found")
 
 
