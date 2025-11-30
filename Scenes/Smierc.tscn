@@ -1,18 +1,34 @@
-[gd_scene format=3 uid="uid://vn5nxnmyk6io"]
+[gd_scene load_steps=5 format=3 uid="uid://vn5nxnmyk6io"]
+
+[ext_resource type="Texture2D" uid="uid://c0452k8g0pn7b" path="res://Textures/Obrazki/Game_Over.png" id="1_ixhn0"]
+[ext_resource type="Script" uid="uid://bcrs8p8nknmf" path="res://Scenes/smierc.gd" id="1_n10rn"]
+[ext_resource type="FontFile" uid="uid://dmq5ter7i6ikq" path="res://Textures/Dialogues/font/PressStart2P.ttf" id="3_7v0uk"]
+[ext_resource type="AudioStream" uid="uid://dyumys7y8hg4f" path="res://Audio/sfx/napisyfx.mp3" id="4_7v0uk"]
 
 [node name="Smierc" type="Node2D"]
+script = ExtResource("1_n10rn")
+
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(75, 75.00001)
+scale = Vector2(0.05, 0.050000004)
+texture = ExtResource("1_ixhn0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextEdit" type="RichTextLabel" parent="CanvasLayer"]
+[node name="Intro" type="RichTextLabel" parent="CanvasLayer"]
 z_index = 1
-offset_right = 150.0
-offset_bottom = 150.0
-bbcode_enabled = true
-text = "Śmierć"
-context_menu_enabled = true
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 145.0
+offset_bottom = 125.0
+theme_override_fonts/normal_font = ExtResource("3_7v0uk")
+theme_override_font_sizes/normal_font_size = 6
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Intro"]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -25,3 +41,6 @@ offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Type_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7v0uk")
