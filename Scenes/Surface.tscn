@@ -1,4 +1,4 @@
-[gd_scene load_steps=443 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=450 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -711,6 +711,27 @@ size = Vector2(248.25, 135)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nh0lb"]
 size = Vector2(176, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgg6j"]
+size = Vector2(31, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0svn"]
+size = Vector2(31, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80r36"]
+size = Vector2(31, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1osq"]
+size = Vector2(11.75, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pedy0"]
+size = Vector2(29, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpjbg"]
+size = Vector2(35, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6s53c"]
+size = Vector2(28, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwttc"]
 size = Vector2(100, 20)
@@ -2177,7 +2198,7 @@ player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_323lg")]
 unique_name_in_owner = true
-position = Vector2(230, 240)
+position = Vector2(230, 241)
 
 [node name="Trenches" type="TileMapLayer" parent="."]
 z_index = -1
@@ -3051,6 +3072,34 @@ shape = SubResource("RectangleShape2D_xaa8o")
 [node name="CollisionShape2D104" type="CollisionShape2D" parent="Surface1/Collisions"]
 position = Vector2(-1546, -251)
 shape = SubResource("RectangleShape2D_nh0lb")
+
+[node name="CollisionShape2D146" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-1847.5, -232)
+shape = SubResource("RectangleShape2D_tgg6j")
+
+[node name="CollisionShape2D151" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-1822, -187)
+shape = SubResource("RectangleShape2D_c0svn")
+
+[node name="CollisionShape2D152" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-1780, -172)
+shape = SubResource("RectangleShape2D_80r36")
+
+[node name="CollisionShape2D150" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-1840.875, -132)
+shape = SubResource("RectangleShape2D_g1osq")
+
+[node name="CollisionShape2D147" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-1822.5, -181)
+shape = SubResource("RectangleShape2D_pedy0")
+
+[node name="CollisionShape2D149" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-1780.5, -168)
+shape = SubResource("RectangleShape2D_bpjbg")
+
+[node name="CollisionShape2D148" type="CollisionShape2D" parent="Surface1/Collisions"]
+position = Vector2(-1873, -235)
+shape = SubResource("RectangleShape2D_6s53c")
 
 [node name="CollisionShape2D105" type="CollisionShape2D" parent="Surface1/Collisions"]
 position = Vector2(-1608, -221)
@@ -4304,10 +4353,6 @@ texture = SubResource("CompressedTexture2D_kycto")
 position = Vector2(-1737, -34)
 texture = SubResource("CompressedTexture2D_5esl7")
 
-[node name="TerenŻywaŚcianaŚrodek4" type="Sprite2D" parent="TerenŻywaŚcianaLeweContiniuum4"]
-position = Vector2(-1278, -773)
-texture = ExtResource("59_qebk8")
-
 [node name="TerenŻywaŚcianaLeweContiniuum2" type="Sprite2D" parent="."]
 position = Vector2(-2001, -104)
 texture = SubResource("CompressedTexture2D_2ms6k")
@@ -4587,6 +4632,7 @@ position = Vector2(-1667, -599)
 texture = SubResource("CompressedTexture2D_mgobh")
 
 [node name="TerenŻywaŚcianaSkrętPrawoDół10" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(-1810, -178)
 texture = SubResource("CompressedTexture2D_mgobh")
 
@@ -4778,6 +4824,7 @@ position = Vector2(-1835, -146)
 texture = SubResource("CompressedTexture2D_328na")
 
 [node name="TerenŻywaŚcianaŚrodek56" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(-1803, -146)
 texture = SubResource("CompressedTexture2D_328na")
 
@@ -4949,6 +4996,7 @@ texture = ExtResource("61_067lj")
 flip_h = true
 
 [node name="ObiektSidła(nowe)3" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1457, -312)
 texture = ExtResource("61_067lj")
 flip_h = true
@@ -4959,10 +5007,12 @@ texture = ExtResource("61_067lj")
 flip_h = true
 
 [node name="ObiektSidła(nowe)4" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1503, -175)
 texture = ExtResource("61_067lj")
 
 [node name="ObiektSidła(nowe)5" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1737, -275)
 texture = ExtResource("61_067lj")
 
@@ -4971,10 +5021,12 @@ position = Vector2(-1613, -525)
 texture = ExtResource("61_067lj")
 
 [node name="ObiektSidła(nowe)9" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1305, -432)
 texture = ExtResource("61_067lj")
 
 [node name="ObiektSidła(nowe)7" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1641, -204)
 texture = ExtResource("61_067lj")
 flip_h = true
@@ -4985,6 +5037,7 @@ texture = ExtResource("61_067lj")
 flip_h = true
 
 [node name="ObiektCiaoI2" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1438, -379)
 rotation = -2.0943952
 texture = ExtResource("14_euti5")
@@ -4995,11 +5048,13 @@ rotation = -3.6651917
 texture = ExtResource("14_euti5")
 
 [node name="ObiektCiaoI7" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1416, -217)
 rotation = -2.3561945
 texture = ExtResource("14_euti5")
 
 [node name="ObiektCiaoI3" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1728, -229)
 rotation = 1.5707964
 texture = ExtResource("14_euti5")
@@ -5010,6 +5065,7 @@ rotation = 0.2617994
 texture = ExtResource("14_euti5")
 
 [node name="ObiektCiaoI8" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-1579, -433.00006)
 rotation = 1.0471976
 texture = ExtResource("14_euti5")
@@ -5084,14 +5140,13 @@ position = Vector2(-1784, -198)
 texture = ExtResource("64_c7txx")
 
 [node name="ObiektPrzewód" type="Sprite2D" parent="."]
-z_index = -1
+z_index = -2
 position = Vector2(-1880.0001, -168)
 scale = Vector2(0.795, 0.795)
 texture = ExtResource("65_qebk8")
 
 [node name="ObiektDetonator" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(-1847, -154)
+position = Vector2(-1851, -146)
 texture = ExtResource("64_dborj")
 
 [connection signal="body_entered" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_entered"]

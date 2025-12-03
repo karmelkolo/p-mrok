@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://it02u411itj7"
-path="res://.godot/imported/System_-_Boom3.png-9cc9229f3c14f5b7cf0953f77d373be2.ctex"
+uid="uid://bxyii7pcl5fm5"
+path="res://.godot/imported/System - Boom2.png-f28d440d1c1820576cf4b1f0624a36da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Objects/Mine/System_-_Boom3.png"
-dest_files=["res://.godot/imported/System_-_Boom3.png-9cc9229f3c14f5b7cf0953f77d373be2.ctex"]
+source_file="res://Textures/Objects/Mine/System - Boom2.png"
+dest_files=["res://.godot/imported/System - Boom2.png-f28d440d1c1820576cf4b1f0624a36da.ctex"]
 
 [params]
 
