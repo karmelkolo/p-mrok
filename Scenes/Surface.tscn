@@ -1037,6 +1037,7 @@ size = Vector2(33, 30)
 size = Vector2(28, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37cei"]
+size = Vector2(34, 26)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0gyt7"]
 load_path = "res://.godot/imported/Obiekt_-_Zasieki.png-f9b1679c650ef291f719bd527082b76b.ctex"
@@ -3786,11 +3787,11 @@ position = Vector2(-1815, -138)
 script = ExtResource("59_067lj")
 
 [node name="ObiektKlucz" type="Sprite2D" parent="klucz"]
-position = Vector2(0, 2)
+position = Vector2(0, 3)
 texture = ExtResource("62_al27h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="klucz"]
-position = Vector2(0, 2)
+position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_37cei")
 
 [node name="Label" type="Label" parent="klucz"]

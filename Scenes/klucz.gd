@@ -12,9 +12,11 @@ func _process(_delta: float) -> void:
 
 
 func _on_body_entered(body: Player) -> void:
+	$ObiektKlucz.texture = load("res://Textures/Objects/That's The Key To Our Problems/Obiekt_-_Klucz_Interakcja1.png")
 	showInteractionLabel = true 
  	
 
 
 func _on_body_exited(body: Player) -> void:
+	$ObiektKlucz.texture = load("res://Textures/Objects/That's The Key To Our Problems/Obiekt - Klucz.png")
 	showInteractionLabel = false
