@@ -26,6 +26,7 @@ var dialogues = [\"The lights in this bunker are starting to fade away.\",
 \"It is my last chance to try to leave this God's abandoned place.\"]
 var dialogue_index = 0
 var dialogue_source = null
+var keystop = true
 
 func _ready() -> void:
 	#%Ciemnosc.visible = true
@@ -56,6 +57,17 @@ func _ready() -> void:
 		dialogue_sprite.start(dialogues[dialogue_index], 2.0)
 		
 func _process(delta: float) -> void:
+	
+	if dialogue_sprite and get_tree().current_scene.scene_file_path == \"res://Scenes/Surface.tscn\" and %Player.has_key and keystop:
+		dialogues = [\"Never thought I would find it amongst these piles of bodies.\",
+		\"Now there’s nothing left but to return to my bunker and end it all.\",
+		]
+		dialogue_source = self
+		dialogue_index = 0
+		dialogue_sprite.start(dialogues[dialogue_index], 2.0)
+		keystop = false
+		
+	
 	if get_tree().current_scene.scene_file_path == \"res://Scenes/test.tscn\":
 		$HUD_Layer/Detector_Sprite.visible = true
 		$HUD_Layer/Detector_Sprite.play(\"default\")
