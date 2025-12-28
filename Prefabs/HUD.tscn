@@ -68,7 +68,22 @@ func _process(delta: float) -> void:
 		keystop = false
 		
 	
-	if get_tree().current_scene.scene_file_path == \"res://Scenes/test.tscn\":
+	#if get_tree().current_scene.scene_file_path == \"res://Scenes/test.tscn\":
+		#$HUD_Layer/Detector_Sprite.visible = true
+		#$HUD_Layer/Detector_Sprite.play(\"default\")
+		#
+		#var player = get_node(\"../Player\")
+		#var monster = get_node(\"../Monster\")
+		#var distance = player.global_position.distance_to(monster.global_position)
+		#
+		#if distance < 80:
+			#detector_sprite.speed_scale = 1.2
+		#elif distance < 160:
+			#detector_sprite.speed_scale = 1
+		#else:
+			#detector_sprite.speed_scale = 0.85
+			
+	if get_tree().current_scene.scene_file_path == \"res://Scenes/Surface.tscn\":
 		$HUD_Layer/Detector_Sprite.visible = true
 		$HUD_Layer/Detector_Sprite.play(\"default\")
 		
@@ -76,10 +91,13 @@ func _process(delta: float) -> void:
 		var monster = get_node(\"../Monster\")
 		var distance = player.global_position.distance_to(monster.global_position)
 		
-		if distance < 80:
-			detector_sprite.speed_scale = 1.2
-		elif distance < 160:
-			detector_sprite.speed_scale = 1
+		if distance < 120:
+			detector_sprite.speed_scale = 1.1
+		elif distance < 480:
+			detector_sprite.speed_scale = 0.96
+		elif distance > 700:
+			detector_sprite.frame = 0
+			detector_sprite.speed_scale = 0
 		else:
 			detector_sprite.speed_scale = 0.85
 			

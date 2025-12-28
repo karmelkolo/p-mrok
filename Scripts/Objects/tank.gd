@@ -23,5 +23,5 @@ func _on_body_entered(body):
 		showInteractionLabel = true
 
 func _on_body_exited(body):
-	if body is Player && is_instance_valid(%"Obiekt-Sejf1"):
+	if body is Player:
 		showInteractionLabel = false
