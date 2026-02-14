@@ -97,7 +97,7 @@ size = Vector2(36, 7)
 size = Vector2(38, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hw5v"]
-size = Vector2(22, 33)
+size = Vector2(14, 34.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0rpk"]
 size = Vector2(27, 48)
@@ -154,7 +154,7 @@ metadata/_edit_lock_ = true
 unique_name_in_owner = true
 z_index = 1
 y_sort_enabled = true
-position = Vector2(156, 78)
+position = Vector2(162, 76)
 hasLamp = false
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
@@ -231,7 +231,7 @@ shape = SubResource("RectangleShape2D_uvxm6")
 [node name="Bed" type="StaticBody2D" parent="Collisions"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Bed"]
-position = Vector2(176, 80.5)
+position = Vector2(179, 70.75)
 shape = SubResource("RectangleShape2D_4hw5v")
 
 [node name="Boxes Left" type="StaticBody2D" parent="Collisions"]

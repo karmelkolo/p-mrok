@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=69 format=3 uid="uid://c1hberdwe7ehs"]
+[gd_resource type="SpriteFrames" load_steps=75 format=3 uid="uid://c1hberdwe7ehs"]
 
 [ext_resource type="Texture2D" uid="uid://chwl5hdepilfc" path="res://Textures/Characters/Adam Bones/Running/Down/Postacie_-_Adam_BonesSprint_Przod1.png" id="1_hv4tm"]
 [ext_resource type="Texture2D" uid="uid://bip4d5y8wrmxc" path="res://Textures/Characters/Adam Bones/Standing/Postacie_-_Adam_BonesPrzod.png" id="1_vaate"]
@@ -68,6 +68,12 @@
 [ext_resource type="Texture2D" uid="uid://d1bbyiwkq1cb" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty6.png" id="34_x7t16"]
 [ext_resource type="Texture2D" uid="uid://ckwmci6ql63na" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty7.png" id="35_tx0ld"]
 [ext_resource type="Texture2D" uid="uid://b7khda2y8aeo5" path="res://Textures/Characters/Adam Bones/Walking/Up/Postacie_-_Adam_BonesRuch_Ty8.png" id="36_5pl31"]
+[ext_resource type="Texture2D" uid="uid://ddokaanhnkbgr" path="res://Textures/Characters/Adam Bones/Wstaje/Postacie_-_Adam_BonesWstaje1.png" id="69_l4q6p"]
+[ext_resource type="Texture2D" uid="uid://bb7mpe5vj4u8r" path="res://Textures/Characters/Adam Bones/Wstaje/Postacie_-_Adam_BonesWstaje2.png" id="70_3lwad"]
+[ext_resource type="Texture2D" uid="uid://bi8x21hgyuenj" path="res://Textures/Characters/Adam Bones/Wstaje/Postacie_-_Adam_BonesWstaje3.png" id="71_i4id3"]
+[ext_resource type="Texture2D" uid="uid://h1fgvsu57eeo" path="res://Textures/Characters/Adam Bones/Wstaje/Postacie_-_Adam_BonesWstaje4.png" id="72_dv3x7"]
+[ext_resource type="Texture2D" uid="uid://b2xrrbluratc2" path="res://Textures/Characters/Adam Bones/Wstaje/Postacie_-_Adam_BonesWstaje5.png" id="73_tlxaa"]
+[ext_resource type="Texture2D" uid="uid://ejy0k8howdib" path="res://Textures/Characters/Adam Bones/Wstaje/Postacie_-_Adam_BonesWstaje6.png" id="74_d37cc"]
 
 [resource]
 animations = [{
@@ -333,5 +339,31 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("69_l4q6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_3lwad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_i4id3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_dv3x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_tlxaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_d37cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sbuqq")
+}],
+"loop": true,
+"name": &"Wstaje",
 "speed": 5.0
 }]
