@@ -7,7 +7,7 @@ class_name Player
 @export var hasLamp = true
 
 var facing = "Down"
-
+var czyjuzwstal = false
 var carrying: bool = false
 var has_key: bool = false
 var has_items = 0
@@ -19,6 +19,7 @@ var is_out = false
 func _ready() -> void:
 	%Ciemnosc.visible = ciemnosc
 	if get_tree().current_scene.scene_file_path == "res://Scenes/Surface.tscn":
+		czyjuzwstal = true
 		is_out = true
 		expand_darkness(2)
 	else:
@@ -27,6 +28,11 @@ func _ready() -> void:
 	was_surface = GameState.was_surface	
 
 func _input(event) -> void:
+	print(can_move)
+	if can_move:
+		czyjuzwstal = true
+	else:
+		czyjuzwstal = false
 	if event.is_action_pressed("run"):
 		if !running:
 			running = true		
