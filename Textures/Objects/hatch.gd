@@ -2,6 +2,9 @@ extends Area2D
 
 var showInteractionLabel = false
 
+func _ready() -> void:
+	$klapa.play()
+
 func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	

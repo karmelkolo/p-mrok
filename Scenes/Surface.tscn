@@ -1,4 +1,4 @@
-[gd_scene load_steps=496 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=501 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -44,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://dx7bopynowv6u" path="res://Textures/Objects/Dead Bodies/Obiekt_-_Ciao_II.png" id="26_g6kmm"]
 [ext_resource type="Texture2D" uid="uid://hekf5eeh6764" path="res://Textures/Objects/Dead Bodies/Obiekt_-_Ciao_III.png" id="27_koir8"]
 [ext_resource type="Script" uid="uid://c1cgmp18yeqti" path="res://Scripts/Objects/body.gd" id="28_uhl2e"]
+[ext_resource type="AudioStream" uid="uid://bk3qjia4ay4wp" path="res://Audio/sfx/bunkier_klapa_end.mp3" id="36_48vxu"]
 [ext_resource type="Script" uid="uid://bmw44v0ydfin2" path="res://Scenes/detonatorek.gd" id="37_borgg"]
 [ext_resource type="AudioStream" uid="uid://m76o1jrhd1f1" path="res://Audio/key_pick_up.wav" id="39_al27h"]
 [ext_resource type="Texture2D" uid="uid://bs0buy4cae4am" path="res://Textures/Objects/station/Obiekt_-_Pret_Stanowisko.png" id="43_ou8jh"]
@@ -54,7 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://rfqnjmiw6avf" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana.png" id="50_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://bh27skh88i3dp" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewe Continiuum.png" id="51_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://qjwnh4hpo845" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewo.png" id="52_iglxr"]
-[ext_resource type="Script" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
+[ext_resource type="Script" uid="uid://cwit0uuatm6sa" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
 [ext_resource type="Texture2D" uid="uid://0d26c5or13rw" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawe Continiuum.png" id="53_067lj"]
 [ext_resource type="Texture2D" uid="uid://ccyb3qqk6v3ei" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawo.png" id="54_al27h"]
 [ext_resource type="Texture2D" uid="uid://dtk1gmwgyqtvs" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Lewo Dół.png" id="55_olatj"]
@@ -1892,6 +1893,7 @@ size = Vector2(20, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0oe6"]
 size = Vector2(5, 20)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_im5dm"]
 animations = [{
 "frames": [],
@@ -3956,6 +3958,9 @@ text = "[E]"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="klapa" type="AudioStreamPlayer2D" parent="Hatch"]
+stream = ExtResource("36_48vxu")
+
 [node name="Body" type="Area2D" parent="."]
 script = ExtResource("28_uhl2e")
 
@@ -5674,6 +5679,7 @@ debug_color = Color(0.98170775, 0, 0.3728054, 0.41960785)
 position = Vector2(-45.5, 226)
 shape = SubResource("RectangleShape2D_b0oe6")
 debug_color = Color(0.96779925, 6.738305e-07, 0.47500032, 0.41960785)
+
 [node name="wybuchdeto" type="StaticBody2D" parent="."]
 position = Vector2(-1839, -208)
 script = ExtResource("74_ipklw")
