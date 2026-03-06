@@ -1,4 +1,4 @@
-[gd_scene load_steps=484 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=488 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -1852,17 +1852,45 @@ load_path = "res://.godot/imported/Teren - Żywa Ściana Środek.png-7dcdf06ddad
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_128oo"]
 load_path = "res://.godot/imported/Teren - Żywa Ściana Środek.png-7dcdf06ddad962a7945b07fa2b3ecfe1.ctex"
 
-[sub_resource type="GDScript" id="GDScript_al27h"]
-script/source = "extends Timer
+[sub_resource type="GDScript" id="GDScript_2h1wf"]
+script/source = "extends Area2D
 
-func _on_timeout() -> void:
-	%Monster.visible = true
+@export var player:Node2D
+@export var monster:Node2D
+@export var destination:Marker2D
+
+func _on_body_entered(body: Node2D) -> void:
+	if (body == player):
+		monster.global_position = destination.global_position
+		set_deferred(\"monitoring\", false)
 "
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ix2kb"]
+size = Vector2(8, 120)
+
+[sub_resource type="GDScript" id="GDScript_xu2tw"]
+script/source = "extends Area2D
+
+@export var player : Node2D
+@export var monster : Node2D
+
+func _on_body_entered(body: Node2D) -> void:
+	if(body == player):
+		monster.visible = true
+		monster.start_moving()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdyrp"]
+size = Vector2(20, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0oe6"]
+size = Vector2(5, 20)
 
 [node name="Surface" type="Node2D"]
 y_sort_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_067lj")
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
@@ -2302,7 +2330,7 @@ player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_323lg")]
 unique_name_in_owner = true
-position = Vector2(230, 239)
+position = Vector2(230, 240)
 
 [node name="Trenches" type="TileMapLayer" parent="."]
 z_index = -1
@@ -4312,6 +4340,7 @@ position = Vector2(-104, -541)
 shape = SubResource("RectangleShape2D_iglxr")
 
 [node name="AmbienceArea" type="Area2D" parent="."]
+visible = false
 position = Vector2(-17, -9)
 script = ExtResource("52_j0fmm")
 
@@ -5229,8 +5258,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Monster" parent="." node_paths=PackedStringArray("target") instance=ExtResource("60_iglxr")]
 unique_name_in_owner = true
-visible = false
-position = Vector2(211, -455)
+position = Vector2(607, -588)
 target = NodePath("../Player")
 SPEED = 45
 
@@ -5410,12 +5438,6 @@ texture = ExtResource("27_koir8")
 position = Vector2(-1416, -628)
 texture = ExtResource("27_koir8")
 
-[node name="Spawn Dezerter" type="Timer" parent="."]
-wait_time = 10.0
-one_shot = true
-autostart = true
-script = SubResource("GDScript_al27h")
-
 [node name="ObiektMaePudo" type="Sprite2D" parent="."]
 position = Vector2(-1892, -248)
 texture = ExtResource("63_nfg57")
@@ -5475,6 +5497,36 @@ position = Vector2(5, 1)
 stream = ExtResource("72_2h1wf")
 script = ExtResource("73_xu2tw")
 
+[node name="Monster_teleport" type="Area2D" parent="." node_paths=PackedStringArray("player", "monster", "destination")]
+monitorable = false
+script = SubResource("GDScript_2h1wf")
+player = NodePath("../Player")
+monster = NodePath("../Monster")
+destination = NodePath("../Teleport_spot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster_teleport"]
+position = Vector2(-1229, -418)
+shape = SubResource("RectangleShape2D_ix2kb")
+debug_color = Color(0.96481246, 0, 0.493397, 0.41960785)
+
+[node name="Teleport_spot" type="Marker2D" parent="."]
+position = Vector2(-1005, -230)
+
+[node name="Monster_spaw" type="Area2D" parent="." node_paths=PackedStringArray("player", "monster")]
+script = SubResource("GDScript_xu2tw")
+player = NodePath("../Player")
+monster = NodePath("../Monster")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster_spaw"]
+position = Vector2(151, -131)
+shape = SubResource("RectangleShape2D_qdyrp")
+debug_color = Color(0.98170775, 0, 0.3728054, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Monster_spaw"]
+position = Vector2(-45.5, 226)
+shape = SubResource("RectangleShape2D_b0oe6")
+debug_color = Color(0.96779925, 6.738305e-07, 0.47500032, 0.41960785)
+
 [connection signal="body_entered" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_exited"]
 [connection signal="body_entered" from="Surface1/Graves/Miller" to="Surface1/Graves/Miller" method="_on_body_entered"]
@@ -5498,5 +5550,5 @@ script = ExtResource("73_xu2tw")
 [connection signal="body_entered" from="Surface2/Tank" to="Surface2/Tank" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface2/Tank" to="Surface2/Tank" method="_on_body_exited"]
 [connection signal="killed" from="Monster" to="Player" method="_on_monster_killed"]
-[connection signal="timeout" from="Spawn Dezerter" to="Monster" method="start_moving"]
-[connection signal="timeout" from="Spawn Dezerter" to="Spawn Dezerter" method="_on_timeout"]
+[connection signal="body_entered" from="Monster_teleport" to="Monster_teleport" method="_on_body_entered"]
+[connection signal="body_entered" from="Monster_spaw" to="Monster_spaw" method="_on_body_entered"]
