@@ -23,6 +23,8 @@ func _process(delta: float) -> void:
 			
 			$AnimatedSprite2D.visible = true
 			$AnimationPlayer.play("wybuch")
+			$ObiektTnt.visible = false
+			$coliza.queue_free()
 			$boom.play()
 		
 		

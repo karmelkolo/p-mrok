@@ -1,4 +1,4 @@
-[gd_scene load_steps=501 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=503 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -55,7 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://rfqnjmiw6avf" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana.png" id="50_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://bh27skh88i3dp" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewe Continiuum.png" id="51_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://qjwnh4hpo845" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewo.png" id="52_iglxr"]
-[ext_resource type="Script" uid="uid://cwit0uuatm6sa" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
+[ext_resource type="Script" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
 [ext_resource type="Texture2D" uid="uid://0d26c5or13rw" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawe Continiuum.png" id="53_067lj"]
 [ext_resource type="Texture2D" uid="uid://ccyb3qqk6v3ei" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawo.png" id="54_al27h"]
 [ext_resource type="Texture2D" uid="uid://dtk1gmwgyqtvs" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Lewo Dół.png" id="55_olatj"]
@@ -799,9 +799,6 @@ size = Vector2(248.25, 135)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nh0lb"]
 size = Vector2(176, 80)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgg6j"]
-size = Vector2(31, 13)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0svn"]
 size = Vector2(31, 13)
 
@@ -816,9 +813,6 @@ size = Vector2(29, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpjbg"]
 size = Vector2(35, 13)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6s53c"]
-size = Vector2(28, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwttc"]
 size = Vector2(100, 20)
@@ -2035,6 +2029,18 @@ _data = {
 &"new_animation": SubResource("Animation_ixhq0"),
 &"wybuch": SubResource("Animation_ujv1i")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1382u"]
+size = Vector2(33, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6s53c"]
+size = Vector2(28, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgg6j"]
+size = Vector2(52, 24.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_356uf"]
+size = Vector2(31, 16)
 
 [node name="Surface" type="Node2D"]
 y_sort_enabled = true
@@ -3497,16 +3503,12 @@ shape = SubResource("RectangleShape2D_xaa8o")
 position = Vector2(-1546, -251)
 shape = SubResource("RectangleShape2D_nh0lb")
 
-[node name="CollisionShape2D146" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(-1847.5, -232)
-shape = SubResource("RectangleShape2D_tgg6j")
-
 [node name="CollisionShape2D151" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(-1822, -187)
+position = Vector2(-1995, -199)
 shape = SubResource("RectangleShape2D_c0svn")
 
 [node name="CollisionShape2D152" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(-1780, -172)
+position = Vector2(-2041, -193)
 shape = SubResource("RectangleShape2D_80r36")
 
 [node name="CollisionShape2D150" type="CollisionShape2D" parent="Surface1/Collisions"]
@@ -3514,16 +3516,12 @@ position = Vector2(-1840.875, -132)
 shape = SubResource("RectangleShape2D_g1osq")
 
 [node name="CollisionShape2D147" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(-1822.5, -181)
+position = Vector2(-1976, -230)
 shape = SubResource("RectangleShape2D_pedy0")
 
 [node name="CollisionShape2D149" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(-1780.5, -168)
+position = Vector2(-2021, -182)
 shape = SubResource("RectangleShape2D_bpjbg")
-
-[node name="CollisionShape2D148" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(-1873, -235)
-shape = SubResource("RectangleShape2D_6s53c")
 
 [node name="CollisionShape2D105" type="CollisionShape2D" parent="Surface1/Collisions"]
 position = Vector2(-1608, -221)
@@ -3982,7 +3980,7 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="detonatorek" type="Area2D" parent="."]
-position = Vector2(-1858, -143)
+position = Vector2(-1858, -144)
 script = ExtResource("37_borgg")
 metadata/_edit_group_ = true
 
@@ -5591,22 +5589,6 @@ texture = ExtResource("27_koir8")
 position = Vector2(-1416, -628)
 texture = ExtResource("27_koir8")
 
-[node name="ObiektMaePudo" type="Sprite2D" parent="."]
-position = Vector2(-1892, -248)
-texture = ExtResource("63_nfg57")
-
-[node name="ObiektTnt" type="Sprite2D" parent="."]
-position = Vector2(-1853, -260)
-texture = ExtResource("64_c7txx")
-
-[node name="ObiektTnt2" type="Sprite2D" parent="."]
-position = Vector2(-1828, -212)
-texture = ExtResource("64_c7txx")
-
-[node name="ObiektTnt3" type="Sprite2D" parent="."]
-position = Vector2(-1784, -198)
-texture = ExtResource("64_c7txx")
-
 [node name="ObiektPrzewód" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(-1880.0001, -168)
@@ -5681,9 +5663,13 @@ shape = SubResource("RectangleShape2D_b0oe6")
 debug_color = Color(0.96779925, 6.738305e-07, 0.47500032, 0.41960785)
 
 [node name="wybuchdeto" type="StaticBody2D" parent="."]
-position = Vector2(-1839, -208)
+position = Vector2(-1848, -203)
 script = ExtResource("74_ipklw")
 metadata/_edit_group_ = true
+
+[node name="ObiektTnt" type="Sprite2D" parent="wybuchdeto"]
+position = Vector2(11, -4)
+texture = ExtResource("64_c7txx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="wybuchdeto"]
 sprite_frames = SubResource("SpriteFrames_im5dm")
@@ -5698,10 +5684,26 @@ libraries = {
 [node name="boom" type="AudioStreamPlayer2D" parent="wybuchdeto"]
 stream = ExtResource("80_24vty")
 
+[node name="coliza" type="CollisionShape2D" parent="wybuchdeto"]
+position = Vector2(-0.5, 13.5)
+shape = SubResource("RectangleShape2D_1382u")
+
 [node name="wybuchdeto2" type="StaticBody2D" parent="."]
-position = Vector2(-1864, -249)
+position = Vector2(-1864, -248)
 script = ExtResource("74_ipklw")
 metadata/_edit_group_ = true
+
+[node name="ObiektTnt" type="Sprite2D" parent="wybuchdeto2"]
+position = Vector2(7, -13)
+texture = ExtResource("64_c7txx")
+
+[node name="ObiektMaePudo" type="Sprite2D" parent="wybuchdeto2/ObiektTnt"]
+position = Vector2(-38, 14)
+texture = ExtResource("63_nfg57")
+
+[node name="CollisionShape2D148" type="CollisionShape2D" parent="wybuchdeto2/ObiektTnt"]
+position = Vector2(-33, 17)
+shape = SubResource("RectangleShape2D_6s53c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="wybuchdeto2"]
 sprite_frames = SubResource("SpriteFrames_im5dm")
@@ -5716,8 +5718,12 @@ libraries = {
 [node name="boom" type="AudioStreamPlayer2D" parent="wybuchdeto2"]
 stream = ExtResource("80_24vty")
 
+[node name="coliza" type="CollisionShape2D" parent="wybuchdeto2"]
+position = Vector2(-16, 1.25)
+shape = SubResource("RectangleShape2D_tgg6j")
+
 [node name="wybuchdeto3" type="StaticBody2D" parent="."]
-position = Vector2(-1794, -191)
+position = Vector2(-1802, -199)
 script = ExtResource("74_ipklw")
 metadata/_edit_group_ = true
 
@@ -5726,6 +5732,10 @@ sprite_frames = SubResource("SpriteFrames_im5dm")
 animation = &"wybuch"
 speed_scale = 2.0
 
+[node name="ObiektTnt" type="Sprite2D" parent="wybuchdeto3"]
+position = Vector2(10, -7)
+texture = ExtResource("64_c7txx")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wybuchdeto3"]
 libraries = {
 &"": SubResource("AnimationLibrary_v4lyd")
@@ -5733,6 +5743,10 @@ libraries = {
 
 [node name="boom" type="AudioStreamPlayer2D" parent="wybuchdeto3"]
 stream = ExtResource("80_24vty")
+
+[node name="coliza" type="CollisionShape2D" parent="wybuchdeto3"]
+position = Vector2(-1.5, 11)
+shape = SubResource("RectangleShape2D_356uf")
 
 [connection signal="body_entered" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface1/Graves/NoName" to="Surface1/Graves/NoName" method="_on_body_exited"]
