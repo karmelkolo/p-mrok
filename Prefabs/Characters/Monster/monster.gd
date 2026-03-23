@@ -55,11 +55,11 @@ func make_path() -> void:
 	
 
 
-#func _on_death_collison_body_entered(body: Node2D) -> void:
-	#if body == target:
-		#SPEED = 0
-		#emit_signal("killed")
-		#get_tree().change_scene_to_file("res://Scenes/Smierc.tscn")
+func _on_death_collison_body_entered(body: Node2D) -> void:
+	if body == target:
+		SPEED = 0
+		emit_signal("killed")
+		get_tree().change_scene_to_file("res://Scenes/Smierc.tscn")
 
 
 func _on_timer_timeout() -> void:
@@ -92,5 +92,6 @@ func start_moving() -> void:
 	
 func wybuch() -> void:
 	aggro_timer.set_paused(true)
+	found_player = false
 	follow = false
 	injured = true
