@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ds0mv1jltl2o6" path="res://Scripts/Objects/mina.gd" id="1_dlik2"]
 [ext_resource type="Texture2D" uid="uid://bgyveso46xkna" path="res://Textures/Objects/Mine/Obiekty_-_Mina.png" id="2_m1fym"]
-[ext_resource type="Texture2D" uid="uid://dhwpen1bkesa" path="res://Textures/Objects/Mine/System_-_Boom1.png" id="3_otahl"]
-[ext_resource type="Texture2D" uid="uid://dbjt053r7vbrt" path="res://Textures/Objects/Mine/System_-_Boom2.png" id="4_qigib"]
-[ext_resource type="Texture2D" uid="uid://7nh0054ctbv5" path="res://Textures/Objects/Mine/System_-_Boom3.png" id="5_hm82p"]
-[ext_resource type="Texture2D" uid="uid://ba075ak4kvs3f" path="res://Textures/Objects/Mine/System_-_Boom4.png" id="6_1tav0"]
-[ext_resource type="Texture2D" uid="uid://bjoxrohjkj6rq" path="res://Textures/Objects/Mine/System_-_Boom5.png" id="7_l0ifd"]
+[ext_resource type="Texture2D" uid="uid://cuyuc615d4cvh" path="res://Textures/Objects/Mine/System_-_Boom1.png" id="3_otahl"]
+[ext_resource type="Texture2D" uid="uid://blp176meg6w63" path="res://Textures/Objects/Mine/System_-_Boom2.png" id="4_qigib"]
+[ext_resource type="Texture2D" uid="uid://it02u411itj7" path="res://Textures/Objects/Mine/System_-_Boom3.png" id="5_hm82p"]
+[ext_resource type="Texture2D" uid="uid://24pxl8y8tudi" path="res://Textures/Objects/Mine/System_-_Boom4.png" id="6_1tav0"]
+[ext_resource type="Texture2D" uid="uid://6tg6u1cdlqo0" path="res://Textures/Objects/Mine/System_-_Boom5.png" id="7_l0ifd"]
 [ext_resource type="Texture2D" uid="uid://dg3reynfaywpq" path="res://Textures/Objects/Mine/System_-_Boom6.png" id="8_sx6vd"]
 [ext_resource type="AudioStream" uid="uid://c0gflt174y223" path="res://Audio/boommina.mp3" id="9_s2ki2"]
 
