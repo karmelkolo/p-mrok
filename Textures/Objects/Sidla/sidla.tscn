@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://dkxy670r01nqc"]
+
+[ext_resource type="Script" uid="uid://c3rnapvhgf3l7" path="res://Textures/Objects/Sidla/sidla.gd" id="1_d5586"]
+[ext_resource type="Texture2D" uid="uid://diatbbvx4yrk1" path="res://Textures/Objects/Bear Trap/Obiekt - Sidła(Nowe).png" id="2_d5586"]
+[ext_resource type="Texture2D" uid="uid://dtsb2qklaofpw" path="res://Textures/Objects/Sidla/System_-_Boom1.png" id="3_mhj4w"]
+[ext_resource type="Texture2D" uid="uid://cpns1dgoajxbd" path="res://Textures/Objects/Sidla/System_-_Boom2.png" id="4_xu10w"]
+[ext_resource type="Texture2D" uid="uid://f2mg830wpmx4" path="res://Textures/Objects/Sidla/System_-_Boom3.png" id="5_mim2m"]
+[ext_resource type="Texture2D" uid="uid://btq1a4pdktfuy" path="res://Textures/Objects/Sidla/System_-_Boom4.png" id="6_y3b2i"]
+[ext_resource type="Texture2D" uid="uid://dqealcld5gano" path="res://Textures/Objects/Sidla/System_-_Boom5.png" id="7_vm7ho"]
+[ext_resource type="Texture2D" uid="uid://c6lw506b2u02o" path="res://Textures/Objects/Sidla/System_-_Boom6.png" id="8_ehh5f"]
+[ext_resource type="AudioStream" uid="uid://biktvikvecw4g" path="res://Textures/Objects/Bear Trap/sidla.mp3" id="9_mkstd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kuf18"]
+radius = 5.0
+height = 10.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pgu05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mhj4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xu10w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mim2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y3b2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vm7ho")
+}, {
+"duration": 5.0,
+"texture": ExtResource("8_ehh5f")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="sidla" type="Area2D"]
+script = ExtResource("1_d5586")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kuf18")
+
+[node name="Sidlasprite" type="Sprite2D" parent="."]
+position = Vector2(4, -3)
+scale = Vector2(0.86, 0.88)
+texture = ExtResource("2_d5586")
+
+[node name="Wybuch" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 5
+sprite_frames = SubResource("SpriteFrames_pgu05")
+animation = &"idle"
+
+[node name="boom" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_mkstd")
