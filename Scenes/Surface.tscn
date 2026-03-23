@@ -55,7 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://rfqnjmiw6avf" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana.png" id="50_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://bh27skh88i3dp" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewe Continiuum.png" id="51_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://qjwnh4hpo845" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewo.png" id="52_iglxr"]
-[ext_resource type="Script" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
+[ext_resource type="Script" uid="uid://cwit0uuatm6sa" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
 [ext_resource type="Texture2D" uid="uid://0d26c5or13rw" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawe Continiuum.png" id="53_067lj"]
 [ext_resource type="Texture2D" uid="uid://ccyb3qqk6v3ei" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawo.png" id="54_al27h"]
 [ext_resource type="Texture2D" uid="uid://dtk1gmwgyqtvs" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Lewo Dół.png" id="55_olatj"]
@@ -2488,6 +2488,7 @@ player = NodePath("../Player")
 [node name="Player" parent="." instance=ExtResource("3_323lg")]
 unique_name_in_owner = true
 position = Vector2(230, 240)
+ciemnosc = false
 
 [node name="Trenches" type="TileMapLayer" parent="."]
 z_index = -1
@@ -4771,6 +4772,9 @@ position = Vector2(-739, -67)
 [node name="mina14" parent="." instance=ExtResource("50_jd8kd")]
 position = Vector2(-893, -93)
 
+[node name="Monster_spawn" type="Marker2D" parent="."]
+position = Vector2(607, -588)
+
 [node name="mina15" parent="." instance=ExtResource("50_jd8kd")]
 position = Vector2(-1038, -187)
 
@@ -5408,11 +5412,12 @@ text = "Co to za jakies ukryte wiadomości poza mapą?
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Monster" parent="." node_paths=PackedStringArray("target") instance=ExtResource("60_iglxr")]
+[node name="Monster" parent="." node_paths=PackedStringArray("target", "safe_spot") instance=ExtResource("60_iglxr")]
 unique_name_in_owner = true
 position = Vector2(607, -588)
 target = NodePath("../Player")
 SPEED = 45
+safe_spot = NodePath("../Monster_spawn")
 
 [node name="TerenŻywaŚcianaŚrodek9" type="Sprite2D" parent="."]
 position = Vector2(-1932, 0)

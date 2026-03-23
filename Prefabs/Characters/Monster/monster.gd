@@ -7,6 +7,7 @@ extends CharacterBody2D
 	"min_time": 20,
 	"max_time": 30
 }
+@export var safe_spot: Marker2D
 
 @onready var nav_agent = $NavigationAgent2D
 @onready var aggro_timer = $Aggro
@@ -14,6 +15,7 @@ extends CharacterBody2D
 
 var follow = true
 var found_player = false
+var injured = false
 signal killed
 
 func _ready() -> void:
@@ -23,6 +25,14 @@ func _ready() -> void:
 	print_debug(random_time)
 	aggro_timer.start(random_time)
 
+
+func _process(_delta: float) -> void:
+	if injured:
+		if global_position.distance_to(target.global_position) > 150:
+			global_position = safe_spot.global_position
+			aggro_timer.start()
+			aggro_timer.set_paused(false)
+			injured = false
 func _physics_process(_delta: float) -> void:
 	var direction = to_local(nav_agent.get_next_path_position()).normalized()
 	velocity = direction * SPEED
@@ -45,11 +55,11 @@ func make_path() -> void:
 	
 
 
-func _on_death_collison_body_entered(body: Node2D) -> void:
-	if body == target:
-		SPEED = 0
-		emit_signal("killed")
-		get_tree().change_scene_to_file("res://Scenes/Smierc.tscn")
+#func _on_death_collison_body_entered(body: Node2D) -> void:
+	#if body == target:
+		#SPEED = 0
+		#emit_signal("killed")
+		#get_tree().change_scene_to_file("res://Scenes/Smierc.tscn")
 
 
 func _on_timer_timeout() -> void:
@@ -79,3 +89,8 @@ func _on_player_detect_body_entered(body: Node2D) -> void:
 
 func start_moving() -> void:
 	can_move = true
+	
+func wybuch() -> void:
+	aggro_timer.set_paused(true)
+	follow = false
+	injured = true
