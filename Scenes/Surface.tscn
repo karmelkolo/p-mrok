@@ -68,7 +68,7 @@
 [ext_resource type="Texture2D" uid="uid://b5kfdjajkqvm4" path="res://Textures/Objects/Box/Obiekt_-_Mae_pudo.png" id="63_nfg57"]
 [ext_resource type="Texture2D" uid="uid://cvutqxrajc5vl" path="res://Textures/Objects/Boom Bomm/Obiekt - TNT.png" id="64_c7txx"]
 [ext_resource type="Texture2D" uid="uid://fdu31s1tw6mu" path="res://Textures/Objects/Boom Bomm/Obiekt - Detonator.png" id="64_dborj"]
-[ext_resource type="Texture2D" uid="uid://cle1kj1nvyb36" path="res://Textures/Objects/Boom Bomm/Obiekt - Przewód.png" id="65_qebk8"]
+[ext_resource type="Texture2D" uid="uid://7813q1vhueys" path="res://Textures/Objects/Boom Bomm/Obiekt_-_Przewod.png" id="67_48vxu"]
 [ext_resource type="Texture2D" uid="uid://6fms8gjxb1ow" path="res://Textures/Objects/Cocoons/Obiekt - Ciało Kokon.png" id="67_wfbjt"]
 [ext_resource type="Texture2D" uid="uid://2cfwroxd7gld" path="res://Textures/Objects/Cocoons/Obiekt - Duzy Kokon.png" id="68_borgg"]
 [ext_resource type="Texture2D" uid="uid://nq0a1lghwvs3" path="res://Textures/Objects/Cocoons/Obiekt - Kokon.png" id="69_j0fmm"]
@@ -3512,7 +3512,7 @@ position = Vector2(-2041, -193)
 shape = SubResource("RectangleShape2D_80r36")
 
 [node name="CollisionShape2D150" type="CollisionShape2D" parent="Surface1/Collisions"]
-position = Vector2(-1840.875, -132)
+position = Vector2(-1906, -205)
 shape = SubResource("RectangleShape2D_g1osq")
 
 [node name="CollisionShape2D147" type="CollisionShape2D" parent="Surface1/Collisions"]
@@ -3980,7 +3980,7 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="detonatorek" type="Area2D" parent="."]
-position = Vector2(-1858, -144)
+position = Vector2(-1924, -216)
 script = ExtResource("37_borgg")
 metadata/_edit_group_ = true
 
@@ -5593,7 +5593,7 @@ texture = ExtResource("27_koir8")
 z_index = -2
 position = Vector2(-1880.0001, -168)
 scale = Vector2(0.795, 0.795)
-texture = ExtResource("65_qebk8")
+texture = ExtResource("67_48vxu")
 
 [node name="ObiektDuzyKokon2" type="Sprite2D" parent="."]
 position = Vector2(679, -628)
