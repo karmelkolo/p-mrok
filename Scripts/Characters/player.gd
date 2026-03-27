@@ -5,6 +5,8 @@ class_name Player
 @export var czas = 0.6
 @export var ciemnosc = true
 @export var hasLamp = true
+@export var paralized = false
+
 
 var facing = "Down"
 var czyjuzwstal = false
@@ -49,7 +51,7 @@ func _input(event) -> void:
 		get_tree().quit(0)
 
 func _physics_process(_delta: float) -> void:
-	
+	print(SPEED)
 	if not can_move:
 		velocity = Vector2.ZERO
 		return
@@ -91,8 +93,8 @@ func _physics_process(_delta: float) -> void:
 		$AnimationTree.set("parameters/Walking/blend_position", velocity)
 		$AnimationTree.set("parameters/Running/blend_position", velocity)
 		
-		
-	move_and_slide()
+	if paralized == false:	
+		move_and_slide()
 
 
 func _on_wyjscie_interaction_body_entered(body: Node2D) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dxfvp3i0nxpm2"]
+[gd_scene load_steps=53 format=3 uid="uid://dxfvp3i0nxpm2"]
 
 [ext_resource type="Script" uid="uid://c7ivjx78kbree" path="res://Scripts/Characters/player.gd" id="1_tc74r"]
 [ext_resource type="SpriteFrames" uid="uid://c1hberdwe7ehs" path="res://Prefabs/Characters/Player/Player_Animation.tres" id="1_tugc6"]
@@ -350,6 +350,33 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.26666668, 0.56666666, 0.8666667, 1.1, 1.3666667)
 }
 
+[sub_resource type="Animation" id="Animation_s651y"]
+resource_name = "sidla"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"sidla"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xctvd"]
 _data = {
 &"RESET": SubResource("Animation_3lkjw"),
@@ -365,6 +392,7 @@ _data = {
 &"Walking_Left": SubResource("Animation_eh1e8"),
 &"Walking_Right": SubResource("Animation_rk1f8"),
 &"Walking_Up": SubResource("Animation_3kv12"),
+&"sidla": SubResource("Animation_s651y"),
 &"wstaje": SubResource("Animation_3pggo")
 }
 
@@ -437,6 +465,9 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_qg7uf")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tidfi"]
+animation = &"sidla"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_77v63"]
 animation = &"wstaje"
 
@@ -475,6 +506,22 @@ advance_expression = "velocity.length() != 0"
 advance_mode = 2
 advance_expression = "get_tree().current_scene.scene_file_path != \"res://Scenes/SafeHouse.tscn\""
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1m7nr"]
+advance_mode = 2
+advance_expression = "paralized == true"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v3m7u"]
+advance_mode = 2
+advance_expression = "paralized == true"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j2q2f"]
+advance_mode = 2
+advance_expression = "paralized == false"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hscyl"]
+advance_mode = 2
+advance_expression = "paralized == true"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_1dsno"]
 states/Running/node = SubResource("AnimationNodeBlendSpace2D_m3lce")
 states/Running/position = Vector2(513, 210)
@@ -483,10 +530,12 @@ states/Standing/position = Vector2(384, 100)
 states/Start/position = Vector2(166, 100)
 states/Walking/node = SubResource("AnimationNodeBlendSpace2D_ggv7w")
 states/Walking/position = Vector2(621, 100)
+states/sidla/node = SubResource("AnimationNodeAnimation_tidfi")
+states/sidla/position = Vector2(491, -19)
 states/wstaje/node = SubResource("AnimationNodeAnimation_77v63")
 states/wstaje/position = Vector2(288, 182)
-transitions = ["Standing", "Walking", SubResource("AnimationNodeStateMachineTransition_cu7pv"), "Walking", "Standing", SubResource("AnimationNodeStateMachineTransition_rayq8"), "Walking", "Running", SubResource("AnimationNodeStateMachineTransition_4d7uh"), "Running", "Walking", SubResource("AnimationNodeStateMachineTransition_8pqdl"), "Running", "Standing", SubResource("AnimationNodeStateMachineTransition_uym0n"), "Standing", "Running", SubResource("AnimationNodeStateMachineTransition_3pggo"), "Start", "wstaje", SubResource("AnimationNodeStateMachineTransition_tidfi"), "wstaje", "Standing", SubResource("AnimationNodeStateMachineTransition_m3lce"), "Start", "Standing", SubResource("AnimationNodeStateMachineTransition_s651y")]
-graph_offset = Vector2(-126, 29)
+transitions = ["Standing", "Walking", SubResource("AnimationNodeStateMachineTransition_cu7pv"), "Walking", "Standing", SubResource("AnimationNodeStateMachineTransition_rayq8"), "Walking", "Running", SubResource("AnimationNodeStateMachineTransition_4d7uh"), "Running", "Walking", SubResource("AnimationNodeStateMachineTransition_8pqdl"), "Running", "Standing", SubResource("AnimationNodeStateMachineTransition_uym0n"), "Standing", "Running", SubResource("AnimationNodeStateMachineTransition_3pggo"), "Start", "wstaje", SubResource("AnimationNodeStateMachineTransition_tidfi"), "wstaje", "Standing", SubResource("AnimationNodeStateMachineTransition_m3lce"), "Start", "Standing", SubResource("AnimationNodeStateMachineTransition_s651y"), "Walking", "sidla", SubResource("AnimationNodeStateMachineTransition_1m7nr"), "Standing", "sidla", SubResource("AnimationNodeStateMachineTransition_v3m7u"), "sidla", "Standing", SubResource("AnimationNodeStateMachineTransition_j2q2f"), "Running", "sidla", SubResource("AnimationNodeStateMachineTransition_hscyl")]
+graph_offset = Vector2(-6, -26)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_tc74r")
