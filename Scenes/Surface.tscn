@@ -55,7 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://rfqnjmiw6avf" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana.png" id="50_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://bh27skh88i3dp" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewe Continiuum.png" id="51_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://qjwnh4hpo845" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewo.png" id="52_iglxr"]
-[ext_resource type="Script" uid="uid://cwit0uuatm6sa" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
+[ext_resource type="Script" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
 [ext_resource type="Texture2D" uid="uid://0d26c5or13rw" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawe Continiuum.png" id="53_067lj"]
 [ext_resource type="Texture2D" uid="uid://ccyb3qqk6v3ei" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawo.png" id="54_al27h"]
 [ext_resource type="Texture2D" uid="uid://dtk1gmwgyqtvs" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Lewo Dół.png" id="55_olatj"]
@@ -4011,12 +4011,13 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="pick_up_key" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-1816, -138)
+position = Vector2(213, 172)
 stream = ExtResource("39_al27h")
 
 [node name="klucz" type="Area2D" parent="."]
-position = Vector2(-1815, -138)
+position = Vector2(213, 172)
 script = ExtResource("59_067lj")
+metadata/_edit_group_ = true
 
 [node name="ObiektKlucz" type="Sprite2D" parent="klucz"]
 position = Vector2(0, 3)

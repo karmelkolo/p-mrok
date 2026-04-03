@@ -10,7 +10,9 @@ var dialogue_index = 0
 
 func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
-	
+	if GameState.has_key == true:
+		dialogues = ["I still can't believe I was able to do it.",
+		"The revolver has one bullet, It's up to me what I do with it."] 
 	#IMPLEMENTACJA DIALOGU
 	if not dialogue_sprite:
 		dialogue_sprite = get_tree().get_root().find_child("Dialogue", true, false)
@@ -21,6 +23,9 @@ func _process(_delta: float) -> void:
 
 func _on_body_entered(body):
 	if body is Player:
+		#if Player.has_key:
+		#	dialogues = ["I still can't believe I was able to do it.",
+		#	"The revolver has one bullet, It's up to me what I do with it."]
 		%"Obiekt-Sejf1".texture = load('res://Textures/Objects/Safe/Obiekt_-_Sejf_Interakcja.png')
 		%"Obiekt-Sejf1".position += Vector2(1,5)
 		showInteractionLabel = true

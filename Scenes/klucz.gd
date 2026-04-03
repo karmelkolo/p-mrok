@@ -8,6 +8,7 @@ func _process(_delta: float) -> void:
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
 		$"../pick_up_key".play()
 		%Player.has_key = true; 
+		GameState.has_key = true;
 		$".".queue_free()
 
 
