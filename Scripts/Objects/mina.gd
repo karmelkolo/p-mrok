@@ -6,13 +6,6 @@ func _ready() -> void:
 	connect("body_entered", _on_body_entered)
 
 func _on_body_entered(body: Node) -> void:
-	if body.name == "Monster":
-		body.wybuch()
-		$Wybuch.play("explode")
-		$boom.play()
-		$Minasprite.visible = false
-		await $Wybuch.animation_finished
-		$Wybuch.play("idle")
 	if body.name == "Player":
 		body.SPEED = 0
 		$Wybuch.play("explode")

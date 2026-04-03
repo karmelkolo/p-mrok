@@ -1,4 +1,4 @@
-[gd_scene load_steps=504 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=506 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
@@ -81,6 +81,7 @@
 [ext_resource type="Texture2D" uid="uid://c386qq1q5tod5" path="res://Textures/Objects/Boom Bomm/System_-_Boom4.png" id="77_48vxu"]
 [ext_resource type="Texture2D" uid="uid://ccdapjqea4t4d" path="res://Textures/Objects/Boom Bomm/System_-_Boom5.png" id="78_5q17r"]
 [ext_resource type="AudioStream" uid="uid://c0gflt174y223" path="res://Audio/boommina.mp3" id="80_24vty"]
+[ext_resource type="Script" uid="uid://bythhcqvai88y" path="res://Scripts/Objects/detonacja.gd" id="81_im5dm"]
 [ext_resource type="PackedScene" uid="uid://dkxy670r01nqc" path="res://Textures/Objects/Sidla/sidla.tscn" id="82_5q17r"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_067lj"]
@@ -2033,6 +2034,9 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1382u"]
 size = Vector2(33, 17)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ixhq0"]
+radius = 49.010204
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6s53c"]
 size = Vector2(28, 13)
@@ -5694,6 +5698,15 @@ stream = ExtResource("80_24vty")
 position = Vector2(-0.5, 13.5)
 shape = SubResource("RectangleShape2D_1382u")
 
+[node name="Area2D" type="Area2D" parent="wybuchdeto" node_paths=PackedStringArray("top_layer")]
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource("81_im5dm")
+top_layer = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wybuchdeto/Area2D"]
+shape = SubResource("CircleShape2D_ixhq0")
+
 [node name="wybuchdeto2" type="StaticBody2D" parent="."]
 position = Vector2(-1864, -248)
 script = ExtResource("74_ipklw")
@@ -5728,6 +5741,15 @@ stream = ExtResource("80_24vty")
 position = Vector2(-16, 1.25)
 shape = SubResource("RectangleShape2D_tgg6j")
 
+[node name="Area2D" type="Area2D" parent="wybuchdeto2" node_paths=PackedStringArray("top_layer")]
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource("81_im5dm")
+top_layer = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wybuchdeto2/Area2D"]
+shape = SubResource("CircleShape2D_ixhq0")
+
 [node name="wybuchdeto3" type="StaticBody2D" parent="."]
 position = Vector2(-1802, -199)
 script = ExtResource("74_ipklw")
@@ -5753,6 +5775,15 @@ stream = ExtResource("80_24vty")
 [node name="coliza" type="CollisionShape2D" parent="wybuchdeto3"]
 position = Vector2(-1.5, 11)
 shape = SubResource("RectangleShape2D_356uf")
+
+[node name="Area2D" type="Area2D" parent="wybuchdeto3" node_paths=PackedStringArray("top_layer")]
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource("81_im5dm")
+top_layer = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wybuchdeto3/Area2D"]
+shape = SubResource("CircleShape2D_ixhq0")
 
 [node name="sidla" parent="." instance=ExtResource("82_5q17r")]
 position = Vector2(193, 235)
@@ -5785,3 +5816,5 @@ position = Vector2(268, 246)
 [connection signal="killed" from="Monster" to="Player" method="_on_monster_killed"]
 [connection signal="body_entered" from="Monster_teleport" to="Monster_teleport" method="_on_body_entered"]
 [connection signal="body_entered" from="Monster_spaw" to="Monster_spaw" method="_on_body_entered"]
+[connection signal="body_entered" from="wybuchdeto3/Area2D" to="wybuchdeto3/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="wybuchdeto3/Area2D" to="wybuchdeto3/Area2D" method="_on_body_exited"]
