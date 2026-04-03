@@ -5,11 +5,10 @@ class_name Player
 @export var czas = 0.6
 @export var ciemnosc = true
 @export var hasLamp = true
-
+var has_key: bool = false
 var facing = "Down"
 var czyjuzwstal = false
 var carrying: bool = false
-var has_key: bool = false
 var has_items = 0
 var was_surface = 0
 var can_move: bool = true
@@ -26,9 +25,10 @@ func _ready() -> void:
 		is_out = false 
 	has_items = GameState.has_items
 	was_surface = GameState.was_surface	
+	has_key = GameState.has_key
 
 func _input(event) -> void:
-	print(can_move)
+	#print(can_move)
 	if can_move:
 		czyjuzwstal = true
 	else:
@@ -49,7 +49,7 @@ func _input(event) -> void:
 		get_tree().quit(0)
 
 func _physics_process(_delta: float) -> void:
-	
+	print(has_key )
 	if not can_move:
 		velocity = Vector2.ZERO
 		return
