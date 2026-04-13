@@ -21,6 +21,8 @@ func _process(_delta: float) -> void:
 		await get_tree().create_timer(1).timeout
 		entrysfx.finished.connect(entrysfx.queue_free)
 		%Player.can_move = true
+		TransitionScene.transition()
+		await TransitionScene.on_transition_finished
 		get_tree().change_scene_to_file("res://Scenes/Surface.tscn")
 	elif showInteractionLabel and Input.is_action_just_pressed("interact") and dialogue_sprite and dialogue_sprite.currently_playing == -1:
 		var hud = get_tree().get_root().find_child("HUD", true, false)

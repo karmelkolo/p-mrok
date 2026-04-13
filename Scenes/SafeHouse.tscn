@@ -1,6 +1,7 @@
-[gd_scene load_steps=56 format=4 uid="uid://51qr3tu6ex3n"]
+[gd_scene load_steps=57 format=4 uid="uid://51qr3tu6ex3n"]
 
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="1_3y2t8"]
+[ext_resource type="PackedScene" uid="uid://ck237g5mca5gf" path="res://Scripts/Objects/transition_scene.tscn" id="1_v5sre"]
 [ext_resource type="Texture2D" uid="uid://b00vq0jrdef8g" path="res://Textures/Objects/FadeIn/fadein.png" id="1_y53bk"]
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="2_e0avo"]
 [ext_resource type="Script" uid="uid://u2bamvp2fnp8" path="res://Scripts/Objects/fadein.gd" id="2_hhged"]
@@ -135,6 +136,8 @@ size = Vector2(16, 8)
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(-1, 0)
+
+[node name="TransitionScene" parent="." instance=ExtResource("1_v5sre")]
 
 [node name="FadeIn" type="Sprite2D" parent="."]
 visible = false
