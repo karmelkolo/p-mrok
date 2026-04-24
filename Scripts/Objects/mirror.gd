@@ -11,25 +11,23 @@ var dialogue_over = false
 var choice_index = 0 # 0 = A, 1 = B
 var choosing = false
 var block_input = false
-var mirror = false
 var block_choice = false
+var in_dialogue = false
 	
 func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	
 	if not dialogue_sprite:
 		dialogue_sprite = get_tree().get_root().find_child("Dialogue", true, false)
-	if showInteractionLabel and Input.is_action_just_pressed("interact") and dialogue_sprite and dialogue_sprite.currently_playing == -1 and not dialogue_over:
-		mirror = true
+	if showInteractionLabel and Input.is_action_just_pressed("interact") and dialogue_sprite and dialogue_sprite.currently_playing == -1 and not dialogue_over and not choosing and not in_dialogue:
 		var hud = get_tree().get_root().find_child("HUD", true, false)
 		if hud:
 			hud.display_dialogue(self)
 			choosing = false
+			in_dialogue = true
 		
-	if dialogue_over and Input.is_action_just_pressed("continue") and not choosing and not block_choice and mirror:
-		mirror = false
+	if dialogue_over and Input.is_action_just_pressed("continue") and not choosing and not block_choice:
 		choice()
-		
 		
 func choice():
 	dialogue_over = false
@@ -72,6 +70,7 @@ func _see():
 				"The air feels like knifes on this growth.",
 				"I don't think I have that much time left before stage two.",
 				"And suicide is a luxury I can't afford."]
+	in_dialogue = true
 	if not dialogue_sprite:
 		dialogue_sprite = get_tree().get_root().find_child("Dialogue", true, false)
 	if showInteractionLabel and dialogue_sprite and dialogue_sprite.currently_playing == -1 and not dialogue_over:
@@ -85,6 +84,7 @@ func dialogue_over_wait():
 	while not dialogue_over:
 		await get_tree().process_frame
 		%Player.can_move = false
+	in_dialogue = false
 	
 func _leave_see():
 	$"../HUD/HUD_Layer/Mirror/FadeOut".fade_in()
@@ -103,6 +103,7 @@ func _leave():
 	dialogues = ["I do not bleed... But everything in me is dying.",
 					"I'm scared to look at it."]
 	block_input = false
+	in_dialogue = false
 	
 	
 func _input(event):
