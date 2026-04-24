@@ -4,6 +4,7 @@ var played = false
 # Called when the node enters the scene tree for the first time.
 var rng = RandomNumberGenerator.new()
 var sec = rng.randf_range(0.0, 3.6)
+var body_inside: Node2D
 func _ready() -> void:
 	
 	$AnimatedSprite2D.visible = false
@@ -21,13 +22,11 @@ func _process(delta: float) -> void:
 			print("play")
 			await get_tree().create_timer(sec).timeout
 			
+			if body_inside != null:
+				body_inside.wybuch()
 			$AnimatedSprite2D.visible = true
 			$AnimationPlayer.play("wybuch")
 			$ObiektTnt.visible = false
 			$coliza.queue_free()
 			$boom.play()
-		
-		
-	
-		
 	pass
