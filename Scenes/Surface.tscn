@@ -1,7 +1,7 @@
 [gd_scene load_steps=509 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
-[ext_resource type="PackedScene" uid="uid://ck237g5mca5gf" path="res://Scripts/Objects/transition_scene.tscn" id="1_ixhq0"]
+[ext_resource type="PackedScene" uid="uid://ej40ev5vo6kn" path="res://Scripts/Objects/transition_scene.tscn" id="1_ixhq0"]
 [ext_resource type="Texture2D" uid="uid://c0ctymvdg7hth" path="res://Textures/default.png" id="2_323lg"]
 [ext_resource type="PackedScene" uid="uid://dxfvp3i0nxpm2" path="res://Prefabs/Characters/Player/Player.tscn" id="3_323lg"]
 [ext_resource type="Texture2D" uid="uid://cawoji8wycx2n" path="res://Textures/World/Walls/Teren_-_Grunt_II_Lewo_Nowe.png" id="3_nimv8"]
