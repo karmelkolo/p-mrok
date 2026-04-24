@@ -16,6 +16,7 @@ var was_surface = 0
 var can_move: bool = true
 var running = false
 var is_out = false
+var has_key = 0 
 
 func _ready() -> void:
 	%Ciemnosc.visible = ciemnosc
