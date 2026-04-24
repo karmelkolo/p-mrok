@@ -1,4 +1,4 @@
-[gd_scene load_steps=507 format=4 uid="uid://bop8lqdjf08do"]
+[gd_scene load_steps=509 format=4 uid="uid://bop8lqdjf08do"]
 
 [ext_resource type="Texture2D" uid="uid://cyuue3ravewst" path="res://Textures/World/Ground/Teren_-_Grunt.png" id="1_8640m"]
 [ext_resource type="PackedScene" uid="uid://ck237g5mca5gf" path="res://Scripts/Objects/transition_scene.tscn" id="1_ixhq0"]
@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://hekf5eeh6764" path="res://Textures/Objects/Dead Bodies/Obiekt_-_Ciao_III.png" id="27_koir8"]
 [ext_resource type="Script" uid="uid://c1cgmp18yeqti" path="res://Scripts/Objects/body.gd" id="28_uhl2e"]
 [ext_resource type="AudioStream" uid="uid://bk3qjia4ay4wp" path="res://Audio/sfx/bunkier_klapa_end.mp3" id="36_48vxu"]
+[ext_resource type="Script" uid="uid://crn3bwah38p10" path="res://Scripts/Objects/grave/area_graves.gd" id="36_ujv1i"]
 [ext_resource type="Script" uid="uid://bmw44v0ydfin2" path="res://Scenes/detonatorek.gd" id="37_borgg"]
 [ext_resource type="AudioStream" uid="uid://m76o1jrhd1f1" path="res://Audio/key_pick_up.wav" id="39_al27h"]
 [ext_resource type="Texture2D" uid="uid://bs0buy4cae4am" path="res://Textures/Objects/station/Obiekt_-_Pret_Stanowisko.png" id="43_ou8jh"]
@@ -56,7 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://rfqnjmiw6avf" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana.png" id="50_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://bh27skh88i3dp" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewe Continiuum.png" id="51_r5tdu"]
 [ext_resource type="Texture2D" uid="uid://qjwnh4hpo845" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Lewo.png" id="52_iglxr"]
-[ext_resource type="Script" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
+[ext_resource type="Script" uid="uid://cwit0uuatm6sa" path="res://Scripts/Audio/ambience_area.gd" id="52_j0fmm"]
 [ext_resource type="Texture2D" uid="uid://0d26c5or13rw" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawe Continiuum.png" id="53_067lj"]
 [ext_resource type="Texture2D" uid="uid://ccyb3qqk6v3ei" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Prawo.png" id="54_al27h"]
 [ext_resource type="Texture2D" uid="uid://dtk1gmwgyqtvs" path="res://Textures/Objects/Living Wall/Teren - Żywa Ściana Skręt Lewo Dół.png" id="55_olatj"]
@@ -1038,6 +1039,9 @@ size = Vector2(27, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhl2e"]
 size = Vector2(24, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njydl"]
+size = Vector2(177, 242)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vgmr"]
 size = Vector2(33, 30)
@@ -2494,7 +2498,7 @@ player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_323lg")]
 unique_name_in_owner = true
-position = Vector2(230, 240)
+position = Vector2(231, 232)
 ciemnosc = false
 
 [node name="Trenches" type="TileMapLayer" parent="."]
@@ -3944,6 +3948,26 @@ metadata/_edit_use_anchors_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Surface1/Graves/Nolan"]
 position = Vector2(362, 151)
 shape = SubResource("RectangleShape2D_uhl2e")
+
+[node name="AreaGraves" type="Area2D" parent="Surface1/Graves"]
+script = ExtResource("36_ujv1i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Surface1/Graves/AreaGraves"]
+position = Vector2(408.5, 223)
+shape = SubResource("RectangleShape2D_njydl")
+
+[node name="Label" type="Label" parent="Surface1/Graves/AreaGraves"]
+z_index = 3
+offset_left = 594.00006
+offset_top = 282.99997
+offset_right = 653.00006
+offset_bottom = 306.99997
+scale = Vector2(1.05717, 1.00271)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "kocham sklep żabka"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Hatch" type="Area2D" parent="."]
 script = ExtResource("20_x2kxo")
@@ -5805,6 +5829,8 @@ position = Vector2(268, 246)
 [connection signal="body_exited" from="Surface1/Graves/Samuel" to="Surface1/Graves/Samuel" method="_on_body_exited"]
 [connection signal="body_entered" from="Surface1/Graves/Nolan" to="Surface1/Graves/Nolan" method="_on_body_entered"]
 [connection signal="body_exited" from="Surface1/Graves/Nolan" to="Surface1/Graves/Nolan" method="_on_body_exited"]
+[connection signal="body_entered" from="Surface1/Graves/AreaGraves" to="Surface1/Graves/AreaGraves" method="_on_body_entered"]
+[connection signal="body_exited" from="Surface1/Graves/AreaGraves" to="Surface1/Graves/AreaGraves" method="_on_body_exited"]
 [connection signal="body_entered" from="Hatch" to="Hatch" method="_on_body_entered"]
 [connection signal="body_exited" from="Hatch" to="Hatch" method="_on_body_exited"]
 [connection signal="body_entered" from="Body" to="Body" method="_on_body_entered"]
