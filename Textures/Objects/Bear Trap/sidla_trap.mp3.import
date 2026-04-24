@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yuxyirytrnur"
+path="res://.godot/imported/sidla_trap.mp3-49c7a06f1b3260e9814984893be92387.mp3str"
+
+[deps]
+
+source_file="res://Textures/Objects/Bear Trap/sidla_trap.mp3"
+dest_files=["res://.godot/imported/sidla_trap.mp3-49c7a06f1b3260e9814984893be92387.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
