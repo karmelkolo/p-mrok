@@ -8,6 +8,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node) -> void:
 	if body.name == "Player":
 		body.SPEED = 0
+		body.paralized = true
 		$Wybuch.play("explode")
 		$boom.play()
 		$Minasprite.visible = false 
