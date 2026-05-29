@@ -6,7 +6,7 @@ class_name Player
 @export var ciemnosc = true
 @export var hasLamp = true
 @export var paralized = false
-
+@export var ratunku = false;
 
 var facing = "Down"
 var czyjuzwstal = false
@@ -17,8 +17,10 @@ var can_move: bool = true
 var running = false
 var is_out = false
 var has_key = 0 
+var poddrabine = false
 
 func _ready() -> void:
+	
 	%Ciemnosc.visible = ciemnosc
 	if get_tree().current_scene.scene_file_path == "res://Scenes/Surface.tscn":
 		czyjuzwstal = true
@@ -26,6 +28,7 @@ func _ready() -> void:
 		expand_darkness(2)
 	else:
 		is_out = false 
+		
 	has_items = GameState.has_items
 	was_surface = GameState.was_surface	
 	has_key = GameState.has_key
@@ -52,14 +55,24 @@ func _input(event) -> void:
 		get_tree().quit(0)
 
 func _physics_process(_delta: float) -> void:
-	print(SPEED)
+	if get_tree().current_scene.scene_file_path == "res://Scenes/SafeHouse.tscn":
+		print(was_surface)
 	if not can_move:
 		velocity = Vector2.ZERO
 		return
 	
+	
+	
 	if is_out:
 		%Ciemnosc.scale = Vector2(25.0 / SPEED , 25.0 / SPEED)
-	
+	else:
+		if was_surface == 1:
+			if poddrabine == false:
+				ratunku = true
+				position = Vector2(33,87)
+				velocity = Vector2(2,3)
+				
+				poddrabine = true
 	if(running):
 		if (SPEED < 50):
 			SPEED = SPEED + 1
